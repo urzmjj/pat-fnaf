@@ -1,0 +1,78 @@
+[gd_resource type="Theme" format=3 uid="uid://yaxmlrujwm50"]
+
+[sub_resource type="SystemFont" id="SystemFont_boyg6"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="FontVariation" id="FontVariation_e36ub"]
+base_font = SubResource("SystemFont_boyg6")
+spacing_bottom = -4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5p1p"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5019608, 0.2509804, 0.2509804, 0.5019608)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e36ub"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_138wb"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.8784314, 0.8784314, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb5m1"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boyg6"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7529412, 0.7529412, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[resource]
+default_font = SubResource("FontVariation_e36ub")
+Button/font_sizes/font_size = 12
+Button/fonts/font = SubResource("FontVariation_e36ub")
+Button/styles/disabled = SubResource("StyleBoxFlat_x5p1p")
+Button/styles/hover = SubResource("StyleBoxFlat_e36ub")
+Button/styles/hover_pressed = SubResource("StyleBoxFlat_138wb")
+Button/styles/normal = SubResource("StyleBoxFlat_hb5m1")
+Button/styles/pressed = SubResource("StyleBoxFlat_boyg6")

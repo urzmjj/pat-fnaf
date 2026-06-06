@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://c5xkoaoqwt4bt"]
+
+[ext_resource type="PackedScene" uid="uid://crhwt8ub2ydhr" path="res://wall_blue.glb" id="1_u6kcn"]
+
+[sub_resource type="Animation" id="Animation_u4fsv"]
+length = 0.001
+step = 0.0167
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -1, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube_003")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 0.188, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube_002")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, -0.406, 0)
+
+[sub_resource type="Animation" id="Animation_2ahvy"]
+resource_name = "wall_extend"
+length = 0.05
+step = 0.0167
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -1, 0, 0.05, 1, 0, 1, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube_002")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, -0.406, 0, 0.05, 1, 0, 1, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube_003")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 0.188, 0, 0.05, 1, 0, 1, 0)
+
+[sub_resource type="Animation" id="Animation_2oivb"]
+resource_name = "wall_retract"
+length = 0.05
+step = 0.0167
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cube")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 1, 0, 0.05, 1, 0, -1, 0)
+tracks/1/type = "position_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cube_002")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0, 1, 0, 0.05, 1, 0, -0.406, 0)
+tracks/2/type = "position_3d"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Cube_003")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0, 1, 0, 0.05, 1, 0, 0.188, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_u6kcn"]
+_data = {
+&"RESET": SubResource("Animation_u4fsv"),
+&"wall_extend": SubResource("Animation_2ahvy"),
+&"wall_retract": SubResource("Animation_2oivb")
+}
+
+[node name="wall_blue" unique_id=325434234 instance=ExtResource("1_u6kcn")]
+
+[node name="Cube" parent="." index="0" unique_id=324028060]
+layers = 517
+
+[node name="Cube_002" parent="." index="1" unique_id=796007886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.406, 0)
+layers = 517
+
+[node name="Cube_003" parent="." index="2" unique_id=33241909]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.188, 0)
+layers = 517
+
+[node name="Cube_004" parent="." index="3" unique_id=804021459]
+layers = 517
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="4" unique_id=1783249906]
+libraries/ = SubResource("AnimationLibrary_u6kcn")

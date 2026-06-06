@@ -1,0 +1,865 @@
+[gd_scene format=3 uid="uid://c1ojnktoubxlb"]
+
+[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://blue_fairy.gd" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://icely_toad.gd" id="1_ryrav"]
+[ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://animatronic_pos_3d.gd" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://door_handler.gd" id="2_fc0e3"]
+[ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://subviewport_input_handler.gd" id="3_e36ub"]
+[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://firefly.gd" id="3_eow3j"]
+[ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://debug_stats.gd" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://merry_fairy.gd" id="3_j5wjh"]
+[ext_resource type="AudioStream" uid="uid://d1xlpc2hbrxqo" path="res://sink_sounds/027.ogg" id="4_7sc4i"]
+[ext_resource type="Script" uid="uid://bfwer75tu1ow3" path="res://camera_controls.gd" id="5_7jktm"]
+[ext_resource type="AudioStream" uid="uid://ctodeheiey2sv" path="res://sink_sounds/028.ogg" id="5_80cx4"]
+[ext_resource type="AudioStream" uid="uid://cjjlci88xm7xm" path="res://sink_sounds/029.ogg" id="6_e8heu"]
+[ext_resource type="AudioStream" uid="uid://dapihi21i7psx" path="res://sink_sounds/030.ogg" id="7_rvswv"]
+[ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://bCuUXw.png" id="8_vef74"]
+[ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://animatronic_icely_pos.gd" id="9_mfdv2"]
+[ext_resource type="Script" uid="uid://25att15er2n8" path="res://camera_handler.gd" id="10_80cx4"]
+[ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://cba_horror.wav" id="10_mfdv2"]
+[ext_resource type="ButtonGroup" uid="uid://dnwmt2axekck8" path="res://camera_button_group.tres" id="12_hb5m1"]
+[ext_resource type="PackedScene" uid="uid://de3pmt4kj1ro7" path="res://wall_red.tscn" id="14_rvswv"]
+[ext_resource type="PackedScene" uid="uid://c5xkoaoqwt4bt" path="res://wall_blue.tscn" id="15_boyg6"]
+[ext_resource type="Script" uid="uid://b6xexvbdogh68" path="res://wall_animator.gd" id="15_e36ub"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7sc4i"]
+size = Vector3(1.65, 0.95, 0.05)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_7sc4i"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80cx4"]
+resource_local_to_scene = true
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission_texture = SubResource("ViewportTexture_7sc4i")
+
+[sub_resource type="QuadMesh" id="QuadMesh_rvswv"]
+size = Vector2(1.6, 0.9)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_boyg6"]
+size = Vector3(1.6, 0.9, 0)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_boyg6"]
+
+[sub_resource type="SystemFont" id="SystemFont_boyg6"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="FontVariation" id="FontVariation_e36ub"]
+base_font = SubResource("SystemFont_boyg6")
+spacing_bottom = -4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb5m1"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_boyg6"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7529412, 0.7529412, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e36ub"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x5p1p"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.5019608, 0.2509804, 0.2509804, 0.5019608)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qhcbd"]
+content_margin_left = 3.0
+content_margin_top = 2.0
+content_margin_right = 3.0
+content_margin_bottom = 4.0
+bg_color = Color(0.7529412, 0.7529412, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fc0e3"]
+albedo_color = Color(0.21960784, 0.26666668, 0.84705883, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_feb5d"]
+lightmap_size_hint = Vector2i(17, 14)
+material = SubResource("StandardMaterial3D_fc0e3")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
+albedo_color = Color(0.77254903, 0.16862746, 0.16862746, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mfdv2"]
+material = SubResource("StandardMaterial3D_hve3p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_215e1"]
+albedo_color = Color(0.62352943, 0.3529412, 0.7921569, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7sc4i"]
+lightmap_size_hint = Vector2i(17, 14)
+material = SubResource("StandardMaterial3D_215e1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+metallic = 1.0
+roughness = 0.5
+
+[sub_resource type="BoxMesh" id="BoxMesh_80nbo"]
+material = SubResource("StandardMaterial3D_ryrav")
+size = Vector3(0.8, 2, 0.8)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
+albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_80cx4"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(3, 3)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_feb5d"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(5, 0.75)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e8heu"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(3, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7sc4i"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(1, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rvswv"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(1, 0.25)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_boyg6"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(2, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eow3j"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_j5wjh"]
+material = SubResource("StandardMaterial3D_eow3j")
+size = Vector2(3, 2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_ryrav"]
+material = SubResource("StandardMaterial3D_eow3j")
+size = Vector2(1, 2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_7jktm"]
+material = SubResource("StandardMaterial3D_eow3j")
+size = Vector2(1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5wjh"]
+albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7jktm"]
+material = SubResource("StandardMaterial3D_j5wjh")
+size = Vector3(0.05, 0.5, 0.25)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vef74"]
+albedo_color = Color(0.7490196, 0.023529412, 0.023529412, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_hve3p"]
+material = SubResource("StandardMaterial3D_vef74")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_ryrav"]
+height = 0.05
+radius = 0.1
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mfdv2"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7jktm"]
+material = SubResource("StandardMaterial3D_mfdv2")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iotsf"]
+albedo_color = Color(0.12941177, 0.2, 1, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lc2xo"]
+material = SubResource("StandardMaterial3D_iotsf")
+top_radius = 0.1
+bottom_radius = 0.1
+height = 0.05
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc2xo"]
+albedo_color = Color(0, 0, 0, 1)
+metallic_specular = 0.0
+
+[sub_resource type="QuadMesh" id="QuadMesh_215e1"]
+material = SubResource("StandardMaterial3D_lc2xo")
+size = Vector2(4, 2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_7sc4i"]
+material = SubResource("StandardMaterial3D_lc2xo")
+size = Vector2(1, 4)
+
+[sub_resource type="QuadMesh" id="QuadMesh_80cx4"]
+material = SubResource("StandardMaterial3D_lc2xo")
+size = Vector2(1, 2)
+
+[sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
+
+[sub_resource type="Environment" id="Environment_ryrav"]
+background_mode = 1
+ambient_light_source = 2
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.1
+reflected_light_source = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_hve3p"]
+material = SubResource("StandardMaterial3D_7jktm")
+size = Vector2(3, 7)
+
+[sub_resource type="QuadMesh" id="QuadMesh_e8heu"]
+material = SubResource("StandardMaterial3D_eow3j")
+size = Vector2(7, 3)
+
+[sub_resource type="QuadMesh" id="QuadMesh_boyg6"]
+material = SubResource("StandardMaterial3D_eow3j")
+size = Vector2(3, 3)
+
+[sub_resource type="QuadMesh" id="QuadMesh_e36ub"]
+material = SubResource("StandardMaterial3D_eow3j")
+
+[node name="Node3D" type="Node3D" unique_id=1071604260]
+script = ExtResource("1_ryrav")
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=776514224]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
+cull_mask = 1047559
+script = ExtResource("5_7jktm")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D" unique_id=1258365587]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.31)
+mesh = SubResource("BoxMesh_7sc4i")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/MeshInstance3D" unique_id=1999517091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
+material_override = SubResource("StandardMaterial3D_80cx4")
+mesh = SubResource("QuadMesh_rvswv")
+
+[node name="Area3D" type="Area3D" parent="Camera3D/MeshInstance3D/MeshInstance3D" unique_id=1705830668 node_paths=PackedStringArray("subviewport")]
+script = ExtResource("3_e36ub")
+subviewport = NodePath("../../../../SubViewport")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Camera3D/MeshInstance3D/MeshInstance3D/Area3D" unique_id=1618795499]
+shape = SubResource("BoxShape3D_boyg6")
+
+[node name="Animatronics" type="Node" parent="." unique_id=258026473]
+
+[node name="BlueFairy" type="Node" parent="Animatronics" unique_id=444632484]
+script = ExtResource("1_80nbo")
+stages = 5
+ai_level = 20
+move_time = 4.02
+metadata/_custom_type_script = "uid://c4bllcvvxn1ot"
+
+[node name="MerryFairy" type="Node" parent="Animatronics" unique_id=1761710030 node_paths=PackedStringArray("blue_fairy")]
+script = ExtResource("3_j5wjh")
+blue_fairy = NodePath("../BlueFairy")
+stages = 5
+move_time = 4.49
+metadata/_custom_type_script = "uid://cbm4aq82pbf70"
+
+[node name="IcelyToad" type="Node" parent="Animatronics" unique_id=1998217580 node_paths=PackedStringArray("audio_player")]
+script = ExtResource("1_ryrav")
+audio_player = NodePath("AudioStreamPlayer")
+audio_streams = Array[AudioStream]([ExtResource("4_7sc4i"), ExtResource("5_80cx4"), ExtResource("6_e8heu"), ExtResource("7_rvswv")])
+stages = 1
+move_time = 12.03
+metadata/_custom_type_script = "uid://cvkkptlwbd16u"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Animatronics/IcelyToad" unique_id=1853153347]
+volume_db = 12.0
+
+[node name="Firefly" type="Node" parent="Animatronics" unique_id=678104402]
+script = ExtResource("3_eow3j")
+stages = 5
+move_time = 5.01
+metadata/_custom_type_script = "uid://ba1dilo0tnuc8"
+
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object")]
+size = Vector2i(960, 540)
+script = ExtResource("10_80cx4")
+cameras = [NodePath("0"), NodePath("1")]
+camera_screen_object = NodePath("../Camera3D/MeshInstance3D")
+button_group = ExtResource("12_hb5m1")
+
+[node name="0" type="Camera3D" parent="SubViewport" unique_id=989210930]
+transform = Transform3D(-4.371139e-08, 0.86602545, -0.49999997, 0, 0.49999997, 0.86602545, 1, 3.7855173e-08, -2.1855692e-08, -5.4, 1.9, 0)
+cull_mask = 1048064
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewport/0" unique_id=495208832]
+layers = 512
+light_energy = 5.0
+light_cull_mask = 4294966784
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 75.0
+
+[node name="1" type="Camera3D" parent="SubViewport" unique_id=320035776]
+transform = Transform3D(-4.371139e-08, -0.86602545, 0.49999997, 0, 0.49999997, 0.86602545, -1, 3.7855173e-08, -2.1855692e-08, 5.4, 1.9, 0)
+cull_mask = 1048064
+
+[node name="SpotLight3D" type="SpotLight3D" parent="SubViewport/1" unique_id=1900797407]
+layers = 512
+light_energy = 5.0
+light_cull_mask = 4294966784
+spot_range = 10.0
+spot_attenuation = 2.0
+spot_angle = 75.0
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="SubViewport" unique_id=488369964]
+
+[node name="Control" type="Control" parent="SubViewport/CanvasLayer2" unique_id=1874368206]
+layout_mode = 3
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -360.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(1, 1)
+
+[node name="TextureRect" type="TextureRect" parent="SubViewport/CanvasLayer2/Control" unique_id=1823405243]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("PlaceholderTexture2D_boyg6")
+
+[node name="0" type="Button" parent="SubViewport/CanvasLayer2/Control" unique_id=705790847]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -12.0
+offset_right = -30.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = SubResource("FontVariation_e36ub")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_hb5m1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boyg6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e36ub")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_x5p1p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qhcbd")
+toggle_mode = true
+button_pressed = true
+button_group = ExtResource("12_hb5m1")
+text = "CAM
+1"
+alignment = 0
+
+[node name="1" type="Button" parent="SubViewport/CanvasLayer2/Control" unique_id=589605896]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -12.0
+offset_right = 66.0
+offset_bottom = 12.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = SubResource("FontVariation_e36ub")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_hb5m1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_boyg6")
+theme_override_styles/hover = SubResource("StyleBoxFlat_e36ub")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_x5p1p")
+theme_override_styles/focus = SubResource("StyleBoxFlat_qhcbd")
+toggle_mode = true
+button_group = ExtResource("12_hb5m1")
+text = "CAM
+2"
+alignment = 0
+
+[node name="DoorHandler" type="Node" parent="." unique_id=964039169 node_paths=PackedStringArray("door_nodes", "light_nodes") groups=["DoorHandler"]]
+script = ExtResource("2_fc0e3")
+door_nodes = [NodePath("../Office/wall_red"), NodePath("../Office/wall_blue")]
+doors_closed = Array[bool]([false, false])
+light_nodes = [NodePath("../Office/LightL"), NodePath("../Office/LightR")]
+lights_on = Array[bool]([false, false])
+metadata/_custom_type_script = "uid://bfccwsyo8lyt4"
+
+[node name="Debug" type="Node" parent="." unique_id=902104194 node_paths=PackedStringArray("debug_label", "fairies")]
+script = ExtResource("3_feb5d")
+debug_label = NodePath("../CanvasLayer/Label")
+fairies = [NodePath("../Animatronics/BlueFairy"), NodePath("../Animatronics/MerryFairy"), NodePath("../Animatronics/IcelyToad"), NodePath("../Animatronics/Firefly")]
+
+[node name="Positions" type="Node" parent="." unique_id=903842287]
+
+[node name="Blue" type="Node" parent="Positions" unique_id=739523855]
+
+[node name="Blue_L4" type="MeshInstance3D" parent="Positions/Blue" unique_id=2098502329 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_feb5d")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/BlueFairy")
+pos = 8
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="Blue_R4" type="MeshInstance3D" parent="Positions/Blue" unique_id=597389590 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_feb5d")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/BlueFairy")
+pos = 9
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="Firefly" type="Node" parent="Positions" unique_id=815920559]
+
+[node name="Firefly_1" type="MeshInstance3D" parent="Positions/Firefly" unique_id=2061089234 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
+visible = false
+layers = 514
+mesh = SubResource("CapsuleMesh_mfdv2")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/Firefly")
+pos = 1
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Positions/Firefly/Firefly_1" unique_id=1257332830]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+layers = 3
+light_color = Color(1, 0.7529412, 0.5019608, 1)
+light_energy = 0.005
+light_cull_mask = 4294966275
+
+[node name="Firefly_2" type="MeshInstance3D" parent="Positions/Firefly" unique_id=918304712 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
+visible = false
+layers = 514
+mesh = SubResource("CapsuleMesh_mfdv2")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/Firefly")
+pos = 2
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Positions/Firefly/Firefly_2" unique_id=17221935]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+layers = 3
+light_color = Color(1, 0.7529412, 0.5019608, 1)
+light_energy = 0.01
+light_cull_mask = 4294966275
+
+[node name="Firefly_3" type="MeshInstance3D" parent="Positions/Firefly" unique_id=2013618321 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+visible = false
+layers = 514
+mesh = SubResource("CapsuleMesh_mfdv2")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/Firefly")
+pos = 3
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Positions/Firefly/Firefly_3" unique_id=1759331014]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+layers = 3
+light_color = Color(1, 0.7529412, 0.5019608, 1)
+light_energy = 0.02
+light_cull_mask = 4294966275
+
+[node name="Firefly_4" type="MeshInstance3D" parent="Positions/Firefly" unique_id=1624909881 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2)
+visible = false
+layers = 514
+mesh = SubResource("CapsuleMesh_mfdv2")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/Firefly")
+pos = 4
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Positions/Firefly/Firefly_4" unique_id=231412172]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1)
+layers = 3
+light_color = Color(1, 0.7529412, 0.5019608, 1)
+light_energy = 0.5
+light_cull_mask = 4294966275
+
+[node name="Merry" type="Node" parent="Positions" unique_id=136393531]
+
+[node name="Merry_L4" type="MeshInstance3D" parent="Positions/Merry" unique_id=247076088 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_7sc4i")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/MerryFairy")
+pos = 8
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="Merry_R4" type="MeshInstance3D" parent="Positions/Merry" unique_id=1110915342 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_7sc4i")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/MerryFairy")
+pos = 9
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="Office" type="Node" parent="." unique_id=989273918]
+
+[node name="wall_red" parent="Office" unique_id=1833346100 instance=ExtResource("14_rvswv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -1, 0)
+script = ExtResource("15_e36ub")
+
+[node name="wall_blue" parent="Office" unique_id=930298628 instance=ExtResource("15_boyg6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -1, 0)
+script = ExtResource("15_e36ub")
+
+[node name="LeftDoorModel" type="MeshInstance3D" parent="Office" unique_id=1349325437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2.0283537, -0.0018391609)
+visible = false
+layers = 517
+mesh = SubResource("BoxMesh_80nbo")
+
+[node name="RightDoorModel" type="MeshInstance3D" parent="Office" unique_id=142232641]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 0)
+visible = false
+layers = 517
+mesh = SubResource("BoxMesh_80nbo")
+
+[node name="Floor" type="MeshInstance3D" parent="Office" unique_id=391381073]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+layers = 517
+mesh = SubResource("PlaneMesh_80cx4")
+
+[node name="Ceiling" type="MeshInstance3D" parent="Office" unique_id=1309828913]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1, 0.125)
+layers = 517
+mesh = SubResource("PlaneMesh_feb5d")
+
+[node name="Ceiling2" type="MeshInstance3D" parent="Office" unique_id=468425734]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1, 1)
+layers = 517
+mesh = SubResource("PlaneMesh_e8heu")
+
+[node name="Ceiling3" type="MeshInstance3D" parent="Office" unique_id=1213013285]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, -1, 1, -1)
+layers = 517
+mesh = SubResource("PlaneMesh_7sc4i")
+
+[node name="Ceiling4" type="MeshInstance3D" parent="Office" unique_id=2095455755]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 1, 1, -1)
+layers = 517
+mesh = SubResource("PlaneMesh_7sc4i")
+
+[node name="Ceiling5" type="MeshInstance3D" parent="Office" unique_id=1960019626]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 0, 1, -1.375)
+layers = 517
+mesh = SubResource("PlaneMesh_rvswv")
+
+[node name="Ceiling6" type="MeshInstance3D" parent="Office" unique_id=620803485]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, -1.5, 1, -0.375)
+layers = 517
+mesh = SubResource("PlaneMesh_boyg6")
+
+[node name="Ceiling7" type="MeshInstance3D" parent="Office" unique_id=1680916710]
+transform = Transform3D(1, 0, 0, 0, -1, 8.742278e-08, 0, -8.742278e-08, -1, 1.5, 1, -0.375)
+layers = 517
+mesh = SubResource("PlaneMesh_boyg6")
+
+[node name="FrontWall" type="MeshInstance3D" parent="Office" unique_id=1914613665]
+transform = Transform3D(1, 0, 0, 0, 1, -1.7484555e-07, 0, 1.7484555e-07, 1, 0, 0, -1.5)
+layers = 517
+mesh = SubResource("QuadMesh_j5wjh")
+
+[node name="BackWallL" type="MeshInstance3D" parent="Office" unique_id=740706561]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -1, 0, 1.5)
+layers = 517
+mesh = SubResource("QuadMesh_ryrav")
+
+[node name="BackWallR" type="MeshInstance3D" parent="Office" unique_id=1298747941]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 1, 0, 1.5)
+layers = 517
+mesh = SubResource("QuadMesh_ryrav")
+
+[node name="BackWallL2" type="MeshInstance3D" parent="Office" unique_id=343142270]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -2, 0, 0.5)
+layers = 517
+mesh = SubResource("QuadMesh_ryrav")
+
+[node name="BackWallR2" type="MeshInstance3D" parent="Office" unique_id=1483908238]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 2, 0, 0.5)
+layers = 517
+mesh = SubResource("QuadMesh_ryrav")
+
+[node name="FrontWallL" type="MeshInstance3D" parent="Office" unique_id=1209397543]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0, -0.5)
+layers = 517
+mesh = SubResource("QuadMesh_ryrav")
+
+[node name="FrontWallR" type="MeshInstance3D" parent="Office" unique_id=1353880190]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, -0.5)
+layers = 517
+mesh = SubResource("QuadMesh_ryrav")
+
+[node name="LeftWallF" type="MeshInstance3D" parent="Office" unique_id=955546085]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -1.5, 0, -1)
+layers = 517
+mesh = SubResource("QuadMesh_7jktm")
+
+[node name="LeftWallB" type="MeshInstance3D" parent="Office" unique_id=1355949783]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -1.5, 0, 1)
+layers = 517
+mesh = SubResource("QuadMesh_7jktm")
+
+[node name="RightWallF" type="MeshInstance3D" parent="Office" unique_id=1626140305]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1.5, 0, -1)
+layers = 517
+mesh = SubResource("QuadMesh_7jktm")
+
+[node name="RightWallB" type="MeshInstance3D" parent="Office" unique_id=942297595]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 1.5, 0, 1)
+layers = 517
+mesh = SubResource("QuadMesh_7jktm")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Office" unique_id=1685102825]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
+light_energy = 0.2
+light_cull_mask = 4294966273
+
+[node name="ButtonPanelL" type="MeshInstance3D" parent="Office" unique_id=958195703]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.475, 0.125, 0.75)
+layers = 517
+mesh = SubResource("BoxMesh_7jktm")
+
+[node name="DoorButtonL" type="Area3D" parent="Office/ButtonPanelL" unique_id=579693225]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024999976, 0.125, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Office/ButtonPanelL/DoorButtonL" unique_id=111722590]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+layers = 517
+mesh = SubResource("CylinderMesh_hve3p")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelL/DoorButtonL" unique_id=256403200]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ryrav")
+
+[node name="LightButttonL" type="Area3D" parent="Office/ButtonPanelL" unique_id=1383521601]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.024999976, -0.125, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Office/ButtonPanelL/LightButttonL" unique_id=1163076506]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+layers = 517
+mesh = SubResource("CylinderMesh_7jktm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelL/LightButttonL" unique_id=790421552]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ryrav")
+
+[node name="ButtonPanelR" type="MeshInstance3D" parent="Office" unique_id=330778949]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.475, 0.125, 0.75)
+layers = 517
+mesh = SubResource("BoxMesh_7jktm")
+
+[node name="DoorButtonR" type="Area3D" parent="Office/ButtonPanelR" unique_id=1866736781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024999976, 0.125, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Office/ButtonPanelR/DoorButtonR" unique_id=1893641418]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+layers = 517
+mesh = SubResource("CylinderMesh_lc2xo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelR/DoorButtonR" unique_id=1435829299]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ryrav")
+
+[node name="LightButtonR" type="Area3D" parent="Office/ButtonPanelR" unique_id=1589593870]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024999976, -0.125, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Office/ButtonPanelR/LightButtonR" unique_id=2095202591]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+layers = 517
+mesh = SubResource("CylinderMesh_7jktm")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelR/LightButtonR" unique_id=120783777]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("CylinderShape3D_ryrav")
+
+[node name="LightL" type="SpotLight3D" parent="Office" unique_id=1214521357]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -2, 0, 0)
+layers = 5
+light_cull_mask = 4294966277
+spot_attenuation = 2.0
+spot_angle = 60.0
+
+[node name="LightR" type="SpotLight3D" parent="Office" unique_id=162322721]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 2, 0, 0)
+layers = 5
+light_cull_mask = 4294966277
+spot_attenuation = 2.0
+spot_angle = 60.0
+
+[node name="DarkL" type="MeshInstance3D" parent="Office" unique_id=1959843777]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0, 3.5)
+mesh = SubResource("QuadMesh_215e1")
+
+[node name="DarkR" type="MeshInstance3D" parent="Office" unique_id=649898262]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, 3.5)
+mesh = SubResource("QuadMesh_215e1")
+
+[node name="DarkU" type="MeshInstance3D" parent="Office" unique_id=493909650]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, 3.5)
+mesh = SubResource("QuadMesh_7sc4i")
+
+[node name="DarkD" type="MeshInstance3D" parent="Office" unique_id=1448784155]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, -1, 3.5)
+mesh = SubResource("QuadMesh_7sc4i")
+
+[node name="DarkB" type="MeshInstance3D" parent="Office" unique_id=916443892]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 5.5)
+mesh = SubResource("QuadMesh_80cx4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6460043]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=952879237]
+offset_right = 40.0
+offset_bottom = 23.0
+label_settings = SubResource("LabelSettings_7jktm")
+
+[node name="Control2" type="Control" parent="CanvasLayer" unique_id=1384620631]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Icely" type="TextureRect" parent="CanvasLayer/Control2" unique_id=2134568217 node_paths=PackedStringArray("animatronic", "audio_player")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.25
+anchor_top = 0.25
+anchor_right = 0.75
+anchor_bottom = 0.75
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_vef74")
+expand_mode = 1
+script = ExtResource("9_mfdv2")
+animatronic = NodePath("../../../Animatronics/IcelyToad")
+pos = 1
+audio_player = NodePath("../AudioStreamPlayer")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="CanvasLayer/Control2" unique_id=137292469]
+stream = ExtResource("10_mfdv2")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1213974731]
+environment = SubResource("Environment_ryrav")
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=2087738437]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, -1, 0)
+layers = 516
+mesh = SubResource("PlaneMesh_hve3p")
+
+[node name="Floor2" type="MeshInstance3D" parent="." unique_id=639686915]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, -1, 0)
+layers = 516
+mesh = SubResource("PlaneMesh_hve3p")
+
+[node name="LeftWallF" type="MeshInstance3D" parent="." unique_id=1021439418]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, -5.5, 0.5, 0)
+layers = 516
+mesh = SubResource("QuadMesh_e8heu")
+
+[node name="RightWallF" type="MeshInstance3D" parent="." unique_id=149618176]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 5.5, 0.5, 0)
+layers = 516
+mesh = SubResource("QuadMesh_e8heu")
+
+[node name="LeftWallF2" type="MeshInstance3D" parent="." unique_id=678005834]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 2.5, 0.5, -2)
+layers = 516
+mesh = SubResource("QuadMesh_boyg6")
+
+[node name="RightWallF2" type="MeshInstance3D" parent="." unique_id=1111807721]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.5, 0.5, -2)
+layers = 516
+mesh = SubResource("QuadMesh_boyg6")
+
+[node name="LeftWallF3" type="MeshInstance3D" parent="." unique_id=2036326699]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 2.5, 0.5, 2)
+layers = 516
+mesh = SubResource("QuadMesh_boyg6")
+
+[node name="RightWallF3" type="MeshInstance3D" parent="." unique_id=1378993059]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.5, 0.5, 2)
+layers = 516
+mesh = SubResource("QuadMesh_boyg6")
+
+[node name="LeftWallF4" type="MeshInstance3D" parent="." unique_id=1154597150]
+transform = Transform3D(-4.371138e-08, 0, 1, 0, 1, 0, -1, 0, -4.371138e-08, 2.5, 1.5, 0)
+layers = 516
+mesh = SubResource("QuadMesh_e36ub")
+
+[node name="RightWallF4" type="MeshInstance3D" parent="." unique_id=880216678]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -2.5, 1.5, 0)
+layers = 516
+mesh = SubResource("QuadMesh_e36ub")
+
+[connection signal="input_event" from="Camera3D/MeshInstance3D/MeshInstance3D/Area3D" to="Camera3D/MeshInstance3D/MeshInstance3D/Area3D" method="_on_input_event"]
+[connection signal="input_event" from="Office/ButtonPanelL/DoorButtonL" to="DoorHandler" method="_on_door_button_l_input_event"]
+[connection signal="input_event" from="Office/ButtonPanelL/LightButttonL" to="DoorHandler" method="_on_light_buttton_l_input_event"]
+[connection signal="mouse_exited" from="Office/ButtonPanelL/LightButttonL" to="DoorHandler" method="_on_light_buttton_l_mouse_exited"]
+[connection signal="input_event" from="Office/ButtonPanelR/DoorButtonR" to="DoorHandler" method="_on_door_button_r_input_event"]
+[connection signal="input_event" from="Office/ButtonPanelR/LightButtonR" to="DoorHandler" method="_on_light_button_r_input_event"]
+[connection signal="mouse_exited" from="Office/ButtonPanelR/LightButtonR" to="DoorHandler" method="_on_light_button_r_mouse_exited"]
