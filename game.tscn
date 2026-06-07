@@ -149,6 +149,38 @@ size = Vector2(1, 2)
 material = SubResource("StandardMaterial3D_eow3j")
 size = Vector2(2, 2)
 
+[sub_resource type="BoxMesh" id="BoxMesh_xa8c5"]
+size = Vector3(0.2, 0.05, 3)
+
+[sub_resource type="Animation" id="Animation_5b14r"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926)
+
+[sub_resource type="Animation" id="Animation_bnpwn"]
+resource_name = "fan_spin"
+length = 0.40000167
+loop_mode = 1
+step = 0.016666668
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926, 0.2, 1, 0, 0.965926, 0, 0.258819, 0.4, 1, 0, 0.258819, 0, -0.965926)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_36jdj"]
+_data = {
+&"RESET": SubResource("Animation_5b14r"),
+&"fan_spin": SubResource("Animation_bnpwn")
+}
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5wjh"]
 albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
 
@@ -343,6 +375,7 @@ mesh = SubResource("QuadMesh_xfvwf")
 [node name="BlueFairy" type="Node" parent="Animatronics" unique_id=444632484]
 script = ExtResource("1_80nbo")
 stages = 5
+ai_level = 5
 move_time = 4.02
 metadata/_custom_type_script = "uid://c4bllcvvxn1ot"
 
@@ -364,6 +397,7 @@ script = ExtResource("1_ryrav")
 audio_player = NodePath("AudioStreamPlayer")
 audio_streams = Array[AudioStream]([ExtResource("4_7sc4i"), ExtResource("5_80cx4"), ExtResource("6_e8heu"), ExtResource("7_rvswv")])
 stages = 1
+ai_level = 10
 move_time = 12.03
 metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 
@@ -517,7 +551,7 @@ lights_on = Array[bool]([false, false])
 metadata/_custom_type_script = "uid://bfccwsyo8lyt4"
 
 [node name="Debug" type="Node" parent="." unique_id=902104194 node_paths=PackedStringArray("debug_label", "fairies")]
-process_mode = 3
+process_mode = 4
 script = ExtResource("3_feb5d")
 debug_label = NodePath("../CanvasLayer/Label")
 fairies = [NodePath("../Animatronics/BlueFairy"), null, null, NodePath("../Animatronics/MerryFairy"), null, NodePath("../Animatronics/WitchFairy"), null, NodePath("../Animatronics/IcelyToad"), NodePath("../Animatronics/AnglerFairy"), NodePath("../Animatronics/Firefly"), null, null, null, null, null, null]
@@ -668,6 +702,8 @@ process_mode = 3
 script = ExtResource("21_vaj68")
 label = NodePath("../CanvasLayer/RichTextLabel")
 time_label = NodePath("../CanvasLayer/RichTextLabel2")
+powerDrainRate = 1
+tempSpeed = 1.0
 powerOn = [NodePath("Table/Monitor/Node3D"), NodePath("OmniLight3D"), NodePath("../Player/Camera3D/MeshInstance3D/MeshInstance3D")]
 powerOff = [NodePath("Table/Monitor/MeshInstance3D3"), NodePath("../Player/Camera3D/MeshInstance3D/MeshInstance3D2")]
 doorHandler = NodePath("../DoorHandler")
@@ -740,7 +776,7 @@ layers = 517
 mesh = SubResource("PlaneMesh_f1jbl")
 
 [node name="FrontWall" type="MeshInstance3D" parent="Office" unique_id=1914613665]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7484555e-07, 0, 1.7484555e-07, 1, 2.9802322e-06, -0.0052860975, -2.5000033)
+transform = Transform3D(1, 0, 0, 0, 1, -1.7484555e-07, 0, 1.7484555e-07, 1, 0, 0, -2.5)
 layers = 517
 mesh = SubResource("QuadMesh_j5wjh")
 
@@ -793,6 +829,14 @@ mesh = SubResource("QuadMesh_7jktm")
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.5, 0, 1.5)
 layers = 517
 mesh = SubResource("QuadMesh_7jktm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Office" unique_id=1058105758]
+transform = Transform3D(0.86602545, 0, -0.4999999, 0, 1, 0, 0.4999999, 0, 0.86602545, 0, 0.85, 0)
+mesh = SubResource("BoxMesh_xa8c5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Office/MeshInstance3D2" unique_id=36595386]
+libraries/ = SubResource("AnimationLibrary_36jdj")
+speed_scale = 3.0
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Office" unique_id=1685102825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
@@ -1018,8 +1062,9 @@ script = ExtResource("2_e2o6t")
 animatronic = NodePath("../../../../../Animatronics/IcelyToad")
 pos = 1
 
-[node name="temp_switch" parent="Office/Table" unique_id=123554159 instance=ExtResource("25_i2p71")]
+[node name="temp_switch" parent="Office/Table" unique_id=123554159 node_paths=PackedStringArray("fanAnimator") instance=ExtResource("25_i2p71")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, -0.25, 0.3)
+fanAnimator = NodePath("../../MeshInstance3D2/AnimationPlayer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6460043]
 
