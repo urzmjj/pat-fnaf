@@ -1,32 +1,32 @@
 [gd_scene format=3 uid="uid://c1ojnktoubxlb"]
 
-[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://blue_fairy.gd" id="1_80nbo"]
-[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://icely_toad.gd" id="1_ryrav"]
-[ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://animatronic_pos_3d.gd" id="2_e2o6t"]
-[ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://door_handler.gd" id="2_fc0e3"]
-[ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://subviewport_input_handler.gd" id="3_e36ub"]
-[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://firefly.gd" id="3_eow3j"]
-[ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://debug_stats.gd" id="3_feb5d"]
-[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://merry_fairy.gd" id="3_j5wjh"]
-[ext_resource type="AudioStream" uid="uid://d1xlpc2hbrxqo" path="res://sink_sounds/027.ogg" id="4_7sc4i"]
-[ext_resource type="Script" uid="uid://bfwer75tu1ow3" path="res://camera_controls.gd" id="5_7jktm"]
-[ext_resource type="AudioStream" uid="uid://ctodeheiey2sv" path="res://sink_sounds/028.ogg" id="5_80cx4"]
-[ext_resource type="AudioStream" uid="uid://cjjlci88xm7xm" path="res://sink_sounds/029.ogg" id="6_e8heu"]
-[ext_resource type="AudioStream" uid="uid://dapihi21i7psx" path="res://sink_sounds/030.ogg" id="7_rvswv"]
-[ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://bCuUXw.png" id="8_vef74"]
-[ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://animatronic_icely_pos.gd" id="9_mfdv2"]
-[ext_resource type="Script" uid="uid://25att15er2n8" path="res://camera_handler.gd" id="10_80cx4"]
-[ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://cba_horror.wav" id="10_mfdv2"]
-[ext_resource type="Script" uid="uid://dwvjn7lxnfadd" path="res://witch_fairy.gd" id="11_f1jbl"]
+[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://scripts/animatronics/blue_fairy.gd" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://scripts/animatronics/icely_toad.gd" id="1_ryrav"]
+[ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://scripts/animatronic_pos_3d.gd" id="2_e2o6t"]
+[ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://scripts/door_handler.gd" id="2_fc0e3"]
+[ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://scripts/subviewport_input_handler.gd" id="3_e36ub"]
+[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://scripts/animatronics/firefly.gd" id="3_eow3j"]
+[ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://scripts/debug_stats.gd" id="3_feb5d"]
+[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://scripts/animatronics/merry_fairy.gd" id="3_j5wjh"]
+[ext_resource type="AudioStream" uid="uid://d1xlpc2hbrxqo" path="res://sounds/sink_sounds/027.ogg" id="4_7sc4i"]
+[ext_resource type="Script" uid="uid://bfwer75tu1ow3" path="res://scripts/camera_controls.gd" id="5_7jktm"]
+[ext_resource type="AudioStream" uid="uid://ctodeheiey2sv" path="res://sounds/sink_sounds/028.ogg" id="5_80cx4"]
+[ext_resource type="AudioStream" uid="uid://cjjlci88xm7xm" path="res://sounds/sink_sounds/029.ogg" id="6_e8heu"]
+[ext_resource type="AudioStream" uid="uid://dapihi21i7psx" path="res://sounds/sink_sounds/030.ogg" id="7_rvswv"]
+[ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="8_vef74"]
+[ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://scripts/animatronic_icely_pos.gd" id="9_mfdv2"]
+[ext_resource type="Script" uid="uid://25att15er2n8" path="res://scripts/camera_handler.gd" id="10_80cx4"]
+[ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://sounds/cba_horror.wav" id="10_mfdv2"]
+[ext_resource type="Script" uid="uid://dwvjn7lxnfadd" path="res://scripts/animatronics/witch_fairy.gd" id="11_f1jbl"]
 [ext_resource type="ButtonGroup" uid="uid://dnwmt2axekck8" path="res://camera_button_group.tres" id="12_hb5m1"]
-[ext_resource type="Script" uid="uid://dawdillo8jg2k" path="res://angler_fairy.gd" id="12_xa8c5"]
+[ext_resource type="Script" uid="uid://dawdillo8jg2k" path="res://scripts/animatronics/angler_fairy.gd" id="12_xa8c5"]
 [ext_resource type="Theme" uid="uid://yaxmlrujwm50" path="res://camera_button_theme.tres" id="13_qhcbd"]
-[ext_resource type="PackedScene" uid="uid://de3pmt4kj1ro7" path="res://wall_red.tscn" id="14_rvswv"]
-[ext_resource type="PackedScene" uid="uid://c5xkoaoqwt4bt" path="res://wall_blue.tscn" id="15_boyg6"]
-[ext_resource type="Script" uid="uid://b6xexvbdogh68" path="res://wall_animator.gd" id="15_e36ub"]
-[ext_resource type="Script" uid="uid://dqiwiyo8nb78u" path="res://office.gd" id="21_vaj68"]
-[ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://wall_yellow.tscn" id="22_x5p1p"]
-[ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://temp_switch.tscn" id="25_i2p71"]
+[ext_resource type="PackedScene" uid="uid://de3pmt4kj1ro7" path="res://models/wall_red.tscn" id="14_rvswv"]
+[ext_resource type="PackedScene" uid="uid://c5xkoaoqwt4bt" path="res://models/wall_blue.tscn" id="15_boyg6"]
+[ext_resource type="Script" uid="uid://b6xexvbdogh68" path="res://scripts/wall_animator.gd" id="15_e36ub"]
+[ext_resource type="Script" uid="uid://dqiwiyo8nb78u" path="res://scripts/office.gd" id="21_vaj68"]
+[ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="22_x5p1p"]
+[ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="25_i2p71"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
 height = 3.0
@@ -510,7 +510,7 @@ stream = ExtResource("10_mfdv2")
 
 [node name="DoorHandler" type="Node" parent="." unique_id=964039169 node_paths=PackedStringArray("door_nodes", "light_nodes") groups=["DoorHandler"]]
 script = ExtResource("2_fc0e3")
-door_nodes = [NodePath("../Office/wall_red"), NodePath("../Office/wall_blue")]
+door_nodes = [null, null]
 doors_closed = Array[bool]([false, false])
 light_nodes = [NodePath("../Office/LightL"), NodePath("../Office/LightR")]
 lights_on = Array[bool]([false, false])
@@ -674,11 +674,11 @@ doorHandler = NodePath("../DoorHandler")
 cameraHandler = NodePath("../SubViewport")
 tempSwitch = NodePath("Table/temp_switch")
 
-[node name="wall_red" parent="Office" unique_id=1833346100 instance=ExtResource("14_rvswv")]
+[node name="wall_red" parent="Office" unique_id=320212070 instance=ExtResource("14_rvswv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, 0)
 script = ExtResource("15_e36ub")
 
-[node name="wall_blue" parent="Office" unique_id=930298628 instance=ExtResource("15_boyg6")]
+[node name="wall_blue" parent="Office" unique_id=325434234 instance=ExtResource("15_boyg6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, 0)
 script = ExtResource("15_e36ub")
 
@@ -1122,7 +1122,7 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.5
 layers = 516
 mesh = SubResource("QuadMesh_e36ub")
 
-[node name="wall_yellow" parent="." unique_id=320212070 instance=ExtResource("22_x5p1p")]
+[node name="wall_yellow" parent="." unique_id=267169977 instance=ExtResource("22_x5p1p")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
 
 [connection signal="input_event" from="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" to="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" method="_on_input_event"]
