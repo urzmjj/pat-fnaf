@@ -510,7 +510,7 @@ stream = ExtResource("10_mfdv2")
 
 [node name="DoorHandler" type="Node" parent="." unique_id=964039169 node_paths=PackedStringArray("door_nodes", "light_nodes") groups=["DoorHandler"]]
 script = ExtResource("2_fc0e3")
-door_nodes = [null, null]
+door_nodes = [NodePath("../Office/wall_red"), NodePath("../Office/wall_blue")]
 doors_closed = Array[bool]([false, false])
 light_nodes = [NodePath("../Office/LightL"), NodePath("../Office/LightR")]
 lights_on = Array[bool]([false, false])
