@@ -1,0 +1,622 @@
+[gd_resource type="Resource" script_class="NightDatabase" format=3 uid="uid://beg0pe4i1rg8a"]
+
+[ext_resource type="Script" uid="uid://c6832darxdrb2" path="res://scripts/night_data.gd" id="1_j4iqq"]
+[ext_resource type="Script" uid="uid://by3bw4sfcdxc4" path="res://scripts/ai_level_dynamic.gd" id="2_uy8ly"]
+[ext_resource type="Script" uid="uid://c00m810htr85w" path="res://scripts/night_database.gd" id="2_ypuks"]
+
+[sub_resource type="Resource" id="Resource_ypuks"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_uy8ly"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_fq7bo"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_2eth7"]
+script = ExtResource("1_j4iqq")
+ai_levels = Array[ExtResource("2_uy8ly")]([SubResource("Resource_ypuks"), null, SubResource("Resource_uy8ly"), null, null, SubResource("Resource_fq7bo"), null, null, null, null, null, null, null, null, null, null])
+power = 0
+temperature = 0.0
+metadata/_custom_type_script = "uid://c6832darxdrb2"
+
+[sub_resource type="Resource" id="Resource_d2ttw"]
+script = ExtResource("2_uy8ly")
+starting_level = 3
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_bepvo"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_2f8es"]
+script = ExtResource("2_uy8ly")
+starting_level = 1
+level_changes = Dictionary[int, int]({
+1: 1,
+2: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_ykiia"]
+script = ExtResource("2_uy8ly")
+starting_level = 1
+level_changes = Dictionary[int, int]({
+2: 1,
+4: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_6q16t"]
+script = ExtResource("2_uy8ly")
+starting_level = 2
+level_changes = Dictionary[int, int]({
+3: 2,
+4: 2,
+5: 2
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_jhk3h"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 2
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_t5fpb"]
+script = ExtResource("1_j4iqq")
+ai_levels = Array[ExtResource("2_uy8ly")]([SubResource("Resource_d2ttw"), SubResource("Resource_bepvo"), SubResource("Resource_2f8es"), null, null, SubResource("Resource_ykiia"), SubResource("Resource_6q16t"), null, SubResource("Resource_jhk3h"), null, null, null, null, null, null, null])
+power = 6
+metadata/_custom_type_script = "uid://c6832darxdrb2"
+
+[sub_resource type="Resource" id="Resource_tnx0i"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_5lg7y"]
+script = ExtResource("2_uy8ly")
+starting_level = 3
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_vmxgs"]
+script = ExtResource("2_uy8ly")
+starting_level = 2
+level_changes = Dictionary[int, int]({
+2: 1,
+5: 2
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_lb0eh"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_ib1vq"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+4: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_pe5t5"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+3: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_sdks2"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_snh36"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+5: 3
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_krqax"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+2: 1,
+4: 2
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_cigc4"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+5: 5
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_t4nmw"]
+script = ExtResource("1_j4iqq")
+ai_levels = Array[ExtResource("2_uy8ly")]([SubResource("Resource_tnx0i"), SubResource("Resource_5lg7y"), SubResource("Resource_vmxgs"), SubResource("Resource_lb0eh"), SubResource("Resource_ib1vq"), SubResource("Resource_pe5t5"), SubResource("Resource_sdks2"), SubResource("Resource_snh36"), SubResource("Resource_krqax"), null, null, null, null, null, SubResource("Resource_cigc4"), null])
+power = 5
+metadata/_custom_type_script = "uid://c6832darxdrb2"
+
+[sub_resource type="Resource" id="Resource_2555h"]
+script = ExtResource("2_uy8ly")
+starting_level = 2
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_stf8t"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_helrf"]
+script = ExtResource("2_uy8ly")
+starting_level = 6
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_vfvf3"]
+script = ExtResource("2_uy8ly")
+starting_level = 4
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_puc4h"]
+script = ExtResource("2_uy8ly")
+starting_level = 4
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_y01vf"]
+script = ExtResource("2_uy8ly")
+starting_level = 4
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_3bjgo"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+2: 2,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_omewh"]
+script = ExtResource("2_uy8ly")
+starting_level = 2
+level_changes = Dictionary[int, int]({
+2: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_docvm"]
+script = ExtResource("2_uy8ly")
+starting_level = 7
+level_changes = Dictionary[int, int]({
+4: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_uy1eb"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_q5bf1"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+3: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_rw1ea"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+4: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_ivf2b"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+4: 5
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_gf7nm"]
+script = ExtResource("2_uy8ly")
+starting_level = 2
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 2,
+5: 2
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_16yt0"]
+script = ExtResource("1_j4iqq")
+ai_levels = Array[ExtResource("2_uy8ly")]([SubResource("Resource_2555h"), SubResource("Resource_stf8t"), SubResource("Resource_helrf"), SubResource("Resource_vfvf3"), SubResource("Resource_puc4h"), SubResource("Resource_y01vf"), SubResource("Resource_3bjgo"), SubResource("Resource_omewh"), SubResource("Resource_docvm"), SubResource("Resource_uy1eb"), SubResource("Resource_q5bf1"), null, SubResource("Resource_rw1ea"), SubResource("Resource_ivf2b"), SubResource("Resource_gf7nm"), null])
+temperature = 0.5
+metadata/_custom_type_script = "uid://c6832darxdrb2"
+
+[sub_resource type="Resource" id="Resource_yx8fd"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_aqgtw"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_ivll6"]
+script = ExtResource("2_uy8ly")
+starting_level = 7
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_v6tjw"]
+script = ExtResource("2_uy8ly")
+starting_level = 4
+level_changes = Dictionary[int, int]({
+2: 1,
+4: 1,
+5: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_xk8ld"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_c3bja"]
+script = ExtResource("2_uy8ly")
+starting_level = 7
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_2uv6p"]
+script = ExtResource("2_uy8ly")
+starting_level = 7
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_w1l5h"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_qxfjq"]
+script = ExtResource("2_uy8ly")
+starting_level = 7
+level_changes = Dictionary[int, int]({
+2: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_hjod1"]
+script = ExtResource("2_uy8ly")
+starting_level = 6
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_c2llg"]
+script = ExtResource("2_uy8ly")
+starting_level = 5
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 2,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_1j0wl"]
+script = ExtResource("2_uy8ly")
+level_changes = Dictionary[int, int]({
+1: 1,
+2: 1,
+3: 2,
+4: 2,
+5: 3
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_7n8bh"]
+script = ExtResource("2_uy8ly")
+starting_level = 6
+level_changes = Dictionary[int, int]({
+3: 2,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_cfenc"]
+script = ExtResource("2_uy8ly")
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_d022l"]
+script = ExtResource("2_uy8ly")
+starting_level = 7
+level_changes = Dictionary[int, int]({
+1: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_70ewu"]
+script = ExtResource("2_uy8ly")
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_w5iyi"]
+script = ExtResource("1_j4iqq")
+ai_levels = Array[ExtResource("2_uy8ly")]([SubResource("Resource_yx8fd"), SubResource("Resource_aqgtw"), SubResource("Resource_ivll6"), SubResource("Resource_v6tjw"), SubResource("Resource_xk8ld"), SubResource("Resource_c3bja"), SubResource("Resource_2uv6p"), SubResource("Resource_w1l5h"), SubResource("Resource_qxfjq"), SubResource("Resource_hjod1"), SubResource("Resource_c2llg"), SubResource("Resource_1j0wl"), SubResource("Resource_7n8bh"), SubResource("Resource_cfenc"), SubResource("Resource_d022l"), SubResource("Resource_70ewu")])
+power = 3
+metadata/_custom_type_script = "uid://c6832darxdrb2"
+
+[sub_resource type="Resource" id="Resource_0gfm6"]
+script = ExtResource("2_uy8ly")
+starting_level = 10
+level_changes = Dictionary[int, int]({
+2: 1,
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_qv1qy"]
+script = ExtResource("2_uy8ly")
+starting_level = 10
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_qc5tr"]
+script = ExtResource("2_uy8ly")
+starting_level = 14
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_75its"]
+script = ExtResource("2_uy8ly")
+starting_level = 10
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_a40qo"]
+script = ExtResource("2_uy8ly")
+starting_level = 10
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_60g24"]
+script = ExtResource("2_uy8ly")
+starting_level = 12
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_hdw8u"]
+script = ExtResource("2_uy8ly")
+starting_level = 16
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_a7gmh"]
+script = ExtResource("2_uy8ly")
+starting_level = 14
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_od6qr"]
+script = ExtResource("2_uy8ly")
+starting_level = 15
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_qfkwc"]
+script = ExtResource("2_uy8ly")
+starting_level = 11
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_oc6ol"]
+script = ExtResource("2_uy8ly")
+starting_level = 17
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_6ci46"]
+script = ExtResource("2_uy8ly")
+starting_level = 13
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_bu3o5"]
+script = ExtResource("2_uy8ly")
+starting_level = 15
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_u6dlj"]
+script = ExtResource("2_uy8ly")
+starting_level = 8
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_pbe71"]
+script = ExtResource("2_uy8ly")
+starting_level = 10
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_au6fm"]
+script = ExtResource("2_uy8ly")
+starting_level = 13
+level_changes = Dictionary[int, int]({
+3: 1,
+4: 1
+})
+metadata/_custom_type_script = "uid://by3bw4sfcdxc4"
+
+[sub_resource type="Resource" id="Resource_wbdrg"]
+script = ExtResource("1_j4iqq")
+ai_levels = Array[ExtResource("2_uy8ly")]([SubResource("Resource_0gfm6"), SubResource("Resource_qv1qy"), SubResource("Resource_qc5tr"), SubResource("Resource_75its"), SubResource("Resource_a40qo"), SubResource("Resource_60g24"), SubResource("Resource_hdw8u"), SubResource("Resource_a7gmh"), SubResource("Resource_od6qr"), SubResource("Resource_qfkwc"), SubResource("Resource_oc6ol"), SubResource("Resource_6ci46"), SubResource("Resource_bu3o5"), SubResource("Resource_u6dlj"), SubResource("Resource_pbe71"), SubResource("Resource_au6fm")])
+power = 3
+temperature = 1.5
+metadata/_custom_type_script = "uid://c6832darxdrb2"
+
+[resource]
+script = ExtResource("2_ypuks")
+nights = Array[ExtResource("1_j4iqq")]([SubResource("Resource_2eth7"), SubResource("Resource_t5fpb"), SubResource("Resource_t4nmw"), SubResource("Resource_16yt0"), SubResource("Resource_w5iyi"), SubResource("Resource_wbdrg")])
+metadata/_custom_type_script = "uid://c00m810htr85w"

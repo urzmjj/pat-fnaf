@@ -22,9 +22,9 @@ func _on_start_button_pressed() -> void:
 	start_custom_night()
 
 func get_data() -> NightData:
-	var ai_levels: Array[int] = []
+	var ai_levels: Array[AILevelDynamic] = []
 	for a in ai_selects:
-		ai_levels.append(a.ai_level)
+		ai_levels.append(AILevelDynamic.new(a.ai_level))
 	var power: int
 	var temperature: float
 	match power_option.selected:
@@ -50,14 +50,14 @@ func get_data() -> NightData:
 		2:
 			temperature = 0.5
 		3:
-			temperature = 1
+			temperature = 1.0
 		4:
 			temperature = 1.5
 		5:
-			temperature = 2
+			temperature = 2.0
 		_:
 			temperature = 0
-	return NightData.new(ai_levels,power,temperature)
+	return NightData.from_data(ai_levels,power,temperature)
 
 
 func _on_back_button_pressed() -> void:

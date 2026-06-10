@@ -1,10 +1,14 @@
 class_name NightData
+extends Resource
 
-var ai_levels: Array[int]
-var power: int
-var temperature: float
+@export var ai_levels: Array[AILevelDynamic] = []
+@export var power: int = 4
+@export var temperature: float = 1.0
 
-func _init(ai_levels: Array[int], power: int, temperature: float) -> void:
-	self.ai_levels = ai_levels
-	self.power = power
-	self.temperature = temperature
+
+static func from_data(ai_levels: Array[AILevelDynamic] = [], power: int = 4, temperature: float = 1.0) -> NightData:
+	var night_data = new()
+	night_data.ai_levels = ai_levels
+	night_data.power = power
+	night_data.temperature = temperature
+	return night_data
