@@ -98,3 +98,4 @@ theme = ExtResource("2_1bvp3")
 night_loader = NodePath("../../NightLoader")
 
 [connection signal="pressed" from="MainMenu/Control/VBoxContainer/CustomNightButton" to="MainMenu" method="_on_custom_night_button_pressed"]
+[connection signal="pressed" from="MainMenu/Control/VBoxContainer/QuitButton" to="MainMenu" method="_on_quit_button_pressed"]
