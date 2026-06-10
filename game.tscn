@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://c1ojnktoubxlb"]
 
 [ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://scripts/animatronics/blue_fairy.gd" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://brvi3emhmsqrd" path="res://scripts/game_init.gd" id="1_bnpwn"]
 [ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://scripts/animatronics/icely_toad.gd" id="1_ryrav"]
 [ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://scripts/animatronic_pos_3d.gd" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://scripts/door_handler.gd" id="2_fc0e3"]
+[ext_resource type="Script" uid="uid://dfgqw58s17p2c" path="res://scripts/ai_loader.gd" id="3_5b14r"]
 [ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://scripts/subviewport_input_handler.gd" id="3_e36ub"]
 [ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://scripts/animatronics/firefly.gd" id="3_eow3j"]
 [ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://scripts/debug_stats.gd" id="3_feb5d"]
@@ -90,15 +92,6 @@ albedo_color = Color(0.77254903, 0.16862746, 0.16862746, 1)
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mfdv2"]
 material = SubResource("StandardMaterial3D_hve3p")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ryrav"]
-albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
-metallic = 1.0
-roughness = 0.5
-
-[sub_resource type="BoxMesh" id="BoxMesh_80nbo"]
-material = SubResource("StandardMaterial3D_ryrav")
-size = Vector3(0.8, 2, 0.8)
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
 albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
 
@@ -148,6 +141,43 @@ size = Vector2(1, 2)
 [sub_resource type="QuadMesh" id="QuadMesh_7jktm"]
 material = SubResource("StandardMaterial3D_eow3j")
 size = Vector2(2, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xfvwf"]
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
+metallic = 1.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_xa8c5"]
+material = SubResource("StandardMaterial3D_xfvwf")
+size = Vector3(0.2, 0.05, 3)
+
+[sub_resource type="Animation" id="Animation_5b14r"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926)
+
+[sub_resource type="Animation" id="Animation_bnpwn"]
+resource_name = "fan_spin"
+length = 0.40000167
+loop_mode = 1
+step = 0.016666668
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.258819, 0, 0.965926, 0.1, 1, 0, 0.5, 0, 0.866025, 0.2, 1, 0, 0.965926, 0, 0.258819, 0.30136752, 1, 0, 0.866025, 0, -0.5, 0.4, 1, 0, 0.258819, 0, -0.965926)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_36jdj"]
+_data = {
+&"RESET": SubResource("Animation_5b14r"),
+&"fan_spin": SubResource("Animation_bnpwn")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_j5wjh"]
 albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
@@ -299,7 +329,11 @@ size = Vector2(3, 3)
 [sub_resource type="QuadMesh" id="QuadMesh_e36ub"]
 material = SubResource("StandardMaterial3D_eow3j")
 
-[node name="Node3D" type="Node3D" unique_id=1071604260]
+[node name="Game" type="Node3D" unique_id=1071604260 node_paths=PackedStringArray("ai_loader", "office")]
+process_mode = 1
+script = ExtResource("1_bnpwn")
+ai_loader = NodePath("Animatronics")
+office = NodePath("Office")
 
 [node name="Player" type="Node3D" parent="." unique_id=1151382070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
@@ -338,11 +372,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
 visible = false
 mesh = SubResource("QuadMesh_xfvwf")
 
-[node name="Animatronics" type="Node" parent="." unique_id=258026473]
+[node name="Animatronics" type="Node" parent="." unique_id=258026473 node_paths=PackedStringArray("animatronics")]
+script = ExtResource("3_5b14r")
+animatronics = [NodePath("BlueFairy"), null, null, NodePath("MerryFairy"), null, NodePath("WitchFairy"), NodePath("IcelyToad"), null, NodePath("AnglerFairy"), NodePath("Firefly"), null, null, null, null, null, null, null, null, null, null, null, null, null, null]
 
 [node name="BlueFairy" type="Node" parent="Animatronics" unique_id=444632484]
 script = ExtResource("1_80nbo")
 stages = 5
+ai_level = 2
 move_time = 4.02
 metadata/_custom_type_script = "uid://c4bllcvvxn1ot"
 
@@ -364,23 +401,24 @@ script = ExtResource("1_ryrav")
 audio_player = NodePath("AudioStreamPlayer")
 audio_streams = Array[AudioStream]([ExtResource("4_7sc4i"), ExtResource("5_80cx4"), ExtResource("6_e8heu"), ExtResource("7_rvswv")])
 stages = 1
+ai_level = 10
 move_time = 12.03
 metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Animatronics/IcelyToad" unique_id=1853153347]
 volume_db = 12.0
 
-[node name="Firefly" type="Node" parent="Animatronics" unique_id=678104402]
-script = ExtResource("3_eow3j")
-stages = 5
-move_time = 5.01
-metadata/_custom_type_script = "uid://ba1dilo0tnuc8"
-
 [node name="AnglerFairy" type="Node" parent="Animatronics" unique_id=869711172]
 script = ExtResource("12_xa8c5")
 stages = 5
 move_time = 7.03
 metadata/_custom_type_script = "uid://dawdillo8jg2k"
+
+[node name="Firefly" type="Node" parent="Animatronics" unique_id=678104402]
+script = ExtResource("3_eow3j")
+stages = 5
+move_time = 5.01
+metadata/_custom_type_script = "uid://ba1dilo0tnuc8"
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object")]
 size = Vector2i(960, 540)
@@ -509,6 +547,7 @@ audio_player = NodePath("../AudioStreamPlayer")
 stream = ExtResource("10_mfdv2")
 
 [node name="DoorHandler" type="Node" parent="." unique_id=964039169 node_paths=PackedStringArray("door_nodes", "light_nodes") groups=["DoorHandler"]]
+unique_name_in_owner = true
 script = ExtResource("2_fc0e3")
 door_nodes = [NodePath("../Office/wall_red"), NodePath("../Office/wall_blue")]
 doors_closed = Array[bool]([false, false])
@@ -517,17 +556,17 @@ lights_on = Array[bool]([false, false])
 metadata/_custom_type_script = "uid://bfccwsyo8lyt4"
 
 [node name="Debug" type="Node" parent="." unique_id=902104194 node_paths=PackedStringArray("debug_label", "fairies")]
-process_mode = 3
+process_mode = 4
 script = ExtResource("3_feb5d")
 debug_label = NodePath("../CanvasLayer/Label")
 fairies = [NodePath("../Animatronics/BlueFairy"), null, null, NodePath("../Animatronics/MerryFairy"), null, NodePath("../Animatronics/WitchFairy"), null, NodePath("../Animatronics/IcelyToad"), NodePath("../Animatronics/AnglerFairy"), NodePath("../Animatronics/Firefly"), null, null, null, null, null, null]
 
-[node name="Positions" type="Node" parent="." unique_id=903842287]
+[node name="Positions" type="Node3D" parent="." unique_id=1590542790]
 
-[node name="Blue" type="Node" parent="Positions" unique_id=739523855]
+[node name="Blue" type="Node3D" parent="Positions" unique_id=2120271543]
 
 [node name="Blue_L4" type="MeshInstance3D" parent="Positions/Blue" unique_id=2098502329 node_paths=PackedStringArray("animatronic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_feb5d")
@@ -537,7 +576,7 @@ pos = 8
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
 [node name="Blue_R4" type="MeshInstance3D" parent="Positions/Blue" unique_id=597389590 node_paths=PackedStringArray("animatronic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_feb5d")
@@ -546,10 +585,10 @@ animatronic = NodePath("../../../Animatronics/BlueFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
-[node name="Merry" type="Node" parent="Positions" unique_id=136393531]
+[node name="Merry" type="Node3D" parent="Positions" unique_id=875461744]
 
 [node name="Merry_L4" type="MeshInstance3D" parent="Positions/Merry" unique_id=247076088 node_paths=PackedStringArray("animatronic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_7sc4i")
@@ -559,7 +598,7 @@ pos = 8
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
 [node name="Merry_R4" type="MeshInstance3D" parent="Positions/Merry" unique_id=1110915342 node_paths=PackedStringArray("animatronic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_7sc4i")
@@ -568,7 +607,7 @@ animatronic = NodePath("../../../Animatronics/MerryFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
-[node name="Witch" type="Node" parent="Positions" unique_id=430908842]
+[node name="Witch" type="Node3D" parent="Positions" unique_id=336536996]
 
 [node name="Witch_1" type="MeshInstance3D" parent="Positions/Witch" unique_id=1554564157 node_paths=PackedStringArray("animatronic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1)
@@ -585,7 +624,7 @@ metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Positions/Witch/Witch_1/Area3D" unique_id=1973285202]
 shape = SubResource("CapsuleShape3D_f1jbl")
 
-[node name="Firefly" type="Node" parent="Positions" unique_id=815920559]
+[node name="Firefly" type="Node3D" parent="Positions" unique_id=210787906]
 
 [node name="Firefly_1" type="MeshInstance3D" parent="Positions/Firefly" unique_id=2061089234 node_paths=PackedStringArray("animatronic")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
@@ -663,11 +702,13 @@ light_cull_mask = 4294966275
 shadow_enabled = true
 shadow_caster_mask = 4294966275
 
-[node name="Office" type="Node" parent="." unique_id=989273918 node_paths=PackedStringArray("label", "time_label", "powerOn", "powerOff", "doorHandler", "cameraHandler", "tempSwitch") groups=["Office"]]
+[node name="Office" type="Node3D" parent="." unique_id=16614919 node_paths=PackedStringArray("label", "time_label", "powerOn", "powerOff", "doorHandler", "cameraHandler", "tempSwitch") groups=["Office"]]
+unique_name_in_owner = true
 process_mode = 3
 script = ExtResource("21_vaj68")
 label = NodePath("../CanvasLayer/RichTextLabel")
 time_label = NodePath("../CanvasLayer/RichTextLabel2")
+powerDrainRate = -1
 powerOn = [NodePath("Table/Monitor/Node3D"), NodePath("OmniLight3D"), NodePath("../Player/Camera3D/MeshInstance3D/MeshInstance3D")]
 powerOff = [NodePath("Table/Monitor/MeshInstance3D3"), NodePath("../Player/Camera3D/MeshInstance3D/MeshInstance3D2")]
 doorHandler = NodePath("../DoorHandler")
@@ -681,18 +722,6 @@ script = ExtResource("15_e36ub")
 [node name="wall_blue" parent="Office" unique_id=325434234 instance=ExtResource("15_boyg6")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, 0)
 script = ExtResource("15_e36ub")
-
-[node name="LeftDoorModel" type="MeshInstance3D" parent="Office" unique_id=1349325437]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, -2.0283537, -0.0018391609)
-visible = false
-layers = 517
-mesh = SubResource("BoxMesh_80nbo")
-
-[node name="RightDoorModel" type="MeshInstance3D" parent="Office" unique_id=142232641]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, -2, 0)
-visible = false
-layers = 517
-mesh = SubResource("BoxMesh_80nbo")
 
 [node name="Floor" type="MeshInstance3D" parent="Office" unique_id=391381073]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -1)
@@ -740,7 +769,7 @@ layers = 517
 mesh = SubResource("PlaneMesh_f1jbl")
 
 [node name="FrontWall" type="MeshInstance3D" parent="Office" unique_id=1914613665]
-transform = Transform3D(1, 0, 0, 0, 1, -1.7484555e-07, 0, 1.7484555e-07, 1, 2.9802322e-06, -0.0052860975, -2.5000033)
+transform = Transform3D(1, 0, 0, 0, 1, -1.7484555e-07, 0, 1.7484555e-07, 1, 0, 0, -2.5)
 layers = 517
 mesh = SubResource("QuadMesh_j5wjh")
 
@@ -793,6 +822,14 @@ mesh = SubResource("QuadMesh_7jktm")
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 2.5, 0, 1.5)
 layers = 517
 mesh = SubResource("QuadMesh_7jktm")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Office" unique_id=1058105758]
+transform = Transform3D(0.86602545, 0, -0.4999999, 0, 1, 0, 0.4999999, 0, 0.86602545, 0, 0.85, 0)
+mesh = SubResource("BoxMesh_xa8c5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Office/MeshInstance3D2" unique_id=36595386]
+libraries/ = SubResource("AnimationLibrary_36jdj")
+speed_scale = 0.5
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Office" unique_id=1685102825]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.75, 0)
@@ -1018,8 +1055,9 @@ script = ExtResource("2_e2o6t")
 animatronic = NodePath("../../../../../Animatronics/IcelyToad")
 pos = 1
 
-[node name="temp_switch" parent="Office/Table" unique_id=123554159 instance=ExtResource("25_i2p71")]
+[node name="temp_switch" parent="Office/Table" unique_id=123554159 node_paths=PackedStringArray("fanAnimator") instance=ExtResource("25_i2p71")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, -0.25, 0.3)
+fanAnimator = NodePath("../../MeshInstance3D2/AnimationPlayer")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6460043]
 

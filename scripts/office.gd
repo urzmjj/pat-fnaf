@@ -40,14 +40,15 @@ func _process(delta: float) -> void:
 			time_label.text = time_f()
 			drainTimer += delta
 			temperature +=(1 if tempSwitch.flipped else -1) * tempSpeed * delta
-			while drainTimer > 1:
+			while drainTimer >= 1:
 				drainTimer -= 1
-				if powerDrainRate > 0:
-					passiveDrainCounter += 1
+				if not (powerDrainRate == 0):
 					power -= powerConsumption
-					while passiveDrainCounter > powerDrainRate:
-						passiveDrainCounter -= powerDrainRate
-						power -= 1
+					if powerDrainRate > 0:
+						passiveDrainCounter += 1
+						while passiveDrainCounter >= powerDrainRate:
+							passiveDrainCounter -= powerDrainRate
+							power -= 1
 			if power <= 0:
 				powerConsumption = 0
 				label.text = ""

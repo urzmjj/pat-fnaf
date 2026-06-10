@@ -1,0 +1,1727 @@
+[gd_scene format=3 uid="uid://cbfactmlorlnp"]
+
+[ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="1_080t1"]
+[ext_resource type="Script" uid="uid://drw0hjf22rmfd" path="res://scripts/ai_select.gd" id="1_b2q62"]
+[ext_resource type="Script" uid="uid://1waitkij0u8g" path="res://scripts/custom_night_loader.gd" id="1_vslsh"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://menus.tres" id="2_b2q62"]
+
+[sub_resource type="Gradient" id="Gradient_b2q62"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vslsh"]
+gradient = SubResource("Gradient_b2q62")
+
+[node name="CustomNight" type="Control" unique_id=2115047209 node_paths=PackedStringArray("ai_selects", "power_option", "temperature_option")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vslsh")
+ai_selects = [NodePath("Control/HFlowContainer/Blue Fairy"), NodePath("Control/HFlowContainer/Strong Fairy"), NodePath("Control/HFlowContainer/Busy Fairy"), NodePath("Control/HFlowContainer/Merry Fairy"), NodePath("Control/HFlowContainer/Brave Fary"), NodePath("Control/HFlowContainer/Witch Fairy"), NodePath("Control/HFlowContainer/Icely Toad"), NodePath("Control/HFlowContainer/Fairy Dummy"), NodePath("Control/HFlowContainer/Angler Fairy"), NodePath("Control/HFlowContainer/Firefly"), NodePath("Control/HFlowContainer/Dummy Fairy"), NodePath("Control/HFlowContainer/Mime Fairy"), NodePath("Control/HFlowContainer/Military Fairy"), NodePath("Control/HFlowContainer/???"), NodePath("Control/HFlowContainer/Thermal Fairy"), NodePath("Control/HFlowContainer/???2"), NodePath("Control/HFlowContainer/Horror Blue"), NodePath("Control/HFlowContainer/Horror Witch"), NodePath("Control/HFlowContainer/???3"), NodePath("Control/HFlowContainer/???4"), NodePath("Control/HFlowContainer/???5"), NodePath("Control/HFlowContainer/???6"), NodePath("Control/HFlowContainer/Gerson"), NodePath("Control/HFlowContainer/Cirno")]
+power_option = NodePath("Control2/ScrollContainer/VBoxContainer/PowerDrain/OptionButton")
+temperature_option = NodePath("Control2/ScrollContainer/VBoxContainer/Temperature/OptionButton")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1980806660]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b2q62")
+texture = SubResource("GradientTexture2D_vslsh")
+
+[node name="Control" type="Control" parent="." unique_id=861653733]
+layout_mode = 1
+anchor_right = 0.8
+anchor_bottom = 0.8
+offset_left = 10.0
+offset_top = 10.0
+offset_right = -5.0
+offset_bottom = -5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b2q62")
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control" unique_id=1962406914]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b2q62")
+
+[node name="HFlowContainer" type="HFlowContainer" parent="Control" unique_id=282747313]
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -154.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b2q62")
+alignment = 1
+last_wrap_alignment = 2
+
+[node name="Blue Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1084509774]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Blue Fairy" unique_id=1049469997]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Blue Fairy" unique_id=341513457]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer" unique_id=557677894]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Blue Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer" unique_id=1854727807]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer" unique_id=1504115401]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer/HBoxContainer" unique_id=1471791525]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer/HBoxContainer" unique_id=2087939778]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer/HBoxContainer" unique_id=72227132]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Strong Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=936138379]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Strong Fairy" unique_id=1252886045]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Strong Fairy" unique_id=1981305209]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer" unique_id=678402043]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Strong Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer" unique_id=1082810673]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer" unique_id=401007979]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer/HBoxContainer" unique_id=2142188875]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer/HBoxContainer" unique_id=196265284]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer/HBoxContainer" unique_id=1116062809]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Busy Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=707745462]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Busy Fairy" unique_id=1227537391]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Busy Fairy" unique_id=482581159]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer" unique_id=1511735003]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Busy Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer" unique_id=432418088]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer" unique_id=898156731]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer/HBoxContainer" unique_id=1688771251]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer/HBoxContainer" unique_id=236516221]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer/HBoxContainer" unique_id=515816749]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Merry Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1576606057]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Merry Fairy" unique_id=363374330]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Merry Fairy" unique_id=1911054190]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer" unique_id=1340300106]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Merry Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer" unique_id=1865808914]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer" unique_id=969999968]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer/HBoxContainer" unique_id=2004449041]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer/HBoxContainer" unique_id=487985755]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer/HBoxContainer" unique_id=1895356399]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Brave Fary" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1870646246]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Brave Fary" unique_id=331141427]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Brave Fary" unique_id=1875212778]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Brave Fary/VBoxContainer" unique_id=2126685239]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Brave Fary"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Brave Fary/VBoxContainer" unique_id=1129163712]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Brave Fary/VBoxContainer" unique_id=1110016261]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Brave Fary/VBoxContainer/HBoxContainer" unique_id=1055804418]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Brave Fary/VBoxContainer/HBoxContainer" unique_id=1865545857]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Brave Fary/VBoxContainer/HBoxContainer" unique_id=700219450]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Witch Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=2104796752]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Witch Fairy" unique_id=1517559715]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Witch Fairy" unique_id=1770507348]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer" unique_id=749296763]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Witch Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer" unique_id=1510465429]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer" unique_id=726066169]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer/HBoxContainer" unique_id=1989085748]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer/HBoxContainer" unique_id=338286270]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer/HBoxContainer" unique_id=49125206]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Icely Toad" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1168441189]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Icely Toad" unique_id=1837796139]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Icely Toad" unique_id=1614241823]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Icely Toad/VBoxContainer" unique_id=1497385986]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Icely Toad"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Icely Toad/VBoxContainer" unique_id=283477452]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+texture = ExtResource("1_080t1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Icely Toad/VBoxContainer" unique_id=632772676]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Icely Toad/VBoxContainer/HBoxContainer" unique_id=354055739]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Icely Toad/VBoxContainer/HBoxContainer" unique_id=697044132]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Icely Toad/VBoxContainer/HBoxContainer" unique_id=912684783]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Fairy Dummy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=617564190]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Fairy Dummy" unique_id=192399697]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Fairy Dummy" unique_id=755411093]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer" unique_id=1983177338]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Fairy Dummy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer" unique_id=837114747]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer" unique_id=111195523]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer/HBoxContainer" unique_id=2131887916]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer/HBoxContainer" unique_id=1069188618]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer/HBoxContainer" unique_id=1793190268]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Angler Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=661041623]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Angler Fairy" unique_id=803401739]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Angler Fairy" unique_id=2079750256]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer" unique_id=1411249949]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Angler Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer" unique_id=1286006974]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer" unique_id=869780252]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer/HBoxContainer" unique_id=1952788723]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer/HBoxContainer" unique_id=735981047]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer/HBoxContainer" unique_id=1097306090]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Firefly" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1620608496]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Firefly" unique_id=950179956]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Firefly" unique_id=1136007968]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Firefly/VBoxContainer" unique_id=910583117]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Firefly"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Firefly/VBoxContainer" unique_id=1921394733]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Firefly/VBoxContainer" unique_id=1926692572]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Firefly/VBoxContainer/HBoxContainer" unique_id=627169365]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Firefly/VBoxContainer/HBoxContainer" unique_id=12628289]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Firefly/VBoxContainer/HBoxContainer" unique_id=271001521]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Dummy Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1322727401]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Dummy Fairy" unique_id=350325034]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Dummy Fairy" unique_id=766457143]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer" unique_id=297142491]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Dummy Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer" unique_id=434425764]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer" unique_id=1741438360]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer/HBoxContainer" unique_id=564468017]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer/HBoxContainer" unique_id=1657790550]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer/HBoxContainer" unique_id=1625788182]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Mime Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1155209832]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Mime Fairy" unique_id=1621444782]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Mime Fairy" unique_id=1051643770]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer" unique_id=1232122182]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Mime Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer" unique_id=1920309840]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer" unique_id=499354182]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer/HBoxContainer" unique_id=1719693277]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer/HBoxContainer" unique_id=1017993440]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer/HBoxContainer" unique_id=2116177703]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Military Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=886823712]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Military Fairy" unique_id=332179647]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Military Fairy" unique_id=1855522007]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Military Fairy/VBoxContainer" unique_id=915227853]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Military Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Military Fairy/VBoxContainer" unique_id=1839485422]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Military Fairy/VBoxContainer" unique_id=1358221927]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Military Fairy/VBoxContainer/HBoxContainer" unique_id=1291472989]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Military Fairy/VBoxContainer/HBoxContainer" unique_id=1111109581]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Military Fairy/VBoxContainer/HBoxContainer" unique_id=1019564800]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="???" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1617773258]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???" unique_id=860924343]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???" unique_id=1431511150]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/???/VBoxContainer" unique_id=1903655515]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "???"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???/VBoxContainer" unique_id=1679016887]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???/VBoxContainer" unique_id=1740090551]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/???/VBoxContainer/HBoxContainer" unique_id=1903645156]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???/VBoxContainer/HBoxContainer" unique_id=1851625627]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/???/VBoxContainer/HBoxContainer" unique_id=1822715172]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Thermal Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1449494758]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Thermal Fairy" unique_id=105742499]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Thermal Fairy" unique_id=1497862891]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer" unique_id=947753865]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Thermal Fairy"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer" unique_id=231866475]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer" unique_id=1551808023]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer/HBoxContainer" unique_id=554725220]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer/HBoxContainer" unique_id=1583490838]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer/HBoxContainer" unique_id=466033945]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="???2" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=271038542]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???2" unique_id=1740506675]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???2" unique_id=1634821550]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=909475637]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "???2"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=1526289412]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=182560127]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/???2/VBoxContainer/HBoxContainer" unique_id=261420838]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???2/VBoxContainer/HBoxContainer" unique_id=1233279233]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/???2/VBoxContainer/HBoxContainer" unique_id=1350033101]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Horror Blue" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1429465960]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Horror Blue" unique_id=2051469067]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Horror Blue" unique_id=77861479]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Horror Blue/VBoxContainer" unique_id=648567680]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Horror Blue"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Horror Blue/VBoxContainer" unique_id=1547758422]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Horror Blue/VBoxContainer" unique_id=2039287396]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Horror Blue/VBoxContainer/HBoxContainer" unique_id=1943035938]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Horror Blue/VBoxContainer/HBoxContainer" unique_id=440589278]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Horror Blue/VBoxContainer/HBoxContainer" unique_id=20976422]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Horror Witch" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=2040911847]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Horror Witch" unique_id=525527351]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Horror Witch" unique_id=526445625]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Horror Witch/VBoxContainer" unique_id=783093906]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Horror Witch"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Horror Witch/VBoxContainer" unique_id=1897327667]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Horror Witch/VBoxContainer" unique_id=1835835172]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Horror Witch/VBoxContainer/HBoxContainer" unique_id=448623180]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Horror Witch/VBoxContainer/HBoxContainer" unique_id=759071751]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Horror Witch/VBoxContainer/HBoxContainer" unique_id=213246870]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="???3" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=557278887]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???3" unique_id=1636231362]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???3" unique_id=877985976]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1172444441]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "???3"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1256419322]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1187565256]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=1929739990]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=66375551]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=760314236]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="???4" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1242019712]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???4" unique_id=581287661]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???4" unique_id=540325663]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1595702203]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "???4"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1693360078]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1497863626]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=430025657]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=1219153790]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=723981778]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="???5" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=965241208]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???5" unique_id=1414012939]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???5" unique_id=415343611]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=1334749594]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "???5"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=1594444969]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=630178099]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=1987831382]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=651479319]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=1748395578]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="???6" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1756503896]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???6" unique_id=1838589961]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???6" unique_id=1909802011]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/???6/VBoxContainer" unique_id=594755244]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "???6"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???6/VBoxContainer" unique_id=2141283919]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???6/VBoxContainer" unique_id=434280839]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/???6/VBoxContainer/HBoxContainer" unique_id=1989970270]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???6/VBoxContainer/HBoxContainer" unique_id=1393200489]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/???6/VBoxContainer/HBoxContainer" unique_id=168579015]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Gerson" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=46028392]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Gerson" unique_id=458541270]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Gerson" unique_id=802028381]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Gerson/VBoxContainer" unique_id=1046519887]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Gerson"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Gerson/VBoxContainer" unique_id=158949793]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Gerson/VBoxContainer" unique_id=254139533]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Gerson/VBoxContainer/HBoxContainer" unique_id=753196676]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Gerson/VBoxContainer/HBoxContainer" unique_id=1181815148]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Gerson/VBoxContainer/HBoxContainer" unique_id=45709622]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Cirno" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1460899560]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+script = ExtResource("1_b2q62")
+metadata/_custom_type_script = "uid://drw0hjf22rmfd"
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Cirno" unique_id=1410841123]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+border_color = Color(0, 1, 1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Cirno" unique_id=1094738794]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Name" type="Label" parent="Control/HFlowContainer/Cirno/VBoxContainer" unique_id=1974247378]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+text = "Cirno"
+horizontal_alignment = 1
+
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Cirno/VBoxContainer" unique_id=1074869448]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_b2q62")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Cirno/VBoxContainer" unique_id=1948687368]
+layout_mode = 2
+size_flags_vertical = 8
+theme = ExtResource("2_b2q62")
+alignment = 1
+
+[node name="Down" type="Button" parent="Control/HFlowContainer/Cirno/VBoxContainer/HBoxContainer" unique_id=1772249896]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = "<"
+
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Cirno/VBoxContainer/HBoxContainer" unique_id=290650680]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_stretch_ratio = 3.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"ValueLabel"
+text = "20"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Up" type="Button" parent="Control/HFlowContainer/Cirno/VBoxContainer/HBoxContainer" unique_id=1528916497]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme = ExtResource("2_b2q62")
+text = ">"
+
+[node name="Control2" type="Control" parent="." unique_id=2138505617]
+layout_mode = 1
+anchor_left = 0.8
+anchor_right = 1.0
+anchor_bottom = 0.8
+offset_left = 5.0
+offset_top = 10.0
+offset_right = -10.0
+offset_bottom = -5.0
+grow_horizontal = 0
+
+[node name="ReferenceRect" type="ReferenceRect" parent="Control2" unique_id=2090930271]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b2q62")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Control2" unique_id=408488703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_b2q62")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control2/ScrollContainer" unique_id=141014459]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = ExtResource("2_b2q62")
+
+[node name="PowerDrain" type="HBoxContainer" parent="Control2/ScrollContainer/VBoxContainer" unique_id=1766473709]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+
+[node name="Label" type="Label" parent="Control2/ScrollContainer/VBoxContainer/PowerDrain" unique_id=1837626130]
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("2_b2q62")
+text = "Power Drain:"
+
+[node name="OptionButton" type="OptionButton" parent="Control2/ScrollContainer/VBoxContainer/PowerDrain" unique_id=1971518768]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("2_b2q62")
+selected = 3
+item_count = 7
+popup/item_0/text = "Off"
+popup/item_0/id = 0
+popup/item_1/text = "Lazy"
+popup/item_1/id = 1
+popup/item_2/text = "Slow"
+popup/item_2/id = 2
+popup/item_3/text = "Normal"
+popup/item_3/id = 3
+popup/item_4/text = "Fast"
+popup/item_4/id = 4
+popup/item_5/text = "Scary"
+popup/item_5/id = 5
+popup/item_6/text = "Custom"
+popup/item_6/id = 6
+
+[node name="Temperature" type="HBoxContainer" parent="Control2/ScrollContainer/VBoxContainer" unique_id=808246743]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+
+[node name="Label" type="Label" parent="Control2/ScrollContainer/VBoxContainer/Temperature" unique_id=92460601]
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("2_b2q62")
+text = "Temperature:"
+
+[node name="OptionButton" type="OptionButton" parent="Control2/ScrollContainer/VBoxContainer/Temperature" unique_id=1723412118]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("2_b2q62")
+selected = 3
+item_count = 7
+popup/item_0/text = "Off"
+popup/item_0/id = 0
+popup/item_1/text = "Lazy"
+popup/item_1/id = 1
+popup/item_2/text = "Slow"
+popup/item_2/id = 2
+popup/item_3/text = "Normal"
+popup/item_3/id = 3
+popup/item_4/text = "Fast"
+popup/item_4/id = 4
+popup/item_5/text = "Scary"
+popup/item_5/id = 6
+popup/item_6/text = "Custom"
+popup/item_6/id = 7
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Control2/ScrollContainer/VBoxContainer" unique_id=1503286553]
+layout_mode = 2
+theme = ExtResource("2_b2q62")
+
+[node name="Label" type="Label" parent="Control2/ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=802890785]
+layout_mode = 2
+size_flags_horizontal = 2
+theme = ExtResource("2_b2q62")
+text = "???"
+
+[node name="CheckBox" type="CheckBox" parent="Control2/ScrollContainer/VBoxContainer/HBoxContainer3" unique_id=1059456525]
+layout_mode = 2
+size_flags_horizontal = 10
+theme = ExtResource("2_b2q62")
+
+[node name="ReadyButton" type="Button" parent="." unique_id=1139911774]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.85
+anchor_top = 0.85
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 5.0
+offset_right = -10.0
+offset_bottom = -10.0
+grow_horizontal = 0
+grow_vertical = 0
+pivot_offset_ratio = Vector2(1, 1)
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"BigButton"
+text = "READY"
+
+[node name="BackButton" type="Button" parent="." unique_id=937744255]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 90.0
+offset_bottom = 50.0
+theme = ExtResource("2_b2q62")
+theme_type_variation = &"MainMenuButton"
+text = "BACK"
+flat = true
+
+[connection signal="pressed" from="ReadyButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]
