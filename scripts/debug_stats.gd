@@ -20,8 +20,8 @@ func _process(_delta: float) -> void:
 						Merry Fairy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
 						Brave Fairy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
 						Witch Fairy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
-						Fairy Dummy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
 						Icely Toad:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
+						Fairy Dummy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
 						Angler Fairy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
 						Firefly:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d
 						Dummy Fairy:    AI Level: %d    Time: %f/%f    Progress: %d/%d    Pos: %d

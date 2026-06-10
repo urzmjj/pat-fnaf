@@ -16,6 +16,7 @@ var passiveDrainCounter: int = 0
 @export var powerOff: Array[Node3D]
 @export var doorHandler: DoorHandler
 @export var cameraHandler: CameraHandler
+@export var aiLoader: AILoader
 @export var tempSwitch: TempSwitch
 
 # Called when the node enters the scene tree for the first time.
@@ -32,14 +33,18 @@ func _ready() -> void:
 		powerOff[i].visible = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
+	var prevTime: int = floori(time/90.0)
 	time += delta
+	var currTime: int = floori(time/90.0)
 	match gameState:
 		Constants.GameState.ACTIVE:
+			if not currTime == prevTime:
+				aiLoader.update_ai_levels(currTime)
 			powerConsumption = doorHandler.powerConsumption() + (1 if cameraHandler.camera_visible else 0) + (2 if get_tree().get_first_node_in_group("IcelyToad").progress == get_tree().get_first_node_in_group("IcelyToad").stages else 0) 
 			label.text = "Power left: %s\nUsage: %s\nTemperature: %s" % [power_f(), usage_f(), temp_f()]
 			time_label.text = time_f()
 			drainTimer += delta
-			temperature +=(1 if tempSwitch.flipped else -1) * tempSpeed * delta
+			temperature += (1 if tempSwitch.flipped else -1) * tempSpeed * delta
 			while drainTimer >= 1:
 				drainTimer -= 1
 				if not (powerDrainRate == 0):

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d0a03q1gs17xc" path="res://scripts/night_loader.gd" id="1_h2yge"]
 [ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://menus.tres" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://cjj2hdxojbtbn" path="res://scripts/main_menu.gd" id="2_lquwl"]
+[ext_resource type="Resource" uid="uid://beg0pe4i1rg8a" path="res://STORY.tres" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cbfactmlorlnp" path="res://custom_night.tscn" id="3_lquwl"]
 
 [node name="Main" type="Node3D" unique_id=1895557947]
@@ -12,9 +13,11 @@ script = ExtResource("1_h2yge")
 main_menu = NodePath("../MainMenu")
 metadata/_custom_type_script = "uid://d0a03q1gs17xc"
 
-[node name="MainMenu" type="CanvasLayer" parent="." unique_id=1297753302 node_paths=PackedStringArray("CustomNight")]
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=1297753302 node_paths=PackedStringArray("night_loader", "custom_night")]
 script = ExtResource("2_lquwl")
-CustomNight = NodePath("CustomNight")
+night_loader = NodePath("../NightLoader")
+custom_night = NodePath("CustomNight")
+night_database = ExtResource("3_7mycd")
 
 [node name="Control" type="Control" parent="MainMenu" unique_id=2142098152]
 layout_mode = 3
@@ -97,5 +100,7 @@ visible = false
 theme = ExtResource("2_1bvp3")
 night_loader = NodePath("../../NightLoader")
 
+[connection signal="pressed" from="MainMenu/Control/VBoxContainer/NewGameButton" to="MainMenu" method="_on_new_game_button_pressed"]
 [connection signal="pressed" from="MainMenu/Control/VBoxContainer/CustomNightButton" to="MainMenu" method="_on_custom_night_button_pressed"]
+[connection signal="pressed" from="MainMenu/Control/VBoxContainer/SettingsButton" to="MainMenu" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MainMenu/Control/VBoxContainer/QuitButton" to="MainMenu" method="_on_quit_button_pressed"]
