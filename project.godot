@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="pat_fnaf"
-run/main_scene="uid://c1ojnktoubxlb"
+run/main_scene="uid://tt1wabu66svw"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

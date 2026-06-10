@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://tt1wabu66svw"]
+
+[ext_resource type="Script" uid="uid://d0a03q1gs17xc" path="res://scripts/night_loader.gd" id="1_h2yge"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://menus.tres" id="2_1bvp3"]
+[ext_resource type="Script" uid="uid://cjj2hdxojbtbn" path="res://scripts/main_menu.gd" id="2_lquwl"]
+[ext_resource type="PackedScene" uid="uid://cbfactmlorlnp" path="res://custom_night.tscn" id="3_lquwl"]
+
+[node name="Main" type="Node3D" unique_id=1895557947]
+
+[node name="NightLoader" type="Node" parent="." unique_id=1145503969 node_paths=PackedStringArray("main_menu")]
+script = ExtResource("1_h2yge")
+main_menu = NodePath("../MainMenu")
+metadata/_custom_type_script = "uid://d0a03q1gs17xc"
+
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=1297753302 node_paths=PackedStringArray("CustomNight")]
+script = ExtResource("2_lquwl")
+CustomNight = NodePath("CustomNight")
+
+[node name="Control" type="Control" parent="MainMenu" unique_id=2142098152]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("2_1bvp3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainMenu/Control" unique_id=297438291]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 60.0
+offset_right = 60.0
+offset_bottom = 240.0
+theme = ExtResource("2_1bvp3")
+
+[node name="NewGameButton" type="Button" parent="MainMenu/Control/VBoxContainer" unique_id=1781167500]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_1bvp3")
+theme_type_variation = &"MainMenuButton"
+text = "New Game"
+flat = true
+alignment = 0
+
+[node name="ContinueButton" type="Button" parent="MainMenu/Control/VBoxContainer" unique_id=420474825]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_1bvp3")
+theme_type_variation = &"MainMenuButton"
+text = "Continue"
+flat = true
+alignment = 0
+
+[node name="Label" type="Label" parent="MainMenu/Control/VBoxContainer/ContinueButton" unique_id=636576178]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+grow_vertical = 2
+theme = ExtResource("2_1bvp3")
+theme_type_variation = &"MainMenuContinueLabel"
+text = "Night X"
+vertical_alignment = 2
+
+[node name="CustomNightButton" type="Button" parent="MainMenu/Control/VBoxContainer" unique_id=574036854]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_1bvp3")
+theme_type_variation = &"MainMenuButton"
+text = "Custom Night"
+flat = true
+alignment = 0
+
+[node name="SettingsButton" type="Button" parent="MainMenu/Control/VBoxContainer" unique_id=1011716022]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_1bvp3")
+theme_type_variation = &"MainMenuButton"
+text = "Settings"
+flat = true
+alignment = 0
+
+[node name="QuitButton" type="Button" parent="MainMenu/Control/VBoxContainer" unique_id=1101072289]
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_1bvp3")
+theme_type_variation = &"MainMenuButton"
+text = "Quit"
+flat = true
+alignment = 0
+
+[node name="CustomNight" parent="MainMenu" unique_id=2115047209 node_paths=PackedStringArray("night_loader") instance=ExtResource("3_lquwl")]
+visible = false
+theme = ExtResource("2_1bvp3")
+night_loader = NodePath("../../NightLoader")
+
+[connection signal="pressed" from="MainMenu/Control/VBoxContainer/CustomNightButton" to="MainMenu" method="_on_custom_night_button_pressed"]

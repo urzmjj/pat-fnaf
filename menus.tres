@@ -1,0 +1,34 @@
+[gd_resource type="Theme" format=3 uid="uid://bwudqkaxb6wgb"]
+
+[sub_resource type="SystemFont" id="SystemFont_l41qh"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="SystemFont" id="SystemFont_5rf0i"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="SystemFont" id="SystemFont_wqh5w"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="SystemFont" id="SystemFont_tgj2w"]
+font_names = PackedStringArray("Consolas")
+
+[sub_resource type="SystemFont" id="SystemFont_5gvop"]
+font_names = PackedStringArray("Consolas")
+
+[resource]
+default_font_size = 0
+BigButton/base_type = &"Button"
+BigButton/font_sizes/font_size = 48
+BigButton/fonts/font = SubResource("SystemFont_l41qh")
+Button/font_sizes/font_size = 10
+Label/font_sizes/font_size = 10
+Label/fonts/font = SubResource("SystemFont_5rf0i")
+MainMenuButton/base_type = &"Button"
+MainMenuButton/font_sizes/font_size = 24
+MainMenuButton/fonts/font = SubResource("SystemFont_wqh5w")
+MainMenuContinueLabel/base_type = &"Label"
+MainMenuContinueLabel/font_sizes/font_size = 12
+MainMenuContinueLabel/fonts/font = SubResource("SystemFont_tgj2w")
+OptionButton/fonts/font = SubResource("SystemFont_5gvop")
+ValueLabel/base_type = &"Label"
+ValueLabel/font_sizes/font_size = 20
