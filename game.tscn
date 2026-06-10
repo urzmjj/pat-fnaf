@@ -76,12 +76,26 @@ albedo_color = Color(0.22745098, 0.27058825, 0.8509804, 1)
 lightmap_size_hint = Vector2i(17, 14)
 material = SubResource("StandardMaterial3D_fc0e3")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xex6t"]
+albedo_color = Color(0.62352943, 0.03137255, 0.023529412, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_aa0lp"]
+lightmap_size_hint = Vector2i(17, 14)
+material = SubResource("StandardMaterial3D_xex6t")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_215e1"]
 albedo_color = Color(0.62352943, 0.3529412, 0.7921569, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7sc4i"]
 lightmap_size_hint = Vector2i(17, 14)
 material = SubResource("StandardMaterial3D_215e1")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iu0sx"]
+albedo_color = Color(0.85490197, 0.3647059, 0.039215688, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4v2jo"]
+lightmap_size_hint = Vector2i(17, 14)
+material = SubResource("StandardMaterial3D_iu0sx")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bnpwn"]
 albedo_color = Color(0.27058825, 0.4392157, 0.05490196, 1)
@@ -91,6 +105,12 @@ lightmap_size_hint = Vector2i(17, 14)
 material = SubResource("StandardMaterial3D_bnpwn")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f1jbl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1i01"]
+albedo_color = Color(0.13725491, 0.8156863, 0.4627451, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_r62pu"]
+material = SubResource("StandardMaterial3D_l1i01")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
 albedo_color = Color(0.77254903, 0.16862746, 0.16862746, 1)
@@ -617,6 +637,28 @@ animatronic = NodePath("../../../Animatronics/BlueFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
+[node name="Strong" type="Node3D" parent="Positions" unique_id=516011848]
+
+[node name="Strong_L4" type="MeshInstance3D" parent="Positions/Strong" unique_id=1633235787 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_aa0lp")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/StrongFairy")
+pos = 8
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="Strong_R4" type="MeshInstance3D" parent="Positions/Strong" unique_id=1925714943 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_aa0lp")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/StrongFairy")
+pos = 9
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
 [node name="Merry" type="Node3D" parent="Positions" unique_id=875461744]
 
 [node name="Merry_L4" type="MeshInstance3D" parent="Positions/Merry" unique_id=247076088 node_paths=PackedStringArray("animatronic")]
@@ -639,6 +681,28 @@ animatronic = NodePath("../../../Animatronics/MerryFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
+[node name="Brave" type="Node3D" parent="Positions" unique_id=897585513]
+
+[node name="Brave_L4" type="MeshInstance3D" parent="Positions/Brave" unique_id=567881236 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_4v2jo")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/BraveFairy")
+pos = 8
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
+[node name="Brave_R4" type="MeshInstance3D" parent="Positions/Brave" unique_id=409000045 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
+visible = false
+layers = 516
+mesh = SubResource("CapsuleMesh_4v2jo")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/BraveFairy")
+pos = 9
+metadata/_custom_type_script = "uid://by06xmmmdxm7g"
+
 [node name="Witch" type="Node3D" parent="Positions" unique_id=336536996]
 
 [node name="Witch_1" type="MeshInstance3D" parent="Positions/Witch" unique_id=1554564157 node_paths=PackedStringArray("animatronic")]
@@ -655,6 +719,16 @@ metadata/_custom_type_script = "uid://by06xmmmdxm7g"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Positions/Witch/Witch_1/Area3D" unique_id=1973285202]
 shape = SubResource("CapsuleShape3D_f1jbl")
+
+[node name="Angler" type="Node3D" parent="Positions" unique_id=789000775]
+
+[node name="Angler_4" type="MeshInstance3D" parent="Positions/Angler" unique_id=795033509 node_paths=PackedStringArray("animatronic")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.5)
+visible = false
+mesh = SubResource("CapsuleMesh_r62pu")
+script = ExtResource("2_e2o6t")
+animatronic = NodePath("../../../Animatronics/AnglerFairy")
+pos = 4
 
 [node name="Firefly" type="Node3D" parent="Positions" unique_id=210787906]
 

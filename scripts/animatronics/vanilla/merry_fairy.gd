@@ -9,10 +9,10 @@ func reset() -> void:
 	door = Constants.Door.values().pick_random()
 	
 func _process(delta: float) -> void:
-	if blue_fairy.door == door and blue_fairy.progress == 4 and progress == 4:
-		locked = true
-	else:
-		locked = false
+	#if blue_fairy.door == door and blue_fairy.progress == 4 and progress == 4:
+	#	locked = true
+	#else:
+	#	locked = false
 	super(delta)
 	pos = progress*2 + (1 if door == Constants.Door.RIGHT else 0)
 
