@@ -9,7 +9,7 @@ func reset() -> void:
 	door = Constants.Door.values().pick_random()
 	
 func _process(delta: float) -> void:
-	if blue_fairy.door == door and (blue_fairy.progress == 4 and (progress == 3 or progress == 4)) or ((blue_fairy.progress == 3 and progress == 3)):
+	if blue_fairy.door == door and blue_fairy.progress == 4 and progress == 4:
 		locked = true
 	else:
 		locked = false

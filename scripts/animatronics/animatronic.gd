@@ -9,6 +9,7 @@ var pos: int = 0
 var timer: float = 0.0
 
 var locked: bool = false
+var lockTimer: float = 0.0
 
 @export var stages: int = 0
 
@@ -30,6 +31,8 @@ func _process(delta: float) -> void:
 	if progress == stages:
 		return
 	timer += delta
+	lockTimer -= delta
+	lockTimer = max(lockTimer, 0)
 	while timer >= move_time:
 		timer -= move_time
 		if eval_movement_opportunity():
@@ -38,7 +41,7 @@ func _process(delta: float) -> void:
 				complete_movement()
 
 func eval_movement_opportunity() -> bool:
-	if locked:
+	if locked or lockTimer > 0:
 		return false
 	var rand: int = randi_range(1,20)
 	if rand <= ai_level:

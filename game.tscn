@@ -1,31 +1,37 @@
 [gd_scene format=3 uid="uid://c1ojnktoubxlb"]
 
-[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://scripts/animatronics/blue_fairy.gd" id="1_80nbo"]
+[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://scripts/animatronics/vanilla/blue_fairy.gd" id="1_80nbo"]
 [ext_resource type="Script" uid="uid://brvi3emhmsqrd" path="res://scripts/game_init.gd" id="1_bnpwn"]
-[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://scripts/animatronics/icely_toad.gd" id="1_ryrav"]
+[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://scripts/animatronics/vanilla/icely_toad.gd" id="1_ryrav"]
 [ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://scripts/animatronic_pos_3d.gd" id="2_e2o6t"]
 [ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://scripts/door_handler.gd" id="2_fc0e3"]
 [ext_resource type="Script" uid="uid://dfgqw58s17p2c" path="res://scripts/ai_loader.gd" id="3_5b14r"]
 [ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://scripts/subviewport_input_handler.gd" id="3_e36ub"]
-[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://scripts/animatronics/firefly.gd" id="3_eow3j"]
+[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://scripts/animatronics/fans/firefly.gd" id="3_eow3j"]
 [ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://scripts/debug_stats.gd" id="3_feb5d"]
-[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://scripts/animatronics/merry_fairy.gd" id="3_j5wjh"]
+[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://scripts/animatronics/vanilla/merry_fairy.gd" id="3_j5wjh"]
 [ext_resource type="AudioStream" uid="uid://d1xlpc2hbrxqo" path="res://sounds/sink_sounds/027.ogg" id="4_7sc4i"]
 [ext_resource type="Script" uid="uid://bfwer75tu1ow3" path="res://scripts/camera_controls.gd" id="5_7jktm"]
 [ext_resource type="AudioStream" uid="uid://ctodeheiey2sv" path="res://sounds/sink_sounds/028.ogg" id="5_80cx4"]
 [ext_resource type="AudioStream" uid="uid://cjjlci88xm7xm" path="res://sounds/sink_sounds/029.ogg" id="6_e8heu"]
+[ext_resource type="Script" uid="uid://ciauoil3sxat7" path="res://scripts/animatronics/vanilla/strong_fairy.gd" id="6_xex6t"]
+[ext_resource type="Script" uid="uid://mpu0p17nsbgc" path="res://scripts/animatronics/vanilla/busy_fairy.gd" id="7_aa0lp"]
 [ext_resource type="AudioStream" uid="uid://dapihi21i7psx" path="res://sounds/sink_sounds/030.ogg" id="7_rvswv"]
 [ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="8_vef74"]
+[ext_resource type="Script" uid="uid://c40ogmgmfk7l6" path="res://scripts/animatronics/vanilla/brave_fairy.gd" id="9_iu0sx"]
 [ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://scripts/animatronic_icely_pos.gd" id="9_mfdv2"]
 [ext_resource type="Script" uid="uid://25att15er2n8" path="res://scripts/camera_handler.gd" id="10_80cx4"]
 [ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://sounds/cba_horror.wav" id="10_mfdv2"]
-[ext_resource type="Script" uid="uid://dwvjn7lxnfadd" path="res://scripts/animatronics/witch_fairy.gd" id="11_f1jbl"]
+[ext_resource type="Script" uid="uid://dwvjn7lxnfadd" path="res://scripts/animatronics/vanilla/witch_fairy.gd" id="11_f1jbl"]
 [ext_resource type="ButtonGroup" uid="uid://dnwmt2axekck8" path="res://camera_button_group.tres" id="12_hb5m1"]
-[ext_resource type="Script" uid="uid://dawdillo8jg2k" path="res://scripts/animatronics/angler_fairy.gd" id="12_xa8c5"]
+[ext_resource type="Script" uid="uid://dawdillo8jg2k" path="res://scripts/animatronics/fans/angler_fairy.gd" id="12_xa8c5"]
 [ext_resource type="Theme" uid="uid://yaxmlrujwm50" path="res://camera_button_theme.tres" id="13_qhcbd"]
 [ext_resource type="PackedScene" uid="uid://de3pmt4kj1ro7" path="res://models/wall_red.tscn" id="14_rvswv"]
 [ext_resource type="PackedScene" uid="uid://c5xkoaoqwt4bt" path="res://models/wall_blue.tscn" id="15_boyg6"]
 [ext_resource type="Script" uid="uid://b6xexvbdogh68" path="res://scripts/wall_animator.gd" id="15_e36ub"]
+[ext_resource type="Script" uid="uid://h1s63y502iie" path="res://scripts/animatronics/vanilla/fairy_dummy.gd" id="16_4v2jo"]
+[ext_resource type="Script" uid="uid://cbj75wxegiwio" path="res://scripts/animatronics/fans/dummy_fairy.gd" id="19_l1i01"]
+[ext_resource type="Script" uid="uid://brgtqkp3jsbv0" path="res://scripts/animatronics/fans/thermal_fairy.gd" id="20_r62pu"]
 [ext_resource type="Script" uid="uid://dqiwiyo8nb78u" path="res://scripts/office.gd" id="21_vaj68"]
 [ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="22_x5p1p"]
 [ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="25_i2p71"]
@@ -383,12 +389,27 @@ ai_level = 2
 move_time = 4.02
 metadata/_custom_type_script = "uid://c4bllcvvxn1ot"
 
+[node name="StrongFairy" type="Node" parent="Animatronics" unique_id=1110592641]
+script = ExtResource("6_xex6t")
+stages = 5
+move_time = 6.14
+metadata/_custom_type_script = "uid://ciauoil3sxat7"
+
+[node name="BusyFairy" type="Node" parent="Animatronics" unique_id=2130963243]
+script = ExtResource("7_aa0lp")
+stages = 1
+metadata/_custom_type_script = "uid://mpu0p17nsbgc"
+
 [node name="MerryFairy" type="Node" parent="Animatronics" unique_id=1761710030 node_paths=PackedStringArray("blue_fairy")]
 script = ExtResource("3_j5wjh")
 blue_fairy = NodePath("../BlueFairy")
 stages = 5
 move_time = 4.49
 metadata/_custom_type_script = "uid://cbm4aq82pbf70"
+
+[node name="BraveFairy" type="Node" parent="Animatronics" unique_id=1823941716]
+script = ExtResource("9_iu0sx")
+metadata/_custom_type_script = "uid://c40ogmgmfk7l6"
 
 [node name="WitchFairy" type="Node" parent="Animatronics" unique_id=1176073366]
 script = ExtResource("11_f1jbl")
@@ -408,6 +429,10 @@ metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Animatronics/IcelyToad" unique_id=1853153347]
 volume_db = 12.0
 
+[node name="FairyDummy" type="Node" parent="Animatronics" unique_id=1342898715]
+script = ExtResource("16_4v2jo")
+metadata/_custom_type_script = "uid://h1s63y502iie"
+
 [node name="AnglerFairy" type="Node" parent="Animatronics" unique_id=869711172]
 script = ExtResource("12_xa8c5")
 stages = 5
@@ -419,6 +444,14 @@ script = ExtResource("3_eow3j")
 stages = 5
 move_time = 5.01
 metadata/_custom_type_script = "uid://ba1dilo0tnuc8"
+
+[node name="DummyFairy" type="Node" parent="Animatronics" unique_id=249277129]
+script = ExtResource("19_l1i01")
+metadata/_custom_type_script = "uid://cbj75wxegiwio"
+
+[node name="ThermalFairy" type="Node" parent="Animatronics" unique_id=1159315201]
+script = ExtResource("20_r62pu")
+metadata/_custom_type_script = "uid://brgtqkp3jsbv0"
 
 [node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object")]
 size = Vector2i(960, 540)
