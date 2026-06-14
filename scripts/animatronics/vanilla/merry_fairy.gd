@@ -1,6 +1,7 @@
 class_name MerryFairy
 extends Animatronic
 
+@export var busy_fairy: BusyFairy
 @export var blue_fairy: BlueFairy
 var door: Constants.Door
 
@@ -9,10 +10,12 @@ func reset() -> void:
 	door = Constants.Door.values().pick_random()
 	
 func _process(delta: float) -> void:
-	#if blue_fairy.door == door and blue_fairy.progress == 4 and progress == 4:
-	#	locked = true
-	#else:
-	#	locked = false
+	if busy_fairy.door == door and busy_fairy.progress == 1 and progress == 4:
+		locked = true
+	elif blue_fairy.door == door and blue_fairy.progress == 4 and progress == 4:
+		locked = true
+	else:
+		locked = false
 	super(delta)
 	pos = progress*2 + (1 if door == Constants.Door.RIGHT else 0)
 
