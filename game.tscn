@@ -402,15 +402,20 @@ mesh = SubResource("QuadMesh_xfvwf")
 script = ExtResource("3_5b14r")
 animatronics = [NodePath("BlueFairy"), NodePath("StrongFairy"), NodePath("BusyFairy"), NodePath("MerryFairy"), NodePath("BraveFairy"), NodePath("WitchFairy"), NodePath("IcelyToad"), NodePath("FairyDummy"), NodePath("AnglerFairy"), NodePath("Firefly"), NodePath("DummyFairy"), null, null, null, NodePath("ThermalFairy"), null, null, null, null, null, null, null, null, null]
 
-[node name="BlueFairy" type="Node" parent="Animatronics" unique_id=444632484]
+[node name="BlueFairy" type="Node" parent="Animatronics" unique_id=444632484 node_paths=PackedStringArray("busy_fairy", "brave_fairy")]
 script = ExtResource("1_80nbo")
+busy_fairy = NodePath("../BusyFairy")
+brave_fairy = NodePath("../BraveFairy")
 stages = 5
 ai_level = 2
 move_time = 4.02
 metadata/_custom_type_script = "uid://c4bllcvvxn1ot"
 
-[node name="StrongFairy" type="Node" parent="Animatronics" unique_id=1110592641]
+[node name="StrongFairy" type="Node" parent="Animatronics" unique_id=1110592641 node_paths=PackedStringArray("busy_fairy", "brave_fairy", "merry_fairy")]
 script = ExtResource("6_xex6t")
+busy_fairy = NodePath("../BusyFairy")
+brave_fairy = NodePath("../BraveFairy")
+merry_fairy = NodePath("../MerryFairy")
 stages = 5
 move_time = 6.14
 metadata/_custom_type_script = "uid://ciauoil3sxat7"
@@ -420,15 +425,17 @@ script = ExtResource("7_aa0lp")
 stages = 1
 metadata/_custom_type_script = "uid://mpu0p17nsbgc"
 
-[node name="MerryFairy" type="Node" parent="Animatronics" unique_id=1761710030 node_paths=PackedStringArray("blue_fairy")]
+[node name="MerryFairy" type="Node" parent="Animatronics" unique_id=1761710030 node_paths=PackedStringArray("busy_fairy", "blue_fairy")]
 script = ExtResource("3_j5wjh")
+busy_fairy = NodePath("../BusyFairy")
 blue_fairy = NodePath("../BlueFairy")
 stages = 5
 move_time = 4.49
 metadata/_custom_type_script = "uid://cbm4aq82pbf70"
 
-[node name="BraveFairy" type="Node" parent="Animatronics" unique_id=1823941716]
+[node name="BraveFairy" type="Node" parent="Animatronics" unique_id=1823941716 node_paths=PackedStringArray("busy_fairy")]
 script = ExtResource("9_iu0sx")
+busy_fairy = NodePath("../BusyFairy")
 metadata/_custom_type_script = "uid://c40ogmgmfk7l6"
 
 [node name="WitchFairy" type="Node" parent="Animatronics" unique_id=1176073366]
