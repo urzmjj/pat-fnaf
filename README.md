@@ -10,5 +10,3 @@ PAT FNF was made in Godot 4.6.2-stable, so you should use that
 2. In the project selector window, click Import.
 3. Locate the project.godot file and click "Open".
 4. Click "Import and Edit".
-### What's the cosine rule?
-For any triangle with side lengths $a$, $b$ and $c$ and angle $\theta$ opposite the side with length $c$, $c^2=a^2+b^2-2ab\cos \theta$.
