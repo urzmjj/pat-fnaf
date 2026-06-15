@@ -1,4 +1,14 @@
 # PAT FNAF
 a game about surviving fairies that are trying to poke you
-## LEGAL STUFF
+## CONTRIBUTING AND FORKING
+### Legal stuff
 Before forking, read the NOTICE and LICENSE. Kinda important legal stuff there, so just read it as proof that I'm NOT scamming you or anything
+### What Godot version shoud I use?
+PAT FNF was made in Godot 4.6.2-stable, so you should use that
+### How do I open it in Godot?
+1. Start Godot.
+2. In the project selector window, click Import.
+3. Locate the project.godot file and click "Open".
+4. Click "Import and Edit".
+### What's the cosine rule?
+For any triangle with side lengths a, b and c and angle θ opposite c, c^2 = a^2+b^2-2ab cos θ.
