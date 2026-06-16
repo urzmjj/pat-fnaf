@@ -97,6 +97,7 @@ alignment = 0
 
 [node name="CustomNight" parent="MainMenu" unique_id=2115047209 node_paths=PackedStringArray("night_loader") instance=ExtResource("3_lquwl")]
 visible = false
+anchors_preset = 15
 theme = ExtResource("2_1bvp3")
 night_loader = NodePath("../../NightLoader")
 

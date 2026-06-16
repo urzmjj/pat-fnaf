@@ -74,7 +74,7 @@ alignment = 1
 last_wrap_alignment = 2
 
 [node name="Blue Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1084509774]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -137,7 +137,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Strong Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=936138379]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -200,7 +200,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Busy Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=707745462]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -263,7 +263,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Merry Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1576606057]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -326,7 +326,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Brave Fary" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1870646246]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -389,7 +389,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Witch Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=2104796752]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -452,7 +452,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Icely Toad" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1168441189]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -516,7 +516,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Fairy Dummy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=617564190]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -579,7 +579,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Angler Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=661041623]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -642,7 +642,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Firefly" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1620608496]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -705,7 +705,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Dummy Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1322727401]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -768,7 +768,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Mime Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1155209832]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -831,7 +831,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Military Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=886823712]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -894,7 +894,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1617773258]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -957,7 +957,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Thermal Fairy" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1449494758]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1020,7 +1020,7 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???2" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=271038542]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1083,7 +1083,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Horror Blue" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1429465960]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1146,7 +1147,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Horror Witch" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=2040911847]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1209,7 +1211,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???3" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=557278887]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1272,7 +1275,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???4" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1242019712]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1335,7 +1339,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???5" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=965241208]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1398,7 +1403,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???6" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1756503896]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1461,7 +1467,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Gerson" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=46028392]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
@@ -1524,7 +1531,8 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Cirno" type="AspectRatioContainer" parent="Control/AspectRatioContainer/HFlowContainer" unique_id=1460899560]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(125, 125)
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
