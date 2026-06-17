@@ -4,7 +4,7 @@ a game about surviving fairies that are trying to poke you
 ### Legal stuff
 Before forking, read the NOTICE and LICENSE. Kinda important legal stuff there, so just read it as proof that I'm NOT scamming you or anything
 ### What Godot version shoud I use?
-PAT FNF was made in Godot 4.6.2-stable, so you should use that
+PAT FNAF was made in Godot 4.6.2-stable, so you should use that
 ### How do I open it in Godot?
 1. Start Godot.
 2. In the project selector window, click Import.
