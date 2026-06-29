@@ -4,6 +4,7 @@ extends Animatronic
 @export var busy_fairy: BusyFairy
 @export var brave_fairy: BraveFairy
 @export var merry_fairy: MerryFairy
+@export var pos_cam_idx: Array[int]
 var door: Constants.Door
 
 func reset():
