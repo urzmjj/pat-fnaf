@@ -1,4 +1,6 @@
-# PAT FNAF
+# PAT FNAF ![Static Badge](https://img.shields.io/badge/Discord-https%3A%2F%2Fdiscord.gg%2F4dDQtjmH52-blue?logo=discord)![Static Badge](https://img.shields.io/badge/Poke%20ALL%20Toads%20Discord-https%3A%2F%2Fdiscord.gg%2FSQ4D7T8dGx-purple?logo=discord)
+
+
 a game about surviving fairies that are trying to poke you
 ## CONTRIBUTING AND FORKING
 ### Legal stuff
