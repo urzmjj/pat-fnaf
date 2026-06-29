@@ -1,4 +1,4 @@
-# PAT FNAF ![Static Badge](https://img.shields.io/badge/Discord-darkblue?logo=discord&link=https%3A%2F%2Fdiscord.gg%2F4dDQtjmH52)![Static Badge](https://img.shields.io/badge/Poke%20ALL%20Toads%20Discord-purple?logo=discord&link=https%3A%2F%2Fdiscord.gg%2FSQ4D7T8dGx)
+# PAT FNAF ![Static Badge](https://img.shields.io/badge/Discord-darkblue?logo=discord&link=https%3A%2F%2Fdiscord.gg%2F4dDQtjmH52)![Static Badge](https://img.shields.io/badge/Poke%20ALL%20Toads%20Discord-indigo?logo=discord&link=https%3A%2F%2Fdiscord.gg%2FSQ4D7T8dGx)
 
 
 
