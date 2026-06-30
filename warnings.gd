@@ -6,16 +6,22 @@ var warning_pos: int = 0
 func _ready() -> void:
 	update_warnings()
 
-func _on_gui_input(event: InputEvent) -> void:
-	if(event.is_action_pressed("select")):
-		get_viewport().set_input_as_handled()
+func _process(_delta: float) -> void:
+	if Input.is_action_just_released("ui_select"):
 		warning_pos += 1
 		update_warnings()
 		
 func update_warnings() -> void:
 	if warning_pos >= len(warning_labels):
 		hide()
+		process_mode = Node.PROCESS_MODE_DISABLED
 	else:
 		for w in warning_labels:
 			w.hide()
 		warning_labels[warning_pos].show()
+
+
+func _on_rich_text_label_2_meta_clicked(meta: Variant) -> void:
+	OS.shell_open(str(meta))
+	warning_pos -= 1
+	pass # Replace with function body.

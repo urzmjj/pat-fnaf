@@ -146,7 +146,7 @@ text = "[font_size=96][color=red]WARNING[/color][/font_size]
 [font_size=36]This game contains a lot of flashing lights, loud noises, jumpscares and some blood.[/font_size]
 
 
-[font_size=24](click anywhere to continue)[/font_size]"
+[font_size=24](click anywhere or press space to continue)[/font_size]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -172,7 +172,7 @@ text = "[font_size=96][color=red]DISCLAIMER[/color][/font_size]
 [font_size=18]You can find the game at: [url]https://store.steampowered.com/app/2302320/Poke_ALL_Toads/[/url]
 You can find the official discord (and all of the fan fairy creators) at: [url]https://discord.gg/SQ4D7T8dGx[/url][/font_size]
 
-[font_size=24](click anywhere to continue)[/font_size]"
+[font_size=24](click anywhere or press space to continue)[/font_size]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -182,3 +182,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="MainMenu/Control/VBoxContainer/SettingsButton" to="MainMenu" method="_on_settings_button_pressed"]
 [connection signal="pressed" from="MainMenu/Control/VBoxContainer/QuitButton" to="MainMenu" method="_on_quit_button_pressed"]
 [connection signal="gui_input" from="MainMenu/Warnings" to="MainMenu/Warnings" method="_on_gui_input"]
+[connection signal="meta_clicked" from="MainMenu/Warnings/RichTextLabel2" to="MainMenu/Warnings" method="_on_rich_text_label_2_meta_clicked"]
