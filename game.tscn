@@ -37,6 +37,7 @@
 [ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="25_i2p71"]
 [ext_resource type="Texture2D" uid="uid://be532q3imje1y" path="res://images/sun.tres" id="34_iu0sx"]
 [ext_resource type="Texture2D" uid="uid://1s4do7i6w6mr" path="res://images/water.tres" id="35_4v2jo"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://theme.tres" id="37_4v2jo"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
 height = 3.0
@@ -333,7 +334,6 @@ material = SubResource("StandardMaterial3D_xa8c5")
 size = Vector2(0.45, 0.45)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
-font_size = 10
 
 [sub_resource type="Environment" id="Environment_ryrav"]
 ambient_light_source = 1
@@ -1196,6 +1196,7 @@ fanAnimator = NodePath("../../MeshInstance3D2/AnimationPlayer")
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=952879237]
 offset_right = 40.0
 offset_bottom = 23.0
+theme = ExtResource("37_4v2jo")
 text = "DEBUG"
 label_settings = SubResource("LabelSettings_7jktm")
 
@@ -1204,10 +1205,12 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = -85.0
+offset_top = -165.0
 offset_right = 245.0
 offset_bottom = -5.0
 grow_vertical = 0
+theme = ExtResource("37_4v2jo")
+theme_type_variation = &"GameLabel"
 bbcode_enabled = true
 text = "Power left:
 Usage:
@@ -1222,8 +1225,10 @@ anchor_right = 1.0
 offset_left = -85.0
 offset_top = 5.0
 offset_right = -5.0
-offset_bottom = 30.0
+offset_bottom = 55.0
 grow_horizontal = 0
+theme = ExtResource("37_4v2jo")
+theme_type_variation = &"GameLabel"
 bbcode_enabled = true
 text = "12 AM"
 scroll_active = false

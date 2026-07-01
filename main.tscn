@@ -1,13 +1,11 @@
 [gd_scene format=3 uid="uid://tt1wabu66svw"]
 
 [ext_resource type="Script" uid="uid://d0a03q1gs17xc" path="res://scripts/night_loader.gd" id="1_h2yge"]
-[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://menus.tres" id="2_1bvp3"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://theme.tres" id="2_1bvp3"]
 [ext_resource type="Script" uid="uid://cjj2hdxojbtbn" path="res://scripts/main_menu.gd" id="2_lquwl"]
 [ext_resource type="Resource" uid="uid://beg0pe4i1rg8a" path="res://STORY.tres" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cbfactmlorlnp" path="res://custom_night.tscn" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://cro5i1m6vrikd" path="res://warnings.gd" id="6_7mycd"]
-
-[sub_resource type="Theme" id="Theme_7mycd"]
 
 [sub_resource type="Gradient" id="Gradient_b2q62"]
 offsets = PackedFloat32Array(0)
@@ -118,14 +116,13 @@ offset_right = -24.0
 offset_bottom = -24.0
 grow_horizontal = 0
 grow_vertical = 0
-theme = SubResource("Theme_7mycd")
+theme = ExtResource("2_1bvp3")
 theme_type_variation = &"MainMenuButton"
 text = "???"
 flat = true
 
 [node name="CustomNight" parent="MainMenu" unique_id=2115047209 node_paths=PackedStringArray("night_loader") instance=ExtResource("3_lquwl")]
 visible = false
-theme = ExtResource("2_1bvp3")
 night_loader = NodePath("../../NightLoader")
 
 [node name="Warnings" type="Control" parent="MainMenu" unique_id=1523190662 node_paths=PackedStringArray("warning_labels")]
@@ -136,6 +133,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_1bvp3")
 script = ExtResource("6_7mycd")
 warning_labels = [NodePath("RichTextLabel"), NodePath("RichTextLabel2")]
 
@@ -162,6 +160,7 @@ offset_right = 420.0
 offset_bottom = 174.5
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_1bvp3")
 bbcode_enabled = true
 text = "[font_size=96][color=red]WARNING[/color][/font_size]
 [font_size=36]This game contains a lot of flashing lights, loud noises, jumpscares and some blood.[/font_size]
@@ -186,9 +185,10 @@ offset_right = 630.0
 offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_1bvp3")
 bbcode_enabled = true
 text = "[font_size=96][color=red]DISCLAIMER[/color][/font_size]
-[font_size=36]This game is unofficial and is not associated or affiliated with the team of the actual Poke ALL Toads, nor is it associated with most of the fan fairies, which can be found in the credits.
+[font_size=36]This game is unofficial and is not associated or affiliated with the team of the actual Poke ALL Toads, nor is it associated with most of the creators of the fan fairies, which can be found in the credits.
 This game is NOT canon to Poke ALL Toads or the fan AUs the fan fairies originate from.
 [/font_size]
 [font_size=24]You can find the game at: [url]https://store.steampowered.com/app/2302320/Poke_ALL_Toads/[/url]
