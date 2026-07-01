@@ -5,12 +5,12 @@
 [ext_resource type="Script" uid="uid://1waitkij0u8g" path="res://scripts/custom_night_loader.gd" id="1_vslsh"]
 [ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://menus.tres" id="2_b2q62"]
 
-[sub_resource type="Gradient" id="Gradient_b2q62"]
+[sub_resource type="Gradient" id="Gradient_vslsh"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vslsh"]
-gradient = SubResource("Gradient_b2q62")
+gradient = SubResource("Gradient_vslsh")
 
 [node name="CustomNight" type="Control" unique_id=2115047209 node_paths=PackedStringArray("ai_selects", "power_option", "temperature_option")]
 layout_mode = 3

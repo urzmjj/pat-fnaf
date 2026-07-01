@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cbfactmlorlnp" path="res://custom_night.tscn" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://cro5i1m6vrikd" path="res://warnings.gd" id="6_7mycd"]
 
+[sub_resource type="Theme" id="Theme_7mycd"]
+
 [sub_resource type="Gradient" id="Gradient_b2q62"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
@@ -103,12 +105,31 @@ text = "Quit"
 flat = true
 alignment = 0
 
+[node name="Button" type="Button" parent="MainMenu/Control" unique_id=1328652622]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_7mycd")
+theme_type_variation = &"MainMenuButton"
+text = "???"
+flat = true
+
 [node name="CustomNight" parent="MainMenu" unique_id=2115047209 node_paths=PackedStringArray("night_loader") instance=ExtResource("3_lquwl")]
 visible = false
 theme = ExtResource("2_1bvp3")
 night_loader = NodePath("../../NightLoader")
 
 [node name="Warnings" type="Control" parent="MainMenu" unique_id=1523190662 node_paths=PackedStringArray("warning_labels")]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -159,18 +180,20 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -420.0
-offset_top = -174.5
-offset_right = 420.0
-offset_bottom = 174.5
+offset_left = -630.0
+offset_top = -324.0
+offset_right = 630.0
+offset_bottom = 324.0
 grow_horizontal = 2
 grow_vertical = 2
 bbcode_enabled = true
 text = "[font_size=96][color=red]DISCLAIMER[/color][/font_size]
 [font_size=36]This game is unofficial and is not associated or affiliated with the team of the actual Poke ALL Toads, nor is it associated with most of the fan fairies, which can be found in the credits.
+This game is NOT canon to Poke ALL Toads or the fan AUs the fan fairies originate from.
 [/font_size]
-[font_size=18]You can find the game at: [url]https://store.steampowered.com/app/2302320/Poke_ALL_Toads/[/url]
-You can find the official discord (and all of the fan fairy creators) at: [url]https://discord.gg/SQ4D7T8dGx[/url][/font_size]
+[font_size=24]You can find the game at: [url]https://store.steampowered.com/app/2302320/Poke_ALL_Toads/[/url]
+You can find the official discord (and all of the fan fairy creators) at: [url]https://discord.gg/SQ4D7T8dGx[/url]
+Links can also be found in [lb]need to add this later[rb][/font_size]
 
 [font_size=24](click anywhere or press space to continue)[/font_size]"
 fit_content = true

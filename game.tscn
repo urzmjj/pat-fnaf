@@ -35,6 +35,8 @@
 [ext_resource type="Script" uid="uid://dqiwiyo8nb78u" path="res://scripts/office.gd" id="21_vaj68"]
 [ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="22_x5p1p"]
 [ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="25_i2p71"]
+[ext_resource type="Texture2D" uid="uid://be532q3imje1y" path="res://images/sun.tres" id="34_iu0sx"]
+[ext_resource type="Texture2D" uid="uid://1s4do7i6w6mr" path="res://images/water.tres" id="35_4v2jo"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
 height = 3.0
@@ -830,11 +832,11 @@ aiLoader = NodePath("../Animatronics")
 tempSwitch = NodePath("Table/temp_switch")
 
 [node name="wall_red" parent="Office" unique_id=320212070 instance=ExtResource("14_rvswv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, 0)
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, -1, 0)
 script = ExtResource("15_e36ub")
 
 [node name="wall_blue" parent="Office" unique_id=325434234 instance=ExtResource("15_boyg6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, 0)
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, -1, 0)
 script = ExtResource("15_e36ub")
 
 [node name="Floor" type="MeshInstance3D" parent="Office" unique_id=391381073]
@@ -965,6 +967,14 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 layers = 517
 mesh = SubResource("CylinderMesh_hve3p")
 
+[node name="Sprite3D" type="Sprite3D" parent="Office/ButtonPanelL/DoorButtonL/MeshInstance3D" unique_id=411710072]
+transform = Transform3D(-4.3711385e-08, 4.371139e-08, -1, 4.371139e-08, 1, 4.371139e-08, 1, -4.371139e-08, -4.371139e-08, 0, -0.026000023, 0)
+pixel_size = 0.0083333
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("34_iu0sx")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelL/DoorButtonL" unique_id=256403200]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_ryrav")
@@ -990,9 +1000,17 @@ mesh = SubResource("BoxMesh_7jktm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024999976, 0.125, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Office/ButtonPanelR/DoorButtonR" unique_id=1893641418]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 layers = 517
 mesh = SubResource("CylinderMesh_lc2xo")
+
+[node name="Sprite3D" type="Sprite3D" parent="Office/ButtonPanelR/DoorButtonR/MeshInstance3D" unique_id=343585109]
+transform = Transform3D(-4.3711385e-08, -4.371139e-08, 1, -4.371139e-08, 1, 4.371139e-08, -1, -4.371139e-08, -4.371139e-08, 0, -0.026000023, 0)
+pixel_size = 0.0083333
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("35_4v2jo")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelR/DoorButtonR" unique_id=1435829299]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)

@@ -4,10 +4,12 @@ var warning_pos: int = 0
 @export var warning_labels: Array[RichTextLabel]
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	show()
+	warning_pos = 0
 	update_warnings()
 
 func _process(_delta: float) -> void:
-	if Input.is_action_just_released("ui_select"):
+	if Input.is_action_just_released("ui_select") or Input.is_action_just_released("select"):
 		warning_pos += 1
 		update_warnings()
 		

@@ -1,6 +1,7 @@
 [gd_scene format=4 uid="uid://c6jp516ofox1x"]
 
 [ext_resource type="PackedScene" uid="uid://dvgnhpu10a6t3" path="res://models/wall_red.glb" id="1_2r06i"]
+[ext_resource type="Texture2D" uid="uid://b4myfbccs1xdc" path="res://images/star.tres" id="2_la0lr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2r06i"]
 resource_name = "Material.001"
@@ -247,19 +248,27 @@ _data = {
 
 [node name="wall_yellow" unique_id=320212070 instance=ExtResource("1_2r06i")]
 
-[node name="Cube" parent="." index="0" unique_id=1499868797]
+[node name="Cube" parent="." index="0" unique_id=1838621729]
 layers = 517
 mesh = SubResource("ArrayMesh_0vas5")
 
-[node name="Cube_002" parent="." index="1" unique_id=352889797]
+[node name="Sprite3D" type="Sprite3D" parent="Cube" index="0" unique_id=677183281]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.001, 0)
+pixel_size = 0.0416667
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("2_la0lr")
+
+[node name="Cube_002" parent="." index="1" unique_id=451655033]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.406, 0)
 layers = 517
 
-[node name="Cube_003" parent="." index="2" unique_id=1179085030]
+[node name="Cube_003" parent="." index="2" unique_id=10123790]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.188, 0)
 layers = 517
 
-[node name="Cube_004" parent="." index="3" unique_id=1203806806]
+[node name="Cube_004" parent="." index="3" unique_id=461137944]
 layers = 517
 mesh = SubResource("ArrayMesh_i5nab")
 
