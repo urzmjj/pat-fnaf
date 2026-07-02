@@ -56,6 +56,7 @@ flat = true
 alignment = 0
 
 [node name="ContinueButton" type="Button" parent="MainMenu/Control/VBoxContainer" unique_id=420474825]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("2_1bvp3")

@@ -482,7 +482,7 @@ metadata/_custom_type_script = "uid://cbj75wxegiwio"
 script = ExtResource("20_r62pu")
 metadata/_custom_type_script = "uid://brgtqkp3jsbv0"
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object")]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object") groups=["CameraHandler"]]
 size = Vector2i(960, 540)
 script = ExtResource("10_80cx4")
 cameras = [NodePath("0"), NodePath("1")]
