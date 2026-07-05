@@ -27,6 +27,11 @@ window/stretch/mode="canvas_items"
 
 project/assembly_name="pat_fnaf"
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [input]
 
 select={

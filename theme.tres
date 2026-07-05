@@ -1,6 +1,6 @@
 [gd_resource type="Theme" format=4 uid="uid://bwudqkaxb6wgb"]
 
-[sub_resource type="SystemFont" id="SystemFont_l41qh"]
+[sub_resource type="SystemFont" id="SystemFont_wvktn"]
 font_names = PackedStringArray("Consolas")
 
 [sub_resource type="Image" id="Image_wvktn"]
@@ -4396,21 +4396,21 @@ cache/0/95/0/glyphs/42/texture_idx = 0
 [sub_resource type="SystemFont" id="SystemFont_5rf0i"]
 font_names = PackedStringArray("Consolas")
 
-[sub_resource type="SystemFont" id="SystemFont_wqh5w"]
-font_names = PackedStringArray("Consolas")
-
 [sub_resource type="SystemFont" id="SystemFont_tgj2w"]
 font_names = PackedStringArray("Consolas")
 
 [sub_resource type="SystemFont" id="SystemFont_5gvop"]
 font_names = PackedStringArray("Consolas")
 
+[sub_resource type="SystemFont" id="SystemFont_e1x85"]
+font_names = PackedStringArray("Consolas")
+
 [resource]
 default_font_size = 0
 BigButton/base_type = &"Button"
 BigButton/font_sizes/font_size = 64
-BigButton/fonts/font = SubResource("SystemFont_l41qh")
-Button/font_sizes/font_size = 16
+Button/font_sizes/font_size = 24
+Button/fonts/font = SubResource("SystemFont_wvktn")
 GameLabel/base_type = &"RichTextLabel"
 GameLabel/colors/font_color = Color(0, 0, 0, 1)
 GameLabel/colors/font_outline_color = Color(0, 0, 0, 1)
@@ -4423,14 +4423,15 @@ GameLabel/constants/shadow_outline_size = 0
 GameLabel/font_sizes/font_size = 24
 GameLabel/font_sizes/normal_font_size = 24
 GameLabel/fonts/font = SubResource("FontFile_i1e0v")
-Label/font_sizes/font_size = 16
+Label/font_sizes/font_size = 24
 Label/fonts/font = SubResource("SystemFont_5rf0i")
 MainMenuButton/base_type = &"Button"
 MainMenuButton/font_sizes/font_size = 48
-MainMenuButton/fonts/font = SubResource("SystemFont_wqh5w")
 MainMenuContinueLabel/base_type = &"Label"
 MainMenuContinueLabel/font_sizes/font_size = 24
 MainMenuContinueLabel/fonts/font = SubResource("SystemFont_tgj2w")
 OptionButton/fonts/font = SubResource("SystemFont_5gvop")
+TabContainer/font_sizes/font_size = 32
+TabContainer/fonts/font = SubResource("SystemFont_e1x85")
 ValueLabel/base_type = &"Label"
 ValueLabel/font_sizes/font_size = 32
