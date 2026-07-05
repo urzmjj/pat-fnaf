@@ -3,7 +3,7 @@ extends Node
 
 @export var main_menu: MainMenu
 var current_game = null
-var game_scene = preload("res://game.tscn")
+var game_scene = preload("res://scenes/game.tscn")
 
 func init_night(data: NightData) -> void:
 	if is_instance_valid(current_game): 

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="1_080t1"]
 [ext_resource type="Script" uid="uid://drw0hjf22rmfd" path="res://scripts/ai_select.gd" id="1_b2q62"]
 [ext_resource type="Script" uid="uid://1waitkij0u8g" path="res://scripts/custom_night_loader.gd" id="1_vslsh"]
-[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://theme.tres" id="2_b2q62"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://themes/theme.tres" id="2_b2q62"]
 
 [sub_resource type="Gradient" id="Gradient_vslsh"]
 offsets = PackedFloat32Array(0)
