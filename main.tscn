@@ -6,6 +6,7 @@
 [ext_resource type="Resource" uid="uid://beg0pe4i1rg8a" path="res://STORY.tres" id="3_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cbfactmlorlnp" path="res://custom_night.tscn" id="3_lquwl"]
 [ext_resource type="Script" uid="uid://cro5i1m6vrikd" path="res://warnings.gd" id="6_7mycd"]
+[ext_resource type="Script" uid="uid://cju0g4aryvs1b" path="res://settings.gd" id="7_272bh"]
 
 [sub_resource type="Gradient" id="Gradient_b2q62"]
 offsets = PackedFloat32Array(0)
@@ -21,11 +22,12 @@ script = ExtResource("1_h2yge")
 main_menu = NodePath("../MainMenu")
 metadata/_custom_type_script = "uid://d0a03q1gs17xc"
 
-[node name="MainMenu" type="CanvasLayer" parent="." unique_id=1297753302 node_paths=PackedStringArray("night_loader", "custom_night")]
+[node name="MainMenu" type="CanvasLayer" parent="." unique_id=1297753302 node_paths=PackedStringArray("night_loader", "custom_night", "settings")]
 script = ExtResource("2_lquwl")
 night_loader = NodePath("../NightLoader")
 custom_night = NodePath("CustomNight")
 night_database = ExtResource("3_7mycd")
+settings = NodePath("Settings")
 
 [node name="Control" type="Control" parent="MainMenu" unique_id=2142098152]
 layout_mode = 3
@@ -112,15 +114,33 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = -40.0
-offset_top = -40.0
+offset_top = -80.0
 offset_right = -24.0
-offset_bottom = -24.0
+offset_bottom = -64.0
 grow_horizontal = 0
 grow_vertical = 0
 theme = ExtResource("2_1bvp3")
 theme_type_variation = &"MainMenuButton"
 text = "???"
 flat = true
+
+[node name="Label" type="Label" parent="MainMenu/Control" unique_id=1133642378]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = -24.0
+offset_bottom = -24.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_type_variation = &"BigLabel"
+text = "v0.0.1"
+horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="CustomNight" parent="MainMenu" unique_id=2115047209 node_paths=PackedStringArray("night_loader") instance=ExtResource("3_lquwl")]
 visible = false
@@ -201,35 +221,37 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="PopupPanel" type="PopupPanel" parent="MainMenu" unique_id=1787950797]
+[node name="Settings" type="PopupPanel" parent="MainMenu" unique_id=1787950797]
 oversampling_override = 1.0
 initial_position = 1
 size = Vector2i(800, 800)
 visible = true
 theme = ExtResource("2_1bvp3")
+script = ExtResource("7_272bh")
 
-[node name="TabContainer" type="TabContainer" parent="MainMenu/PopupPanel" unique_id=1273685963]
+[node name="TabContainer" type="TabContainer" parent="MainMenu/Settings" unique_id=1273685963]
 offset_left = 4.0
 offset_top = 4.0
 offset_right = 796.0
 offset_bottom = 796.0
 theme = ExtResource("2_1bvp3")
-current_tab = 0
+current_tab = 1
 
-[node name="Video" type="VBoxContainer" parent="MainMenu/PopupPanel/TabContainer" unique_id=1373026087]
+[node name="Video" type="VBoxContainer" parent="MainMenu/Settings/TabContainer" unique_id=1373026087]
+visible = false
 layout_mode = 2
 theme = ExtResource("2_1bvp3")
 metadata/_tab_index = 0
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/PopupPanel/TabContainer/Video" unique_id=738390673]
+[node name="Window" type="HBoxContainer" parent="MainMenu/Settings/TabContainer/Video" unique_id=738390673]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainMenu/PopupPanel/TabContainer/Video/HBoxContainer" unique_id=844251153]
+[node name="Label" type="Label" parent="MainMenu/Settings/TabContainer/Video/Window" unique_id=844251153]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Window"
 
-[node name="CheckBox" type="OptionButton" parent="MainMenu/PopupPanel/TabContainer/Video/HBoxContainer" unique_id=386939715]
+[node name="CheckBox" type="OptionButton" parent="MainMenu/Settings/TabContainer/Video/Window" unique_id=386939715]
 layout_mode = 2
 size_flags_horizontal = 10
 selected = 0
@@ -241,76 +263,87 @@ popup/item_1/id = 1
 popup/item_2/text = "Fullscreen"
 popup/item_2/id = 2
 
-[node name="HBoxContainer2" type="HBoxContainer" parent="MainMenu/PopupPanel/TabContainer/Video" unique_id=1439387852]
+[node name="FPS" type="HBoxContainer" parent="MainMenu/Settings/TabContainer/Video" unique_id=1439387852]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainMenu/PopupPanel/TabContainer/Video/HBoxContainer2" unique_id=195426890]
+[node name="Label" type="Label" parent="MainMenu/Settings/TabContainer/Video/FPS" unique_id=195426890]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "FPS"
 
-[node name="HSlider" type="HSlider" parent="MainMenu/PopupPanel/TabContainer/Video/HBoxContainer2" unique_id=1432075330]
+[node name="Label2" type="Label" parent="MainMenu/Settings/TabContainer/Video/FPS" unique_id=678329092]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "AUTO"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="MainMenu/Settings/TabContainer/Video/FPS" unique_id=1432075330]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
-min_value = 30.0
 max_value = 300.0
 value = 60.0
 
-[node name="HBoxContainer3" type="HBoxContainer" parent="MainMenu/PopupPanel/TabContainer/Video" unique_id=807496246]
+[node name="V-Sync" type="HBoxContainer" parent="MainMenu/Settings/TabContainer/Video" unique_id=807496246]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainMenu/PopupPanel/TabContainer/Video/HBoxContainer3" unique_id=1668180828]
+[node name="Label" type="Label" parent="MainMenu/Settings/TabContainer/Video/V-Sync" unique_id=1668180828]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "V-Sync"
 
-[node name="CheckBox" type="CheckBox" parent="MainMenu/PopupPanel/TabContainer/Video/HBoxContainer3" unique_id=1972157170]
+[node name="CheckBox" type="CheckBox" parent="MainMenu/Settings/TabContainer/Video/V-Sync" unique_id=1972157170]
 layout_mode = 2
 size_flags_horizontal = 10
 
-[node name="Audio" type="VBoxContainer" parent="MainMenu/PopupPanel/TabContainer" unique_id=526936293]
-visible = false
+[node name="Audio" type="VBoxContainer" parent="MainMenu/Settings/TabContainer" unique_id=526936293]
 layout_mode = 2
 theme = ExtResource("2_1bvp3")
 metadata/_tab_index = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/PopupPanel/TabContainer/Audio" unique_id=591680467]
+[node name="Master" type="HBoxContainer" parent="MainMenu/Settings/TabContainer/Audio" unique_id=591680467]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainMenu/PopupPanel/TabContainer/Audio/HBoxContainer" unique_id=1550039339]
+[node name="Label" type="Label" parent="MainMenu/Settings/TabContainer/Audio/Master" unique_id=1550039339]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Master"
 
-[node name="HSlider" type="HSlider" parent="MainMenu/PopupPanel/TabContainer/Audio/HBoxContainer" unique_id=1907799479]
+[node name="Label2" type="Label" parent="MainMenu/Settings/TabContainer/Audio/Master" unique_id=115770352]
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+text = "100%"
+horizontal_alignment = 2
+
+[node name="HSlider" type="HSlider" parent="MainMenu/Settings/TabContainer/Audio/Master" unique_id=1907799479]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 value = 100.0
 
-[node name="Gameplay" type="VBoxContainer" parent="MainMenu/PopupPanel/TabContainer" unique_id=1373483340]
+[node name="Gameplay" type="VBoxContainer" parent="MainMenu/Settings/TabContainer" unique_id=1373483340]
 visible = false
 layout_mode = 2
 theme = ExtResource("2_1bvp3")
 metadata/_tab_index = 2
 
-[node name="Button" type="Button" parent="MainMenu/PopupPanel/TabContainer/Gameplay" unique_id=321935905]
+[node name="Keybinds" type="Button" parent="MainMenu/Settings/TabContainer/Gameplay" unique_id=321935905]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 theme = ExtResource("2_1bvp3")
-text = "Change Keybinds"
+text = "Keybinds"
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MainMenu/PopupPanel/TabContainer/Gameplay" unique_id=922268027]
+[node name="Secret" type="HBoxContainer" parent="MainMenu/Settings/TabContainer/Gameplay" unique_id=922268027]
 layout_mode = 2
 
-[node name="Label" type="Label" parent="MainMenu/PopupPanel/TabContainer/Gameplay/HBoxContainer" unique_id=1370246539]
+[node name="Label" type="Label" parent="MainMenu/Settings/TabContainer/Gameplay/Secret" unique_id=1370246539]
 layout_mode = 2
 size_flags_horizontal = 0
 text = "Secret"
 
-[node name="CheckBox" type="CheckBox" parent="MainMenu/PopupPanel/TabContainer/Gameplay/HBoxContainer" unique_id=1102064028]
+[node name="CheckBox" type="CheckBox" parent="MainMenu/Settings/TabContainer/Gameplay/Secret" unique_id=1102064028]
 layout_mode = 2
 size_flags_horizontal = 10
 
@@ -320,3 +353,8 @@ size_flags_horizontal = 10
 [connection signal="pressed" from="MainMenu/Control/VBoxContainer/QuitButton" to="MainMenu" method="_on_quit_button_pressed"]
 [connection signal="gui_input" from="MainMenu/Warnings" to="MainMenu/Warnings" method="_on_gui_input"]
 [connection signal="meta_clicked" from="MainMenu/Warnings/RichTextLabel2" to="MainMenu/Warnings" method="_on_rich_text_label_2_meta_clicked"]
+[connection signal="visibility_changed" from="MainMenu/Settings" to="MainMenu/Settings" method="_on_visibility_changed"]
+[connection signal="item_selected" from="MainMenu/Settings/TabContainer/Video/Window/CheckBox" to="MainMenu/Settings" method="_on_window_mode_selected"]
+[connection signal="drag_ended" from="MainMenu/Settings/TabContainer/Video/FPS/HSlider" to="MainMenu/Settings" method="_on_fps_slider_drag_ended"]
+[connection signal="toggled" from="MainMenu/Settings/TabContainer/Video/V-Sync/CheckBox" to="MainMenu/Settings" method="_on_vsync_toggled"]
+[connection signal="drag_ended" from="MainMenu/Settings/TabContainer/Audio/Master/HSlider" to="MainMenu/Settings" method="_on_master_vol_drag_ended"]
