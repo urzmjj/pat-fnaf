@@ -390,6 +390,7 @@ script = ExtResource("2_m4url")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D" unique_id=1258365587]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.24)
+visible = false
 mesh = SubResource("BoxMesh_7sc4i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D/MeshInstance3D" unique_id=1999517091]
