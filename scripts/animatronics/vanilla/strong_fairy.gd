@@ -16,10 +16,13 @@ func reset():
 func _process(delta: float) -> void:
 	if busy_fairy.door == door and busy_fairy.progress == 1 and progress == 4:
 		locked = true
+		lock_timer = 1
 	elif brave_fairy.door == door and brave_fairy.progress == 4 and progress == 4:
 		locked = true
+		lock_timer = 1
 	elif merry_fairy.door == door and merry_fairy.progress == 4 and progress == 4:
 		locked = true
+		lock_timer = 1
 	else:
 		locked = false
 	if pos_cam_idx[pos] == get_tree().get_first_node_in_group("CameraHandler").camera_index:
