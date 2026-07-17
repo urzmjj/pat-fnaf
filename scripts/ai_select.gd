@@ -1,4 +1,4 @@
-@tool
+
 class_name AISelect
 extends AspectRatioContainer
 
@@ -17,7 +17,7 @@ func _ready() -> void:
 		name_label.text = animatronic_name
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Engine.is_editor_hint():
 		if is_inside_tree():
 			get_node("VBoxContainer/Name").text = name

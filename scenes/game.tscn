@@ -1,40 +1,44 @@
 [gd_scene format=3 uid="uid://c1ojnktoubxlb"]
 
-[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://scripts/animatronics/vanilla/blue_fairy.gd" id="1_80nbo"]
-[ext_resource type="Script" uid="uid://brvi3emhmsqrd" path="res://scripts/game_init.gd" id="1_bnpwn"]
-[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://scripts/animatronics/vanilla/icely_toad.gd" id="1_ryrav"]
-[ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://scripts/animatronic_pos_3d.gd" id="2_e2o6t"]
-[ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://scripts/door_handler.gd" id="2_fc0e3"]
-[ext_resource type="Script" uid="uid://dfgqw58s17p2c" path="res://scripts/ai_loader.gd" id="3_5b14r"]
-[ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://scripts/subviewport_input_handler.gd" id="3_e36ub"]
-[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://scripts/animatronics/fans/firefly.gd" id="3_eow3j"]
-[ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://scripts/debug_stats.gd" id="3_feb5d"]
-[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://scripts/animatronics/vanilla/merry_fairy.gd" id="3_j5wjh"]
-[ext_resource type="AudioStream" uid="uid://d1xlpc2hbrxqo" path="res://sounds/sink_sounds/027.ogg" id="4_7sc4i"]
-[ext_resource type="Script" uid="uid://bfwer75tu1ow3" path="res://scripts/camera_controls.gd" id="5_7jktm"]
-[ext_resource type="AudioStream" uid="uid://ctodeheiey2sv" path="res://sounds/sink_sounds/028.ogg" id="5_80cx4"]
-[ext_resource type="AudioStream" uid="uid://cjjlci88xm7xm" path="res://sounds/sink_sounds/029.ogg" id="6_e8heu"]
-[ext_resource type="Script" uid="uid://ciauoil3sxat7" path="res://scripts/animatronics/vanilla/strong_fairy.gd" id="6_xex6t"]
-[ext_resource type="Script" uid="uid://mpu0p17nsbgc" path="res://scripts/animatronics/vanilla/busy_fairy.gd" id="7_aa0lp"]
-[ext_resource type="AudioStream" uid="uid://dapihi21i7psx" path="res://sounds/sink_sounds/030.ogg" id="7_rvswv"]
-[ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="8_vef74"]
-[ext_resource type="Script" uid="uid://c40ogmgmfk7l6" path="res://scripts/animatronics/vanilla/brave_fairy.gd" id="9_iu0sx"]
-[ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://scripts/animatronic_icely_pos.gd" id="9_mfdv2"]
-[ext_resource type="Script" uid="uid://25att15er2n8" path="res://scripts/camera_handler.gd" id="10_80cx4"]
-[ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://sounds/cba_horror.wav" id="10_mfdv2"]
-[ext_resource type="Script" uid="uid://dwvjn7lxnfadd" path="res://scripts/animatronics/vanilla/witch_fairy.gd" id="11_f1jbl"]
-[ext_resource type="ButtonGroup" uid="uid://dnwmt2axekck8" path="res://camera_button_group.tres" id="12_hb5m1"]
-[ext_resource type="Script" uid="uid://dawdillo8jg2k" path="res://scripts/animatronics/fans/angler_fairy.gd" id="12_xa8c5"]
-[ext_resource type="Theme" uid="uid://yaxmlrujwm50" path="res://camera_button_theme.tres" id="13_qhcbd"]
-[ext_resource type="PackedScene" uid="uid://de3pmt4kj1ro7" path="res://models/wall_red.tscn" id="14_rvswv"]
-[ext_resource type="PackedScene" uid="uid://c5xkoaoqwt4bt" path="res://models/wall_blue.tscn" id="15_boyg6"]
-[ext_resource type="Script" uid="uid://b6xexvbdogh68" path="res://scripts/wall_animator.gd" id="15_e36ub"]
-[ext_resource type="Script" uid="uid://h1s63y502iie" path="res://scripts/animatronics/vanilla/fairy_dummy.gd" id="16_4v2jo"]
-[ext_resource type="Script" uid="uid://cbj75wxegiwio" path="res://scripts/animatronics/fans/dummy_fairy.gd" id="19_l1i01"]
-[ext_resource type="Script" uid="uid://brgtqkp3jsbv0" path="res://scripts/animatronics/fans/thermal_fairy.gd" id="20_r62pu"]
-[ext_resource type="Script" uid="uid://dqiwiyo8nb78u" path="res://scripts/office.gd" id="21_vaj68"]
-[ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="22_x5p1p"]
-[ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="25_i2p71"]
+[ext_resource type="Script" uid="uid://brvi3emhmsqrd" path="res://scripts/game_init.gd" id="1_7025r"]
+[ext_resource type="Script" uid="uid://bfwer75tu1ow3" path="res://scripts/camera_controls.gd" id="2_m4url"]
+[ext_resource type="Script" uid="uid://cptkxgm54xwb7" path="res://scripts/subviewport_input_handler.gd" id="3_8ool0"]
+[ext_resource type="Script" uid="uid://dfgqw58s17p2c" path="res://scripts/ai_loader.gd" id="4_pr1ej"]
+[ext_resource type="Script" uid="uid://c4bllcvvxn1ot" path="res://scripts/animatronics/vanilla/blue_fairy.gd" id="5_05nbr"]
+[ext_resource type="Script" uid="uid://ciauoil3sxat7" path="res://scripts/animatronics/vanilla/strong_fairy.gd" id="6_0sl42"]
+[ext_resource type="Script" uid="uid://mpu0p17nsbgc" path="res://scripts/animatronics/vanilla/busy_fairy.gd" id="7_oaba0"]
+[ext_resource type="Script" uid="uid://cbm4aq82pbf70" path="res://scripts/animatronics/vanilla/merry_fairy.gd" id="8_458eo"]
+[ext_resource type="Script" uid="uid://c40ogmgmfk7l6" path="res://scripts/animatronics/vanilla/brave_fairy.gd" id="9_h3rex"]
+[ext_resource type="Script" uid="uid://dwvjn7lxnfadd" path="res://scripts/animatronics/vanilla/witch_fairy.gd" id="10_fedci"]
+[ext_resource type="Script" uid="uid://cvkkptlwbd16u" path="res://scripts/animatronics/vanilla/icely_toad.gd" id="11_8qswn"]
+[ext_resource type="AudioStream" uid="uid://d1xlpc2hbrxqo" path="res://sounds/sink_sounds/027.ogg" id="12_rm0al"]
+[ext_resource type="AudioStream" uid="uid://ctodeheiey2sv" path="res://sounds/sink_sounds/028.ogg" id="13_i4re6"]
+[ext_resource type="AudioStream" uid="uid://cjjlci88xm7xm" path="res://sounds/sink_sounds/029.ogg" id="14_pf7vy"]
+[ext_resource type="AudioStream" uid="uid://dapihi21i7psx" path="res://sounds/sink_sounds/030.ogg" id="15_o8ni1"]
+[ext_resource type="Script" uid="uid://h1s63y502iie" path="res://scripts/animatronics/vanilla/fairy_dummy.gd" id="16_3hbvx"]
+[ext_resource type="Script" uid="uid://dawdillo8jg2k" path="res://scripts/animatronics/fans/angler_fairy.gd" id="17_q8j3a"]
+[ext_resource type="Script" uid="uid://ba1dilo0tnuc8" path="res://scripts/animatronics/fans/firefly.gd" id="18_ms3bu"]
+[ext_resource type="Script" uid="uid://cbj75wxegiwio" path="res://scripts/animatronics/fans/dummy_fairy.gd" id="19_7ixpq"]
+[ext_resource type="Script" uid="uid://brgtqkp3jsbv0" path="res://scripts/animatronics/fans/thermal_fairy.gd" id="20_bk1p3"]
+[ext_resource type="Script" uid="uid://25att15er2n8" path="res://scripts/camera_handler.gd" id="21_n8ral"]
+[ext_resource type="ButtonGroup" uid="uid://dnwmt2axekck8" path="res://camera_button_group.tres" id="22_yd4ix"]
+[ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://sounds/cba_horror.wav" id="23_66xif"]
+[ext_resource type="Shader" uid="uid://bogpa13fuqxvg" path="res://scanlines_and_something.gdshader" id="24_bnuda"]
+[ext_resource type="Theme" uid="uid://yaxmlrujwm50" path="res://themes/camera_button_theme.tres" id="25_0rmfi"]
+[ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="26_xbak0"]
+[ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://scripts/animatronic_icely_pos.gd" id="27_3x28f"]
+[ext_resource type="Script" uid="uid://bfccwsyo8lyt4" path="res://scripts/door_handler.gd" id="28_l6q63"]
+[ext_resource type="Script" uid="uid://c6q1s67pwogdr" path="res://scripts/debug_stats.gd" id="29_mmvbu"]
+[ext_resource type="Script" uid="uid://by06xmmmdxm7g" path="res://scripts/animatronic_pos_3d.gd" id="30_weeiq"]
+[ext_resource type="Script" uid="uid://dqiwiyo8nb78u" path="res://scripts/office.gd" id="31_uxocx"]
+[ext_resource type="PackedScene" uid="uid://de3pmt4kj1ro7" path="res://models/wall_red.tscn" id="32_7nv0b"]
+[ext_resource type="Script" uid="uid://b6xexvbdogh68" path="res://scripts/wall_animator.gd" id="33_o8oq8"]
+[ext_resource type="PackedScene" uid="uid://c5xkoaoqwt4bt" path="res://models/wall_blue.tscn" id="34_sxt1d"]
+[ext_resource type="Texture2D" uid="uid://be532q3imje1y" path="res://images/sun.tres" id="35_2iuns"]
+[ext_resource type="Texture2D" uid="uid://1s4do7i6w6mr" path="res://images/water.tres" id="36_7gkqi"]
+[ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="37_753oq"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://themes/theme.tres" id="38_3x338"]
+[ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="39_1yg85"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
 height = 3.0
@@ -42,19 +46,26 @@ height = 3.0
 [sub_resource type="BoxMesh" id="BoxMesh_7sc4i"]
 size = Vector3(1.65, 0.95, 0.05)
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_7sc4i"]
+[sub_resource type="ViewportTexture" id="ViewportTexture_7025r"]
 viewport_path = NodePath("SubViewport")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80cx4"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_m4url"]
 resource_local_to_scene = true
-albedo_color = Color(0, 0, 0, 1)
-emission_enabled = true
-emission = Color(1.353256, 1.353256, 1.353256, 1)
-emission_energy_multiplier = 2.0
-emission_operator = 1
-emission_texture = SubResource("ViewportTexture_7sc4i")
+render_priority = 0
+shader = ExtResource("24_bnuda")
+shader_parameter/resolution = Vector2(960, 540)
+shader_parameter/pixel_size = 1.5
+shader_parameter/scanline_strength = 0.3
+shader_parameter/subpixel_strength = 0.4
+shader_parameter/glow_intensity = 0.05
+shader_parameter/albedo_texture = SubResource("ViewportTexture_7025r")
+shader_parameter/tex_offset = Vector2(0, 0)
+shader_parameter/tex_scale = Vector2(1, 1)
+shader_parameter/tex_rotation_degrees = 0.0
 
 [sub_resource type="QuadMesh" id="QuadMesh_rvswv"]
+resource_local_to_scene = true
+material = SubResource("ShaderMaterial_m4url")
 size = Vector2(1.6, 0.9)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_boyg6"]
@@ -324,14 +335,13 @@ size = Vector2(0.45, 0.45)
 emission_enabled = true
 emission = Color(1.353256, 1.353256, 1.353256, 1)
 emission_operator = 1
-emission_texture = ExtResource("8_vef74")
+emission_texture = ExtResource("26_xbak0")
 
 [sub_resource type="QuadMesh" id="QuadMesh_5b14r"]
 material = SubResource("StandardMaterial3D_xa8c5")
 size = Vector2(0.45, 0.45)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
-font_size = 10
 
 [sub_resource type="Environment" id="Environment_ryrav"]
 ambient_light_source = 1
@@ -339,6 +349,7 @@ ambient_light_sky_contribution = 0.0
 ambient_light_energy = 0.05
 reflected_light_source = 1
 glow_enabled = true
+glow_intensity = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hve3p"]
 material = SubResource("StandardMaterial3D_7jktm")
@@ -357,7 +368,7 @@ material = SubResource("StandardMaterial3D_eow3j")
 
 [node name="Game" type="Node3D" unique_id=1071604260 node_paths=PackedStringArray("ai_loader", "office")]
 process_mode = 1
-script = ExtResource("1_bnpwn")
+script = ExtResource("1_7025r")
 ai_loader = NodePath("Animatronics")
 office = NodePath("Office")
 
@@ -375,19 +386,19 @@ mesh = SubResource("SphereMesh_qhcbd")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 0)
 cull_mask = 1047559
 fov = 90.0
-script = ExtResource("5_7jktm")
+script = ExtResource("2_m4url")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D" unique_id=1258365587]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.24)
+visible = false
 mesh = SubResource("BoxMesh_7sc4i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D/MeshInstance3D" unique_id=1999517091]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
-material_override = SubResource("StandardMaterial3D_80cx4")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.029999971)
 mesh = SubResource("QuadMesh_rvswv")
 
 [node name="Area3D" type="Area3D" parent="Player/Camera3D/MeshInstance3D/MeshInstance3D" unique_id=1705830668 node_paths=PackedStringArray("subviewport")]
-script = ExtResource("3_e36ub")
+script = ExtResource("3_8ool0")
 subviewport = NodePath("../../../../../SubViewport")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" unique_id=1618795499]
@@ -399,11 +410,11 @@ visible = false
 mesh = SubResource("QuadMesh_xfvwf")
 
 [node name="Animatronics" type="Node" parent="." unique_id=258026473 node_paths=PackedStringArray("animatronics") groups=["AILoader"]]
-script = ExtResource("3_5b14r")
+script = ExtResource("4_pr1ej")
 animatronics = [NodePath("BlueFairy"), NodePath("StrongFairy"), NodePath("BusyFairy"), NodePath("MerryFairy"), NodePath("BraveFairy"), NodePath("WitchFairy"), NodePath("IcelyToad"), NodePath("FairyDummy"), NodePath("AnglerFairy"), NodePath("Firefly"), NodePath("DummyFairy"), null, null, null, NodePath("ThermalFairy"), null, null, null, null, null, null, null, null, null]
 
 [node name="BlueFairy" type="Node" parent="Animatronics" unique_id=444632484 node_paths=PackedStringArray("busy_fairy", "brave_fairy")]
-script = ExtResource("1_80nbo")
+script = ExtResource("5_05nbr")
 busy_fairy = NodePath("../BusyFairy")
 brave_fairy = NodePath("../BraveFairy")
 stages = 5
@@ -412,21 +423,22 @@ move_time = 4.02
 metadata/_custom_type_script = "uid://c4bllcvvxn1ot"
 
 [node name="StrongFairy" type="Node" parent="Animatronics" unique_id=1110592641 node_paths=PackedStringArray("busy_fairy", "brave_fairy", "merry_fairy")]
-script = ExtResource("6_xex6t")
+script = ExtResource("6_0sl42")
 busy_fairy = NodePath("../BusyFairy")
 brave_fairy = NodePath("../BraveFairy")
 merry_fairy = NodePath("../MerryFairy")
+pos_cam_idx = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 stages = 5
 move_time = 6.14
 metadata/_custom_type_script = "uid://ciauoil3sxat7"
 
 [node name="BusyFairy" type="Node" parent="Animatronics" unique_id=2130963243]
-script = ExtResource("7_aa0lp")
+script = ExtResource("7_oaba0")
 stages = 1
 metadata/_custom_type_script = "uid://mpu0p17nsbgc"
 
 [node name="MerryFairy" type="Node" parent="Animatronics" unique_id=1761710030 node_paths=PackedStringArray("busy_fairy", "blue_fairy")]
-script = ExtResource("3_j5wjh")
+script = ExtResource("8_458eo")
 busy_fairy = NodePath("../BusyFairy")
 blue_fairy = NodePath("../BlueFairy")
 stages = 5
@@ -434,20 +446,20 @@ move_time = 4.49
 metadata/_custom_type_script = "uid://cbm4aq82pbf70"
 
 [node name="BraveFairy" type="Node" parent="Animatronics" unique_id=1823941716 node_paths=PackedStringArray("busy_fairy")]
-script = ExtResource("9_iu0sx")
+script = ExtResource("9_h3rex")
 busy_fairy = NodePath("../BusyFairy")
 metadata/_custom_type_script = "uid://c40ogmgmfk7l6"
 
 [node name="WitchFairy" type="Node" parent="Animatronics" unique_id=1176073366]
-script = ExtResource("11_f1jbl")
+script = ExtResource("10_fedci")
 stages = 1
 move_time = 8.93
 metadata/_custom_type_script = "uid://dwvjn7lxnfadd"
 
 [node name="IcelyToad" type="Node" parent="Animatronics" unique_id=1998217580 node_paths=PackedStringArray("audio_player") groups=["IcelyToad"]]
-script = ExtResource("1_ryrav")
+script = ExtResource("11_8qswn")
 audio_player = NodePath("AudioStreamPlayer")
-audio_streams = Array[AudioStream]([ExtResource("4_7sc4i"), ExtResource("5_80cx4"), ExtResource("6_e8heu"), ExtResource("7_rvswv")])
+audio_streams = Array[AudioStream]([ExtResource("12_rm0al"), ExtResource("13_i4re6"), ExtResource("14_pf7vy"), ExtResource("15_o8ni1")])
 stages = 1
 ai_level = 10
 move_time = 12.03
@@ -457,35 +469,35 @@ metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 volume_db = 12.0
 
 [node name="FairyDummy" type="Node" parent="Animatronics" unique_id=1342898715]
-script = ExtResource("16_4v2jo")
+script = ExtResource("16_3hbvx")
 metadata/_custom_type_script = "uid://h1s63y502iie"
 
 [node name="AnglerFairy" type="Node" parent="Animatronics" unique_id=869711172]
-script = ExtResource("12_xa8c5")
+script = ExtResource("17_q8j3a")
 stages = 5
 move_time = 7.03
 metadata/_custom_type_script = "uid://dawdillo8jg2k"
 
 [node name="Firefly" type="Node" parent="Animatronics" unique_id=678104402]
-script = ExtResource("3_eow3j")
+script = ExtResource("18_ms3bu")
 stages = 5
 move_time = 5.01
 metadata/_custom_type_script = "uid://ba1dilo0tnuc8"
 
 [node name="DummyFairy" type="Node" parent="Animatronics" unique_id=249277129]
-script = ExtResource("19_l1i01")
+script = ExtResource("19_7ixpq")
 metadata/_custom_type_script = "uid://cbj75wxegiwio"
 
 [node name="ThermalFairy" type="Node" parent="Animatronics" unique_id=1159315201]
-script = ExtResource("20_r62pu")
+script = ExtResource("20_bk1p3")
 metadata/_custom_type_script = "uid://brgtqkp3jsbv0"
 
-[node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object")]
+[node name="SubViewport" type="SubViewport" parent="." unique_id=1132365198 node_paths=PackedStringArray("cameras", "camera_screen_object") groups=["CameraHandler"]]
 size = Vector2i(960, 540)
-script = ExtResource("10_80cx4")
+script = ExtResource("21_n8ral")
 cameras = [NodePath("0"), NodePath("1")]
 camera_screen_object = NodePath("../Player/Camera3D/MeshInstance3D")
-button_group = ExtResource("12_hb5m1")
+button_group = ExtResource("22_yd4ix")
 
 [node name="0" type="Camera3D" parent="SubViewport" unique_id=989210930]
 transform = Transform3D(-4.371139e-08, 0.86602545, -0.49999997, 0, 0.49999997, 0.86602545, 1, 3.7855173e-08, -2.1855692e-08, -6.4, 1.9, 0)
@@ -513,7 +525,11 @@ spot_angle = 75.0
 
 [node name="CanvasLayer2" type="CanvasLayer" parent="SubViewport" unique_id=488369964]
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SubViewport/CanvasLayer2" unique_id=455307204]
+stream = ExtResource("23_66xif")
+
 [node name="Control" type="Control" parent="SubViewport/CanvasLayer2" unique_id=1874368206]
+use_parent_material = true
 layout_mode = 3
 anchors_preset = 3
 anchor_left = 1.0
@@ -528,6 +544,7 @@ pivot_offset_ratio = Vector2(1, 1)
 
 [node name="TextureRect" type="TextureRect" parent="SubViewport/CanvasLayer2/Control" unique_id=1823405243]
 visible = false
+use_parent_material = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -537,6 +554,7 @@ grow_vertical = 2
 texture = SubResource("PlaceholderTexture2D_boyg6")
 
 [node name="0" type="Button" parent="SubViewport/CanvasLayer2/Control" unique_id=705790847]
+use_parent_material = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -550,15 +568,16 @@ offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme = ExtResource("13_qhcbd")
+theme = ExtResource("25_0rmfi")
 toggle_mode = true
 button_pressed = true
-button_group = ExtResource("12_hb5m1")
+button_group = ExtResource("22_yd4ix")
 text = "CAM
 1"
 alignment = 0
 
 [node name="1" type="Button" parent="SubViewport/CanvasLayer2/Control" unique_id=589605896]
+use_parent_material = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -572,14 +591,15 @@ offset_bottom = 12.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset_ratio = Vector2(0.5, 0.5)
-theme = ExtResource("13_qhcbd")
+theme = ExtResource("25_0rmfi")
 toggle_mode = true
-button_group = ExtResource("12_hb5m1")
+button_group = ExtResource("22_yd4ix")
 text = "CAM
 2"
 alignment = 0
 
 [node name="Control2" type="Control" parent="SubViewport/CanvasLayer2" unique_id=1660339360]
+use_parent_material = true
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -590,25 +610,23 @@ mouse_filter = 2
 
 [node name="Icely" type="TextureRect" parent="SubViewport/CanvasLayer2/Control2" unique_id=532734151 node_paths=PackedStringArray("animatronic", "audio_player")]
 visible = false
+use_parent_material = true
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("8_vef74")
+texture = ExtResource("26_xbak0")
 expand_mode = 1
-script = ExtResource("9_mfdv2")
+script = ExtResource("27_3x28f")
 animatronic = NodePath("../../../../Animatronics/IcelyToad")
 pos = 1
-audio_player = NodePath("../AudioStreamPlayer")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="SubViewport/CanvasLayer2/Control2" unique_id=455307204]
-stream = ExtResource("10_mfdv2")
+audio_player = NodePath("../../AudioStreamPlayer")
 
 [node name="DoorHandler" type="Node" parent="." unique_id=964039169 node_paths=PackedStringArray("door_nodes", "light_nodes") groups=["DoorHandler"]]
 unique_name_in_owner = true
-script = ExtResource("2_fc0e3")
+script = ExtResource("28_l6q63")
 door_nodes = [NodePath("../Office/wall_red"), NodePath("../Office/wall_blue")]
 doors_closed = Array[bool]([false, false])
 light_nodes = [NodePath("../Office/LightL"), NodePath("../Office/LightR")]
@@ -616,7 +634,7 @@ lights_on = Array[bool]([false, false])
 metadata/_custom_type_script = "uid://bfccwsyo8lyt4"
 
 [node name="Debug" type="Node" parent="." unique_id=902104194 node_paths=PackedStringArray("debug_label", "fairies")]
-script = ExtResource("3_feb5d")
+script = ExtResource("29_mmvbu")
 debug_label = NodePath("../CanvasLayer/Label")
 fairies = [NodePath("../Animatronics/BlueFairy"), NodePath("../Animatronics/StrongFairy"), NodePath("../Animatronics/BusyFairy"), NodePath("../Animatronics/MerryFairy"), NodePath("../Animatronics/BraveFairy"), NodePath("../Animatronics/WitchFairy"), NodePath("../Animatronics/IcelyToad"), NodePath("../Animatronics/FairyDummy"), NodePath("../Animatronics/AnglerFairy"), NodePath("../Animatronics/Firefly"), NodePath("../Animatronics/DummyFairy"), NodePath("../Animatronics/ThermalFairy"), null, null, null, null]
 
@@ -629,7 +647,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_feb5d")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/BlueFairy")
 pos = 8
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -639,7 +657,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_feb5d")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/BlueFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -651,7 +669,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_aa0lp")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/StrongFairy")
 pos = 8
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -661,7 +679,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_aa0lp")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/StrongFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -673,7 +691,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_7sc4i")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/MerryFairy")
 pos = 8
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -683,7 +701,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_7sc4i")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/MerryFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -695,7 +713,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_4v2jo")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/BraveFairy")
 pos = 8
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -705,7 +723,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0)
 visible = false
 layers = 516
 mesh = SubResource("CapsuleMesh_4v2jo")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/BraveFairy")
 pos = 9
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -717,7 +735,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 0, -1)
 visible = false
 layers = 517
 mesh = SubResource("CapsuleMesh_vaj68")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/WitchFairy")
 pos = 1
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -733,7 +751,7 @@ shape = SubResource("CapsuleShape3D_f1jbl")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.5)
 visible = false
 mesh = SubResource("CapsuleMesh_r62pu")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/AnglerFairy")
 pos = 4
 
@@ -744,7 +762,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
 visible = false
 layers = 514
 mesh = SubResource("CapsuleMesh_mfdv2")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/Firefly")
 pos = 1
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -763,7 +781,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 5)
 visible = false
 layers = 514
 mesh = SubResource("CapsuleMesh_mfdv2")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/Firefly")
 pos = 2
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -782,7 +800,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 visible = false
 layers = 514
 mesh = SubResource("CapsuleMesh_mfdv2")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/Firefly")
 pos = 3
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -801,7 +819,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
 visible = false
 layers = 514
 mesh = SubResource("CapsuleMesh_mfdv2")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/Firefly")
 pos = 4
 metadata/_custom_type_script = "uid://by06xmmmdxm7g"
@@ -818,7 +836,7 @@ shadow_caster_mask = 4294966275
 [node name="Office" type="Node3D" parent="." unique_id=16614919 node_paths=PackedStringArray("label", "time_label", "powerOn", "powerOff", "doorHandler", "cameraHandler", "aiLoader", "tempSwitch") groups=["Office"]]
 unique_name_in_owner = true
 process_mode = 3
-script = ExtResource("21_vaj68")
+script = ExtResource("31_uxocx")
 label = NodePath("../CanvasLayer/RichTextLabel")
 time_label = NodePath("../CanvasLayer/RichTextLabel2")
 powerDrainRate = -1
@@ -829,13 +847,13 @@ cameraHandler = NodePath("../SubViewport")
 aiLoader = NodePath("../Animatronics")
 tempSwitch = NodePath("Table/temp_switch")
 
-[node name="wall_red" parent="Office" unique_id=320212070 instance=ExtResource("14_rvswv")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, -1, 0)
-script = ExtResource("15_e36ub")
+[node name="wall_red" parent="Office" unique_id=320212070 instance=ExtResource("32_7nv0b")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -3, -1, 0)
+script = ExtResource("33_o8oq8")
 
-[node name="wall_blue" parent="Office" unique_id=325434234 instance=ExtResource("15_boyg6")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, -1, 0)
-script = ExtResource("15_e36ub")
+[node name="wall_blue" parent="Office" unique_id=325434234 instance=ExtResource("34_sxt1d")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 3, -1, 0)
+script = ExtResource("33_o8oq8")
 
 [node name="Floor" type="MeshInstance3D" parent="Office" unique_id=391381073]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -1)
@@ -965,6 +983,14 @@ transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0
 layers = 517
 mesh = SubResource("CylinderMesh_hve3p")
 
+[node name="Sprite3D" type="Sprite3D" parent="Office/ButtonPanelL/DoorButtonL/MeshInstance3D" unique_id=411710072]
+transform = Transform3D(-4.3711385e-08, 4.371139e-08, -1, 4.371139e-08, 1, 4.371139e-08, 1, -4.371139e-08, -4.371139e-08, 0, -0.026000023, 0)
+pixel_size = 0.0083333
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("35_2iuns")
+
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelL/DoorButtonL" unique_id=256403200]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 shape = SubResource("CylinderShape3D_ryrav")
@@ -990,9 +1016,17 @@ mesh = SubResource("BoxMesh_7jktm")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.024999976, 0.125, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Office/ButtonPanelR/DoorButtonR" unique_id=1893641418]
-transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+transform = Transform3D(-4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
 layers = 517
 mesh = SubResource("CylinderMesh_lc2xo")
+
+[node name="Sprite3D" type="Sprite3D" parent="Office/ButtonPanelR/DoorButtonR/MeshInstance3D" unique_id=343585109]
+transform = Transform3D(-4.3711385e-08, -4.371139e-08, 1, -4.371139e-08, 1, 4.371139e-08, -1, -4.371139e-08, -4.371139e-08, 0, -0.026000023, 0)
+pixel_size = 0.0083333
+axis = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("36_7gkqi")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/ButtonPanelR/DoorButtonR" unique_id=1435829299]
 transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
@@ -1138,7 +1172,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.26)
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Office/Table/Monitor/Node3D" unique_id=1435357257 node_paths=PackedStringArray("animatronic")]
 transform = Transform3D(1.0000005, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000005, -5.9604645e-08, 0, 1.1920929e-07)
 mesh = SubResource("QuadMesh_i2p71")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../../../Animatronics/IcelyToad")
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="Office/Table/Monitor/Node3D" unique_id=575033757 node_paths=PackedStringArray("animatronic")]
@@ -1147,14 +1181,14 @@ light_color = Color(0.13149942, 0.13149942, 0.13149942, 1)
 light_cull_mask = 4294966273
 shadow_enabled = true
 shadow_caster_mask = 4294966273
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../../../Animatronics/IcelyToad")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="Office/Table/Monitor/Node3D" unique_id=435334969 node_paths=PackedStringArray("animatronic")]
 transform = Transform3D(1.0000005, 0, 2.9802322e-08, 0, 1, 0, -2.9802322e-08, 0, 1.0000005, 0, 0, 0)
 visible = false
 mesh = SubResource("QuadMesh_5b14r")
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../../../Animatronics/IcelyToad")
 pos = 1
 
@@ -1165,11 +1199,11 @@ light_color = Color(0.5019608, 1, 1, 1)
 light_cull_mask = 4294966273
 shadow_enabled = true
 shadow_caster_mask = 4294966273
-script = ExtResource("2_e2o6t")
+script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../../../Animatronics/IcelyToad")
 pos = 1
 
-[node name="temp_switch" parent="Office/Table" unique_id=123554159 node_paths=PackedStringArray("fanAnimator") instance=ExtResource("25_i2p71")]
+[node name="temp_switch" parent="Office/Table" unique_id=123554159 node_paths=PackedStringArray("fanAnimator") instance=ExtResource("37_753oq")]
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, -0.25, 0.3)
 fanAnimator = NodePath("../../MeshInstance3D2/AnimationPlayer")
 
@@ -1178,6 +1212,7 @@ fanAnimator = NodePath("../../MeshInstance3D2/AnimationPlayer")
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=952879237]
 offset_right = 40.0
 offset_bottom = 23.0
+theme = ExtResource("38_3x338")
 text = "DEBUG"
 label_settings = SubResource("LabelSettings_7jktm")
 
@@ -1186,10 +1221,12 @@ anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = 5.0
-offset_top = -85.0
+offset_top = -165.0
 offset_right = 245.0
 offset_bottom = -5.0
 grow_vertical = 0
+theme = ExtResource("38_3x338")
+theme_type_variation = &"GameLabel"
 bbcode_enabled = true
 text = "Power left:
 Usage:
@@ -1204,8 +1241,10 @@ anchor_right = 1.0
 offset_left = -85.0
 offset_top = 5.0
 offset_right = -5.0
-offset_bottom = 30.0
+offset_bottom = 55.0
 grow_horizontal = 0
+theme = ExtResource("38_3x338")
+theme_type_variation = &"GameLabel"
 bbcode_enabled = true
 text = "12 AM"
 scroll_active = false
@@ -1274,7 +1313,7 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.5
 layers = 516
 mesh = SubResource("QuadMesh_e36ub")
 
-[node name="wall_yellow" parent="." unique_id=267169977 instance=ExtResource("22_x5p1p")]
+[node name="wall_yellow" parent="." unique_id=267169977 instance=ExtResource("39_1yg85")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
 
 [connection signal="input_event" from="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" to="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" method="_on_input_event"]

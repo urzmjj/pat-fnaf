@@ -1,0 +1,66 @@
+[gd_resource type="Theme" format=3 uid="uid://bwudqkaxb6wgb"]
+
+[ext_resource type="SystemFont" uid="uid://ft2q8l04rx4o" path="res://consolas.tres" id="1_e1x85"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cjfk0"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(1, 1, 1, 0.75)
+draw_center = false
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+expand_margin_left = 2.0
+expand_margin_top = 2.0
+expand_margin_right = 2.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vj6dk"]
+
+[resource]
+default_font_size = 0
+BigButton/base_type = &"Button"
+BigButton/font_sizes/font_size = 64
+BigLabel/base_type = &"Label"
+BigLabel/font_sizes/font_size = 36
+Button/font_sizes/font_size = 24
+Button/fonts/font = ExtResource("1_e1x85")
+GameLabel/base_type = &"RichTextLabel"
+GameLabel/colors/font_color = Color(0, 0, 0, 1)
+GameLabel/colors/font_outline_color = Color(0, 0, 0, 1)
+GameLabel/colors/font_shadow_color = Color(0, 0, 0, 1)
+GameLabel/font_sizes/font_size = 24
+GameLabel/font_sizes/normal_font_size = 24
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(0, 0, 0, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 24
+Label/fonts/font = ExtResource("1_e1x85")
+Label/styles/focus = SubResource("StyleBoxFlat_cjfk0")
+Label/styles/normal = SubResource("StyleBoxEmpty_vj6dk")
+LineEdit/fonts/font = ExtResource("1_e1x85")
+MainMenuButton/base_type = &"Button"
+MainMenuButton/font_sizes/font_size = 48
+MainMenuContinueLabel/base_type = &"Label"
+MainMenuContinueLabel/font_sizes/font_size = 24
+NameLabel/base_type = &"Label"
+NameLabel/font_sizes/font_size = 20
+TabContainer/font_sizes/font_size = 32
+TabContainer/fonts/font = ExtResource("1_e1x85")
+TextEdit/fonts/font = ExtResource("1_e1x85")
+Tree/fonts/font = ExtResource("1_e1x85")
+ValueLabel/base_type = &"Label"
+ValueLabel/font_sizes/font_size = 32

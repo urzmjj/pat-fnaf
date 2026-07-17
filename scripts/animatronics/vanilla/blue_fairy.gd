@@ -12,8 +12,10 @@ func reset() -> void:
 func _process(delta: float) -> void:
 	if busy_fairy.door == door and busy_fairy.progress == 1 and progress == 4:
 		locked = true
+		lock_timer = 1
 	elif brave_fairy.door == door and brave_fairy.progress == 4 and progress == 4:
 		locked = true
+		lock_timer = 1
 	else:
 		locked = false
 	super(delta)

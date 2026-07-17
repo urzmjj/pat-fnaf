@@ -4,6 +4,7 @@ extends Node
 @export var night_loader: NightLoader
 @export var custom_night: CustomNightLoader
 @export var night_database: NightDatabase
+@export var settings: Settings
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -28,4 +29,4 @@ func _on_new_game_button_pressed() -> void:
 
 
 func _on_settings_button_pressed() -> void:
-	pass # Replace with function body.
+	settings.show()

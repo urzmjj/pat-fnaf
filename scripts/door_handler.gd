@@ -47,14 +47,12 @@ func _on_door_button_r_input_event(_camera: Node, event: InputEvent, _event_posi
 func _on_light_buttton_l_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if get_tree().get_first_node_in_group("Office").gameState != Constants.GameState.ACTIVE:
 		return
-	var a = lights_on[0]
 	lights_on[0] = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
 	get_viewport().set_input_as_handled()
 
 func _on_light_button_r_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
 	if get_tree().get_first_node_in_group("Office").gameState != Constants.GameState.ACTIVE:
 		return
-	var a = lights_on[1]
 	lights_on[1] = Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT)
 	get_viewport().set_input_as_handled()
 

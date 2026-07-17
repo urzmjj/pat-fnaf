@@ -3,14 +3,14 @@
 [ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="1_080t1"]
 [ext_resource type="Script" uid="uid://drw0hjf22rmfd" path="res://scripts/ai_select.gd" id="1_b2q62"]
 [ext_resource type="Script" uid="uid://1waitkij0u8g" path="res://scripts/custom_night_loader.gd" id="1_vslsh"]
-[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://menus.tres" id="2_b2q62"]
+[ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://themes/theme.tres" id="2_b2q62"]
 
-[sub_resource type="Gradient" id="Gradient_b2q62"]
+[sub_resource type="Gradient" id="Gradient_vslsh"]
 offsets = PackedFloat32Array(0)
 colors = PackedColorArray(0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_vslsh"]
-gradient = SubResource("Gradient_b2q62")
+gradient = SubResource("Gradient_vslsh")
 
 [node name="CustomNight" type="Control" unique_id=2115047209 node_paths=PackedStringArray("ai_selects", "power_option", "temperature_option")]
 layout_mode = 3
@@ -19,6 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("2_b2q62")
 script = ExtResource("1_vslsh")
 ai_selects = [NodePath("Control/HFlowContainer/Blue Fairy"), NodePath("Control/HFlowContainer/Strong Fairy"), NodePath("Control/HFlowContainer/Busy Fairy"), NodePath("Control/HFlowContainer/Merry Fairy"), NodePath("Control/HFlowContainer/Brave Fary"), NodePath("Control/HFlowContainer/Witch Fairy"), NodePath("Control/HFlowContainer/Icely Toad"), NodePath("Control/HFlowContainer/Fairy Dummy"), NodePath("Control/HFlowContainer/Angler Fairy"), NodePath("Control/HFlowContainer/Firefly"), NodePath("Control/HFlowContainer/Dummy Fairy"), NodePath("Control/HFlowContainer/Mime Fairy"), NodePath("Control/HFlowContainer/Military Fairy"), NodePath("Control/HFlowContainer/???"), NodePath("Control/HFlowContainer/Thermal Fairy"), NodePath("Control/HFlowContainer/???2"), NodePath("Control/HFlowContainer/Horror Blue"), NodePath("Control/HFlowContainer/Horror Witch"), NodePath("Control/HFlowContainer/???3"), NodePath("Control/HFlowContainer/???4"), NodePath("Control/HFlowContainer/???5"), NodePath("Control/HFlowContainer/???6"), NodePath("Control/HFlowContainer/Gerson"), NodePath("Control/HFlowContainer/Cirno")]
 power_option = NodePath("Control2/ScrollContainer/VBoxContainer/PowerDrain/OptionButton")
@@ -34,7 +35,7 @@ grow_vertical = 2
 theme = ExtResource("2_b2q62")
 texture = SubResource("GradientTexture2D_vslsh")
 
-[node name="Control" type="Control" parent="." unique_id=861653733]
+[node name="Control" type="Control" parent="." unique_id=2072298016]
 layout_mode = 1
 anchor_right = 0.8
 anchor_bottom = 0.8
@@ -61,18 +62,18 @@ anchors_preset = 14
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_top = -154.0
-offset_bottom = 154.0
 grow_horizontal = 2
 grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
 theme = ExtResource("2_b2q62")
 alignment = 1
 last_wrap_alignment = 2
 
 [node name="Blue Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1084509774]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -92,6 +93,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Blue Fairy/VBoxContainer" unique_id=557677894]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Blue Fairy"
 horizontal_alignment = 1
 
@@ -133,9 +135,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Strong Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=936138379]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -155,6 +158,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Strong Fairy/VBoxContainer" unique_id=678402043]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Strong Fairy"
 horizontal_alignment = 1
 
@@ -196,9 +200,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Busy Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=707745462]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -218,6 +223,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Busy Fairy/VBoxContainer" unique_id=1511735003]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Busy Fairy"
 horizontal_alignment = 1
 
@@ -259,9 +265,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Merry Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1576606057]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -281,6 +288,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Merry Fairy/VBoxContainer" unique_id=1340300106]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Merry Fairy"
 horizontal_alignment = 1
 
@@ -322,9 +330,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Brave Fary" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1870646246]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -344,6 +353,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Brave Fary/VBoxContainer" unique_id=2126685239]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Brave Fary"
 horizontal_alignment = 1
 
@@ -385,9 +395,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Witch Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=2104796752]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -407,6 +418,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Witch Fairy/VBoxContainer" unique_id=749296763]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Witch Fairy"
 horizontal_alignment = 1
 
@@ -448,9 +460,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Icely Toad" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1168441189]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -470,6 +483,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Icely Toad/VBoxContainer" unique_id=1497385986]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Icely Toad"
 horizontal_alignment = 1
 
@@ -512,9 +526,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Fairy Dummy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=617564190]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -534,6 +549,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Fairy Dummy/VBoxContainer" unique_id=1983177338]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Fairy Dummy"
 horizontal_alignment = 1
 
@@ -575,9 +591,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Angler Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=661041623]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -597,6 +614,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Angler Fairy/VBoxContainer" unique_id=1411249949]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Angler Fairy"
 horizontal_alignment = 1
 
@@ -638,9 +656,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Firefly" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1620608496]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -660,6 +679,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Firefly/VBoxContainer" unique_id=910583117]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Firefly"
 horizontal_alignment = 1
 
@@ -701,9 +721,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Dummy Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1322727401]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -723,6 +744,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Dummy Fairy/VBoxContainer" unique_id=297142491]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Dummy Fairy"
 horizontal_alignment = 1
 
@@ -764,9 +786,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Mime Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1155209832]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -786,6 +809,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Mime Fairy/VBoxContainer" unique_id=1232122182]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Mime Fairy"
 horizontal_alignment = 1
 
@@ -827,9 +851,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Military Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=886823712]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -849,6 +874,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Military Fairy/VBoxContainer" unique_id=915227853]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Military Fairy"
 horizontal_alignment = 1
 
@@ -890,9 +916,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1617773258]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -912,6 +939,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/???/VBoxContainer" unique_id=1903655515]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "???"
 horizontal_alignment = 1
 
@@ -953,9 +981,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Thermal Fairy" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1449494758]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -975,6 +1004,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/Thermal Fairy/VBoxContainer" unique_id=947753865]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Thermal Fairy"
 horizontal_alignment = 1
 
@@ -1016,9 +1046,10 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???2" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=271038542]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_horizontal = 4
+size_flags_vertical = 6
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
@@ -1038,6 +1069,7 @@ alignment = 1
 [node name="Name" type="Label" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=909475637]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "???2"
 horizontal_alignment = 1
 
@@ -1079,56 +1111,50 @@ theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Horror Blue" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1429465960]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Horror Blue" unique_id=2051469067]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Horror Blue" unique_id=77861479]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Name" type="Label" parent="Control/HFlowContainer/Horror Blue/VBoxContainer" unique_id=648567680]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Horror Blue"
 horizontal_alignment = 1
 
 [node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Horror Blue/VBoxContainer" unique_id=1547758422]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Horror Blue/VBoxContainer" unique_id=2039287396]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Down" type="Button" parent="Control/HFlowContainer/Horror Blue/VBoxContainer/HBoxContainer" unique_id=1943035938]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
 [node name="AI Level" type="Label" parent="Control/HFlowContainer/Horror Blue/VBoxContainer/HBoxContainer" unique_id=440589278]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
@@ -1138,60 +1164,53 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Horror Witch" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=2040911847]
-custom_minimum_size = Vector2(100, 100)
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Horror Witch" unique_id=525527351]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Horror Witch" unique_id=526445625]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Name" type="Label" parent="Control/HFlowContainer/Horror Witch/VBoxContainer" unique_id=783093906]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Horror Witch"
 horizontal_alignment = 1
 
 [node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Horror Witch/VBoxContainer" unique_id=1897327667]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Horror Witch/VBoxContainer" unique_id=1835835172]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Down" type="Button" parent="Control/HFlowContainer/Horror Witch/VBoxContainer/HBoxContainer" unique_id=448623180]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
 [node name="AI Level" type="Label" parent="Control/HFlowContainer/Horror Witch/VBoxContainer/HBoxContainer" unique_id=759071751]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
@@ -1201,249 +1220,225 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
-[node name="???3" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=557278887]
-custom_minimum_size = Vector2(100, 100)
+[node name="???3" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1181228769]
+visible = false
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
-[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???3" unique_id=1636231362]
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???3" unique_id=1261561086]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???3" unique_id=877985976]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???3" unique_id=946389027]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Name" type="Label" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1172444441]
+[node name="Name" type="Label" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1516993749]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
-text = "???3"
+theme_type_variation = &"NameLabel"
+text = "???6"
 horizontal_alignment = 1
 
-[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1256419322]
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=762755946]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1187565256]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???3/VBoxContainer" unique_id=1202272431]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Down" type="Button" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=1929739990]
+[node name="Down" type="Button" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=828094292]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
-[node name="AI Level" type="Label" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=66375551]
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=2032013069]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Up" type="Button" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=760314236]
+[node name="Up" type="Button" parent="Control/HFlowContainer/???3/VBoxContainer/HBoxContainer" unique_id=1188838145]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
-[node name="???4" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1242019712]
-custom_minimum_size = Vector2(100, 100)
+[node name="???4" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=113079192]
+visible = false
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
-[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???4" unique_id=581287661]
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???4" unique_id=1365317644]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???4" unique_id=540325663]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???4" unique_id=456133885]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Name" type="Label" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1595702203]
+[node name="Name" type="Label" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1073753160]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
-text = "???4"
+theme_type_variation = &"NameLabel"
+text = "???6"
 horizontal_alignment = 1
 
-[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1693360078]
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=964317110]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=1497863626]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???4/VBoxContainer" unique_id=55059640]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Down" type="Button" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=430025657]
+[node name="Down" type="Button" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=34282677]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
-[node name="AI Level" type="Label" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=1219153790]
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=559302447]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Up" type="Button" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=723981778]
+[node name="Up" type="Button" parent="Control/HFlowContainer/???4/VBoxContainer/HBoxContainer" unique_id=187806709]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
-[node name="???5" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=965241208]
-custom_minimum_size = Vector2(100, 100)
+[node name="???5" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1034894085]
+visible = false
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
-[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???5" unique_id=1414012939]
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???5" unique_id=2092992847]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???5" unique_id=415343611]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???5" unique_id=818011948]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Name" type="Label" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=1334749594]
+[node name="Name" type="Label" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=236622259]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
-text = "???5"
+theme_type_variation = &"NameLabel"
+text = "???6"
 horizontal_alignment = 1
 
-[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=1594444969]
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=411537824]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=630178099]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???5/VBoxContainer" unique_id=31068366]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Down" type="Button" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=1987831382]
+[node name="Down" type="Button" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=161951713]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
-[node name="AI Level" type="Label" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=651479319]
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=196724187]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Up" type="Button" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=1748395578]
+[node name="Up" type="Button" parent="Control/HFlowContainer/???5/VBoxContainer/HBoxContainer" unique_id=7248727]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="???6" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1756503896]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???6" unique_id=1838589961]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???6" unique_id=1909802011]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Name" type="Label" parent="Control/HFlowContainer/???6/VBoxContainer" unique_id=594755244]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "???6"
 horizontal_alignment = 1
 
 [node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???6/VBoxContainer" unique_id=2141283919]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???6/VBoxContainer" unique_id=434280839]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Down" type="Button" parent="Control/HFlowContainer/???6/VBoxContainer/HBoxContainer" unique_id=1989970270]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
 [node name="AI Level" type="Label" parent="Control/HFlowContainer/???6/VBoxContainer/HBoxContainer" unique_id=1393200489]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
@@ -1453,60 +1448,54 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Gerson" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=46028392]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Gerson" unique_id=458541270]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Gerson" unique_id=802028381]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Name" type="Label" parent="Control/HFlowContainer/Gerson/VBoxContainer" unique_id=1046519887]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Gerson"
 horizontal_alignment = 1
 
 [node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Gerson/VBoxContainer" unique_id=158949793]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Gerson/VBoxContainer" unique_id=254139533]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Down" type="Button" parent="Control/HFlowContainer/Gerson/VBoxContainer/HBoxContainer" unique_id=753196676]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
 [node name="AI Level" type="Label" parent="Control/HFlowContainer/Gerson/VBoxContainer/HBoxContainer" unique_id=1181815148]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
@@ -1516,60 +1505,54 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Cirno" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=1460899560]
-custom_minimum_size = Vector2(100, 100)
+visible = false
+custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
-size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
+size_flags_horizontal = 4
+size_flags_vertical = 6
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Cirno" unique_id=1410841123]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Cirno" unique_id=1094738794]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Name" type="Label" parent="Control/HFlowContainer/Cirno/VBoxContainer" unique_id=1974247378]
 layout_mode = 2
-theme = ExtResource("2_b2q62")
+theme_type_variation = &"NameLabel"
 text = "Cirno"
 horizontal_alignment = 1
 
 [node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Cirno/VBoxContainer" unique_id=1074869448]
 layout_mode = 2
 size_flags_vertical = 3
-theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Cirno/VBoxContainer" unique_id=1948687368]
 layout_mode = 2
 size_flags_vertical = 8
-theme = ExtResource("2_b2q62")
 alignment = 1
 
 [node name="Down" type="Button" parent="Control/HFlowContainer/Cirno/VBoxContainer/HBoxContainer" unique_id=1772249896]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = "<"
 
 [node name="AI Level" type="Label" parent="Control/HFlowContainer/Cirno/VBoxContainer/HBoxContainer" unique_id=290650680]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
-theme = ExtResource("2_b2q62")
 theme_type_variation = &"ValueLabel"
 text = "20"
 horizontal_alignment = 1
@@ -1579,7 +1562,6 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
-theme = ExtResource("2_b2q62")
 text = ">"
 
 [node name="Control2" type="Control" parent="." unique_id=2138505617]
@@ -1592,6 +1574,7 @@ offset_top = 10.0
 offset_right = -10.0
 offset_bottom = -5.0
 grow_horizontal = 0
+theme = ExtResource("2_b2q62")
 
 [node name="ReferenceRect" type="ReferenceRect" parent="Control2" unique_id=2090930271]
 layout_mode = 1
@@ -1614,6 +1597,7 @@ theme = ExtResource("2_b2q62")
 [node name="VBoxContainer" type="VBoxContainer" parent="Control2/ScrollContainer" unique_id=141014459]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
 
 [node name="PowerDrain" type="HBoxContainer" parent="Control2/ScrollContainer/VBoxContainer" unique_id=1766473709]
