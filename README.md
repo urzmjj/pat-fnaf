@@ -2,7 +2,7 @@
 
 
 
-a game about surviving fairies that are trying to poke you
+a poke all toads fangame about surviving fairies that are trying to poke you
 ## CONTRIBUTING AND FORKING
 ### Legal stuff
 Before forking, read the NOTICE and LICENSE. Kinda important legal stuff there, so just read it as proof that I'm NOT scamming you or anything
