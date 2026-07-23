@@ -21,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_b2q62")
 script = ExtResource("1_vslsh")
-ai_selects = [NodePath("Control/HFlowContainer/Blue Fairy"), NodePath("Control/HFlowContainer/Strong Fairy"), NodePath("Control/HFlowContainer/Busy Fairy"), NodePath("Control/HFlowContainer/Merry Fairy"), NodePath("Control/HFlowContainer/Brave Fary"), NodePath("Control/HFlowContainer/Witch Fairy"), NodePath("Control/HFlowContainer/Icely Toad"), NodePath("Control/HFlowContainer/Fairy Dummy"), NodePath("Control/HFlowContainer/Angler Fairy"), NodePath("Control/HFlowContainer/Firefly"), NodePath("Control/HFlowContainer/Dummy Fairy"), NodePath("Control/HFlowContainer/Mime Fairy"), NodePath("Control/HFlowContainer/Military Fairy"), NodePath("Control/HFlowContainer/???"), NodePath("Control/HFlowContainer/Thermal Fairy"), NodePath("Control/HFlowContainer/???2"), NodePath("Control/HFlowContainer/Horror Blue"), NodePath("Control/HFlowContainer/Horror Witch"), NodePath("Control/HFlowContainer/???3"), NodePath("Control/HFlowContainer/???4"), NodePath("Control/HFlowContainer/???5"), NodePath("Control/HFlowContainer/???6"), NodePath("Control/HFlowContainer/Gerson"), NodePath("Control/HFlowContainer/Cirno")]
+ai_selects = [NodePath("Control/HFlowContainer/Blue Fairy"), NodePath("Control/HFlowContainer/Strong Fairy"), NodePath("Control/HFlowContainer/Busy Fairy"), NodePath("Control/HFlowContainer/Merry Fairy"), NodePath("Control/HFlowContainer/Brave Fary"), NodePath("Control/HFlowContainer/Witch Fairy"), NodePath("Control/HFlowContainer/Icely Toad"), NodePath("Control/HFlowContainer/Fairy Dummy"), NodePath("Control/HFlowContainer/Angler Fairy"), NodePath("Control/HFlowContainer/Firefly"), NodePath("Control/HFlowContainer/Dummy Fairy"), NodePath("Control/HFlowContainer/Mime Fairy"), NodePath("Control/HFlowContainer/Military Fairy"), NodePath("Control/HFlowContainer/???"), NodePath("Control/HFlowContainer/Thermal Fairy"), NodePath("Control/HFlowContainer/Pixies"), NodePath("Control/HFlowContainer/Horror Blue"), NodePath("Control/HFlowContainer/Horror Witch"), NodePath("Control/HFlowContainer/???3"), NodePath("Control/HFlowContainer/???4"), NodePath("Control/HFlowContainer/???5"), NodePath("Control/HFlowContainer/???6"), NodePath("Control/HFlowContainer/Gerson"), NodePath("Control/HFlowContainer/Cirno")]
 power_option = NodePath("Control2/ScrollContainer/VBoxContainer/PowerDrain/OptionButton")
 temperature_option = NodePath("Control2/ScrollContainer/VBoxContainer/Temperature/OptionButton")
 
@@ -1045,7 +1045,7 @@ size_flags_vertical = 4
 theme = ExtResource("2_b2q62")
 text = ">"
 
-[node name="???2" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=271038542]
+[node name="Pixies" type="AspectRatioContainer" parent="Control/HFlowContainer" unique_id=271038542]
 custom_minimum_size = Vector2(160, 160)
 layout_mode = 2
 size_flags_horizontal = 4
@@ -1054,46 +1054,46 @@ theme = ExtResource("2_b2q62")
 script = ExtResource("1_b2q62")
 metadata/_custom_type_script = "uid://drw0hjf22rmfd"
 
-[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/???2" unique_id=1740506675]
+[node name="ReferenceRect" type="ReferenceRect" parent="Control/HFlowContainer/Pixies" unique_id=1740506675]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
 border_color = Color(0, 1, 1, 1)
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/???2" unique_id=1634821550]
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/HFlowContainer/Pixies" unique_id=1634821550]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Name" type="Label" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=909475637]
+[node name="Name" type="Label" parent="Control/HFlowContainer/Pixies/VBoxContainer" unique_id=909475637]
 layout_mode = 2
 theme = ExtResource("2_b2q62")
 theme_type_variation = &"NameLabel"
-text = "???2"
+text = "Pixies"
 horizontal_alignment = 1
 
-[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=1526289412]
+[node name="Pic" type="TextureRect" parent="Control/HFlowContainer/Pixies/VBoxContainer" unique_id=1526289412]
 layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_b2q62")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/???2/VBoxContainer" unique_id=182560127]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/HFlowContainer/Pixies/VBoxContainer" unique_id=182560127]
 layout_mode = 2
 size_flags_vertical = 8
 theme = ExtResource("2_b2q62")
 alignment = 1
 
-[node name="Down" type="Button" parent="Control/HFlowContainer/???2/VBoxContainer/HBoxContainer" unique_id=261420838]
+[node name="Down" type="Button" parent="Control/HFlowContainer/Pixies/VBoxContainer/HBoxContainer" unique_id=261420838]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 theme = ExtResource("2_b2q62")
 text = "<"
 
-[node name="AI Level" type="Label" parent="Control/HFlowContainer/???2/VBoxContainer/HBoxContainer" unique_id=1233279233]
+[node name="AI Level" type="Label" parent="Control/HFlowContainer/Pixies/VBoxContainer/HBoxContainer" unique_id=1233279233]
 layout_mode = 2
 size_flags_horizontal = 6
 size_flags_stretch_ratio = 3.0
@@ -1103,7 +1103,7 @@ text = "20"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Up" type="Button" parent="Control/HFlowContainer/???2/VBoxContainer/HBoxContainer" unique_id=1350033101]
+[node name="Up" type="Button" parent="Control/HFlowContainer/Pixies/VBoxContainer/HBoxContainer" unique_id=1350033101]
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4

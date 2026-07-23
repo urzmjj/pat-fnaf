@@ -209,7 +209,7 @@ grow_vertical = 2
 theme = ExtResource("2_1bvp3")
 bbcode_enabled = true
 text = "[font_size=96][color=red]DISCLAIMER[/color][/font_size]
-[font_size=36]This game is unofficial and is not associated or affiliated with the team of the actual Poke ALL Toads, nor is it associated with most of the creators of the fan fairies, which can be found in the credits.
+[font_size=36]This is an unofficial fangame and is not associated or affiliated with the team of the actual Poke ALL Toads, nor is it associated with most of the creators of the fan fairies, which can be found in the credits.
 This game is NOT canon to Poke ALL Toads or the fan AUs the fan fairies originate from.
 [/font_size]
 [font_size=24]You can find the game at: [url]https://store.steampowered.com/app/2302320/Poke_ALL_Toads/[/url]
