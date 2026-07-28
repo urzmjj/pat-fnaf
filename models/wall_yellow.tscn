@@ -79,7 +79,7 @@ roughness = 0.5
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ccfmh"]
 resource_name = "Material.002"
-albedo_color = Color(0.9063318, 0.9063318, 0.9063318, 1)
+albedo_color = Color(0.5019608, 0.5019608, 0.5019608, 1)
 roughness = 0.5
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_ff56g"]

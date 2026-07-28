@@ -55,8 +55,8 @@ render_priority = 0
 shader = ExtResource("24_bnuda")
 shader_parameter/resolution = Vector2(960, 540)
 shader_parameter/pixel_size = 1.5
-shader_parameter/scanline_strength = 0.3
-shader_parameter/subpixel_strength = 0.4
+shader_parameter/scanline_strength = 0.75
+shader_parameter/subpixel_strength = 0.25
 shader_parameter/glow_intensity = 0.05
 shader_parameter/albedo_texture = SubResource("ViewportTexture_7025r")
 shader_parameter/tex_offset = Vector2(0, 0)
@@ -117,13 +117,62 @@ material = SubResource("StandardMaterial3D_bnpwn")
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_f1jbl"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1i01"]
-albedo_color = Color(0.13725491, 0.8156863, 0.4627451, 1)
+[sub_resource type="Animation" id="Animation_7025r"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MeshInstance3D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1.5]
+}
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_r62pu"]
-material = SubResource("StandardMaterial3D_l1i01")
+[sub_resource type="Animation" id="Animation_m4url"]
+resource_name = "lower"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MeshInstance3D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [1.5, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_8ool0"]
+resource_name = "raise"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../MeshInstance3D:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(-2, 1),
+"update": 0,
+"values": [0.0, 1.5]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8ool0"]
+_data = {
+&"RESET": SubResource("Animation_7025r"),
+&"lower": SubResource("Animation_m4url"),
+&"raise": SubResource("Animation_8ool0")
+}
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4url"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_7025r"]
+material = SubResource("StandardMaterial3D_m4url")
 radius = 0.05
 height = 0.2
 
@@ -131,11 +180,41 @@ height = 0.2
 radius = 0.1
 height = 0.3
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l1i01"]
+albedo_color = Color(0.13725491, 0.8156863, 0.4627451, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_r62pu"]
+material = SubResource("StandardMaterial3D_l1i01")
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hve3p"]
 albedo_color = Color(0.77254903, 0.16862746, 0.16862746, 1)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_mfdv2"]
 material = SubResource("StandardMaterial3D_hve3p")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7025r"]
+metallic = 1.0
+roughness = 0.25
+
+[sub_resource type="QuadMesh" id="QuadMesh_m4url"]
+material = SubResource("StandardMaterial3D_7025r")
+size = Vector2(1, 0.5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8ool0"]
+material = SubResource("StandardMaterial3D_7025r")
+size = Vector2(1, 1.5)
+
+[sub_resource type="QuadMesh" id="QuadMesh_05nbr"]
+material = SubResource("StandardMaterial3D_7025r")
+size = Vector2(1, 3)
+
+[sub_resource type="QuadMesh" id="QuadMesh_pr1ej"]
+material = SubResource("StandardMaterial3D_7025r")
+size = Vector2(2, 1)
+
+[sub_resource type="QuadMesh" id="QuadMesh_7025r"]
+material = SubResource("StandardMaterial3D_7025r")
+size = Vector2(1, 2)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7jktm"]
 albedo_color = Color(0.2509804, 0.2509804, 0.2509804, 1)
@@ -332,6 +411,7 @@ size = Vector2(0.45, 0.45)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vaj68"]
 albedo_color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+roughness = 0.1
 emission_enabled = true
 emission = Color(0.13149942, 0.13149942, 0.13149942, 1)
 
@@ -340,6 +420,7 @@ material = SubResource("StandardMaterial3D_vaj68")
 size = Vector2(0.45, 0.45)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa8c5"]
+roughness = 0.1
 emission_enabled = true
 emission = Color(1.353256, 1.353256, 1.353256, 1)
 emission_operator = 1
@@ -350,14 +431,6 @@ material = SubResource("StandardMaterial3D_xa8c5")
 size = Vector2(0.45, 0.45)
 
 [sub_resource type="LabelSettings" id="LabelSettings_7jktm"]
-
-[sub_resource type="Environment" id="Environment_ryrav"]
-ambient_light_source = 1
-ambient_light_sky_contribution = 0.0
-ambient_light_energy = 0.05
-reflected_light_source = 1
-glow_enabled = true
-glow_intensity = 1.0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_hve3p"]
 material = SubResource("StandardMaterial3D_7jktm")
@@ -373,6 +446,23 @@ size = Vector2(3, 3)
 
 [sub_resource type="QuadMesh" id="QuadMesh_e36ub"]
 material = SubResource("StandardMaterial3D_eow3j")
+
+[sub_resource type="Environment" id="Environment_ryrav"]
+ambient_light_source = 1
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.05
+reflected_light_source = 1
+tonemap_mode = 4
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
+glow_enabled = true
+glow_intensity = 1.0
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_7025r"]
+dof_blur_far_enabled = true
+dof_blur_near_enabled = true
+dof_blur_near_distance = 0.2
 
 [node name="Game" type="Node3D" unique_id=1071604260 node_paths=PackedStringArray("ai_loader", "office")]
 process_mode = 1
@@ -398,7 +488,6 @@ script = ExtResource("2_m4url")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D" unique_id=1258365587]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.24)
-visible = false
 mesh = SubResource("BoxMesh_7sc4i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D/MeshInstance3D" unique_id=1999517091]
@@ -456,6 +545,7 @@ metadata/_custom_type_script = "uid://cbm4aq82pbf70"
 [node name="BraveFairy" type="Node" parent="Animatronics" unique_id=1823941716 node_paths=PackedStringArray("busy_fairy")]
 script = ExtResource("9_h3rex")
 busy_fairy = NodePath("../BusyFairy")
+pos_cam_idx = Array[int]([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0])
 metadata/_custom_type_script = "uid://c40ogmgmfk7l6"
 
 [node name="WitchFairy" type="Node" parent="Animatronics" unique_id=1176073366]
@@ -510,6 +600,7 @@ button_group = ExtResource("22_yd4ix")
 [node name="0" type="Camera3D" parent="SubViewport" unique_id=989210930]
 transform = Transform3D(-4.371139e-08, 0.86602545, -0.49999997, 0, 0.49999997, 0.86602545, 1, 3.7855173e-08, -2.1855692e-08, -6.4, 1.9, 0)
 cull_mask = 1048064
+fov = 74.96004
 
 [node name="SpotLight3D" type="SpotLight3D" parent="SubViewport/0" unique_id=495208832]
 layers = 512
@@ -755,21 +846,25 @@ shape = SubResource("CapsuleShape3D_f1jbl")
 
 [node name="Angler" type="Node3D" parent="Positions" unique_id=789000775]
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Positions/Angler" unique_id=843348964]
+root_node = NodePath("../Angler_4")
+libraries/ = SubResource("AnimationLibrary_8ool0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Positions/Angler" unique_id=787870753]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, -2)
+mesh = SubResource("CapsuleMesh_7025r")
+
+[node name="Area3D" type="Area3D" parent="Positions/Angler/MeshInstance3D" unique_id=456424540]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Positions/Angler/MeshInstance3D/Area3D" unique_id=1790965451]
+shape = SubResource("CapsuleShape3D_7025r")
+
 [node name="Angler_4" type="MeshInstance3D" parent="Positions/Angler" unique_id=795033509 node_paths=PackedStringArray("animatronic")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -2.5)
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 2, -3)
 mesh = SubResource("CapsuleMesh_r62pu")
 script = ExtResource("30_weeiq")
 animatronic = NodePath("../../../Animatronics/AnglerFairy")
 pos = 4
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Positions/Angler/Angler_4" unique_id=787870753]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2, 1)
-mesh = SubResource("CapsuleMesh_7025r")
-
-[node name="Area3D" type="Area3D" parent="Positions/Angler/Angler_4/MeshInstance3D" unique_id=456424540]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Positions/Angler/Angler_4/MeshInstance3D/Area3D" unique_id=1790965451]
-shape = SubResource("CapsuleShape3D_7025r")
 
 [node name="Firefly" type="Node3D" parent="Positions" unique_id=210787906]
 
@@ -848,6 +943,41 @@ light_energy = 0.5
 light_cull_mask = 4294966275
 shadow_enabled = true
 shadow_caster_mask = 4294966275
+
+[node name="Top Vent" type="Node3D" parent="." unique_id=492655620]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, -2)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Top Vent" unique_id=788898179]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, -0.5)
+mesh = SubResource("QuadMesh_m4url")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Top Vent" unique_id=657142498]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.75, 0.5)
+mesh = SubResource("QuadMesh_8ool0")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Top Vent" unique_id=1393341224]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0.75, 0)
+mesh = SubResource("QuadMesh_8ool0")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Top Vent" unique_id=519361994]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0.75, 0)
+mesh = SubResource("QuadMesh_8ool0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Top Vent" unique_id=1184258612]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1.5, -1)
+mesh = SubResource("QuadMesh_05nbr")
+
+[node name="MeshInstance3D6" type="MeshInstance3D" parent="Top Vent" unique_id=1799942833]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 1, -1.5)
+mesh = SubResource("QuadMesh_pr1ej")
+
+[node name="MeshInstance3D7" type="MeshInstance3D" parent="Top Vent" unique_id=163873181]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 1, -1.5)
+mesh = SubResource("QuadMesh_pr1ej")
+
+[node name="MeshInstance3D8" type="MeshInstance3D" parent="Top Vent" unique_id=190044874]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 0.5, -1.5)
+mesh = SubResource("QuadMesh_7025r")
 
 [node name="Office" type="Node3D" parent="." unique_id=16614919 node_paths=PackedStringArray("label", "time_label", "powerOn", "powerOff", "doorHandler", "cameraHandler", "aiLoader", "tempSwitch") groups=["Office"]]
 unique_name_in_owner = true
@@ -1094,8 +1224,18 @@ mesh = SubResource("QuadMesh_7sc4i")
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 6.5)
 mesh = SubResource("QuadMesh_80cx4")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Office" unique_id=432029013]
-transform = Transform3D(1, 0, 0, 0, -4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 1, -2)
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Office" unique_id=1643642582]
+root_node = NodePath("../Node3D/MeshInstance3D")
+
+[node name="Node3D" type="Node3D" parent="Office" unique_id=1629741199]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, -1.0000001, 0, 1.0000001, -2.9802322e-08, 0, 1, -2.5)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Office/Node3D" unique_id=432029013]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -5.9604645e-08)
+mesh = SubResource("QuadMesh_qhcbd")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Office/Node3D" unique_id=1854515939]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 0, 0.5, -5.9604645e-08)
 mesh = SubResource("QuadMesh_qhcbd")
 
 [node name="Shelf" type="Node3D" parent="Office" unique_id=580209283]
@@ -1223,6 +1363,9 @@ pos = 1
 transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -1, -0.25, 0.3)
 fanAnimator = NodePath("../../MeshInstance3D2/AnimationPlayer")
 
+[node name="wall_yellow" parent="Office" unique_id=267169977 instance=ExtResource("39_1yg85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
+
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=6460043]
 
 [node name="Label" type="Label" parent="CanvasLayer" unique_id=952879237]
@@ -1294,9 +1437,6 @@ text = "Night 1"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1213974731]
-environment = SubResource("Environment_ryrav")
-
 [node name="Floor" type="MeshInstance3D" parent="." unique_id=2087738437]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, -1, 0)
 layers = 516
@@ -1357,8 +1497,9 @@ transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.5
 layers = 516
 mesh = SubResource("QuadMesh_e36ub")
 
-[node name="wall_yellow" parent="." unique_id=267169977 instance=ExtResource("39_1yg85")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 1)
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1213974731]
+environment = SubResource("Environment_ryrav")
+camera_attributes = SubResource("CameraAttributesPractical_7025r")
 
 [connection signal="input_event" from="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" to="Player/Camera3D/MeshInstance3D/MeshInstance3D/Area3D" method="_on_input_event"]
 [connection signal="input_event" from="Positions/Witch/Witch_1/Area3D" to="Animatronics/WitchFairy" method="_on_area_3d_input_event"]
