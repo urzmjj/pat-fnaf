@@ -509,9 +509,11 @@ size = Vector2(3, 3)
 material = SubResource("StandardMaterial3D_eow3j")
 
 [sub_resource type="QuadMesh" id="QuadMesh_0sl42"]
+material = SubResource("StandardMaterial3D_eow3j")
 size = Vector2(1, 2)
 
 [sub_resource type="QuadMesh" id="QuadMesh_oaba0"]
+material = SubResource("StandardMaterial3D_7jktm")
 orientation = 1
 
 [sub_resource type="Environment" id="Environment_ryrav"]
