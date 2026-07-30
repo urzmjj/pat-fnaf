@@ -45,6 +45,7 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ool0"]
 shader = ExtResource("41_8ool0")
 shader_parameter/invert = 0.0
+shader_parameter/brightness = 0.0
 shader_parameter/size = Vector2(32, 28)
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
@@ -540,10 +541,10 @@ script = ExtResource("1_7025r")
 ai_loader = NodePath("Animatronics")
 office = NodePath("Office")
 
-[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=42931009]
+[node name="FX" type="CanvasLayer" parent="." unique_id=42931009]
 layer = 1025
 
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer2" unique_id=506372054]
+[node name="ColorRect2" type="ColorRect" parent="FX" unique_id=506372054]
 z_index = 2763
 material = SubResource("ShaderMaterial_8ool0")
 anchors_preset = 15
@@ -643,7 +644,7 @@ script = ExtResource("11_8qswn")
 audio_player = NodePath("AudioStreamPlayer")
 audio_streams = Array[AudioStream]([ExtResource("12_rm0al"), ExtResource("13_i4re6"), ExtResource("14_pf7vy"), ExtResource("15_o8ni1")])
 stages = 1
-ai_level = 10
+ai_level = 20
 move_time = 12.03
 metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 

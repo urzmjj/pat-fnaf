@@ -1,6 +1,7 @@
 shader_type canvas_item;
 
 uniform float invert = 0;
+uniform float brightness = 0;
 uniform vec2 size = vec2(32.0, 28.0);
 // If you intend to read from mipmaps with `textureLod()` LOD values greater than `0.0`,
 // use `filter_nearest_mipmap` instead. This shader doesn't require it.
@@ -20,5 +21,6 @@ vec4 inv(vec4 color, float inv){
 void fragment() {
 	vec4 color = texture(screen_texture, SCREEN_UV);
 	color = inv(color, invert);
+	color = color * vec4(brightness + 1.0,brightness + 1.0,brightness + 1.0,1);
     COLOR = color;
 }
