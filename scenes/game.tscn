@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://be532q3imje1y" path="res://images/sun.tres" id="35_2iuns"]
 [ext_resource type="Texture2D" uid="uid://1s4do7i6w6mr" path="res://images/water.tres" id="36_7gkqi"]
 [ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="37_753oq"]
+[ext_resource type="Script" uid="uid://c2jcfatoylnx" path="res://scenes/vent_controller.gd" id="37_m4url"]
 [ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://themes/theme.tres" id="38_3x338"]
 [ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="39_1yg85"]
 
@@ -355,6 +356,60 @@ size = Vector2(1, 4)
 [sub_resource type="QuadMesh" id="QuadMesh_80cx4"]
 material = SubResource("StandardMaterial3D_lc2xo")
 size = Vector2(1, 2)
+
+[sub_resource type="Animation" id="Animation_pr1ej"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2.8797932]
+}
+
+[sub_resource type="Animation" id="Animation_0sl42"]
+resource_name = "close"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(0.25, 1),
+"update": 0,
+"values": [2.88, 1.571]
+}
+
+[sub_resource type="Animation" id="Animation_05nbr"]
+resource_name = "open"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:rotation:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.19999999),
+"transitions": PackedFloat32Array(2, 1),
+"update": 0,
+"values": [1.571, 2.88]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_0sl42"]
+_data = {
+&"RESET": SubResource("Animation_pr1ej"),
+&"close": SubResource("Animation_0sl42"),
+&"open": SubResource("Animation_05nbr")
+}
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x5p1p"]
 metallic = 1.0
@@ -1226,9 +1281,11 @@ mesh = SubResource("QuadMesh_80cx4")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Office" unique_id=1643642582]
 root_node = NodePath("../Node3D/MeshInstance3D")
+libraries/ = SubResource("AnimationLibrary_0sl42")
+script = ExtResource("37_m4url")
 
 [node name="Node3D" type="Node3D" parent="Office" unique_id=1629741199]
-transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, -1.0000001, 0, 1.0000001, -2.9802322e-08, 0, 1, -2.5)
+transform = Transform3D(1, 0, 0, 0, -0.96592593, -0.25881916, 0, 0.25881916, -0.96592593, 0, 1, -2.5)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Office/Node3D" unique_id=432029013]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, -5.9604645e-08)
