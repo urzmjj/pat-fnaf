@@ -13,6 +13,9 @@ func _process(delta: float) -> void:
 	pos = progress
 	if progress == stages:
 		timeRemaining -= delta
+		if timeRemaining == 0:
+			pass
+			# call jumpscare
 
 func poke() -> void:
 	if(progress == 0):

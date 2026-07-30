@@ -23,6 +23,7 @@ func _process(delta: float) -> void:
 
 func complete_movement() -> void:
 	if get_tree().get_first_node_in_group("DoorHandler").doors_closed[door]:
+		# call jumpscare
 		pass
 	else:
 		reset()

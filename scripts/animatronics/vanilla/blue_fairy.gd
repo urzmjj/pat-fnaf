@@ -25,6 +25,7 @@ func complete_movement() -> void:
 	if get_tree().get_first_node_in_group("DoorHandler").doors_closed[door]:
 		reset()
 	else:
+		# call jumpscare
 		pass
 	
 	

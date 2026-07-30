@@ -37,3 +37,4 @@ func _process(delta: float) -> void:
 
 func complete_movement():
 	pass
+	# call jumpscare
