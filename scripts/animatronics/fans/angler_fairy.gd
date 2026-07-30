@@ -21,7 +21,7 @@ func _process(delta: float) -> void:
 func complete_movement():
 	hook.show()
 	hookAnim.play("lower")
-	timeRemaining = (21.0-ai_level)*2/20+1
+	timeRemaining = (21.0-ai_level)*2/20+1.2
 
 
 func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Vector3, normal: Vector3, shape_idx: int) -> void:
