@@ -508,6 +508,12 @@ size = Vector2(3, 3)
 [sub_resource type="QuadMesh" id="QuadMesh_e36ub"]
 material = SubResource("StandardMaterial3D_eow3j")
 
+[sub_resource type="QuadMesh" id="QuadMesh_0sl42"]
+size = Vector2(1, 2)
+
+[sub_resource type="QuadMesh" id="QuadMesh_oaba0"]
+orientation = 1
+
 [sub_resource type="Environment" id="Environment_ryrav"]
 ambient_light_source = 1
 ambient_light_sky_contribution = 0.0
@@ -1578,6 +1584,29 @@ mesh = SubResource("QuadMesh_e36ub")
 transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, -3.5, 1.5, 0)
 layers = 516
 mesh = SubResource("QuadMesh_e36ub")
+
+[node name="BroomCloset" type="Node3D" parent="." unique_id=2052004733]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7, 0, 9)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="BroomCloset" unique_id=227522886]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.5)
+mesh = SubResource("QuadMesh_0sl42")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="BroomCloset" unique_id=1713964823]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0.5, 0, 0)
+mesh = SubResource("QuadMesh_0sl42")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="BroomCloset" unique_id=1364693010]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -0.5, 0, 0)
+mesh = SubResource("QuadMesh_0sl42")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="BroomCloset" unique_id=921435901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, 0)
+mesh = SubResource("QuadMesh_oaba0")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="BroomCloset" unique_id=58236376]
+transform = Transform3D(-1, 0, 0, 0, -1, 0, 0, 0, -1, 0, 1, 0)
+mesh = SubResource("QuadMesh_oaba0")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1213974731]
 environment = SubResource("Environment_ryrav")
