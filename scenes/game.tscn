@@ -23,7 +23,7 @@
 [ext_resource type="Script" uid="uid://25att15er2n8" path="res://scripts/camera_handler.gd" id="21_n8ral"]
 [ext_resource type="ButtonGroup" uid="uid://dnwmt2axekck8" path="res://camera_button_group.tres" id="22_yd4ix"]
 [ext_resource type="AudioStream" uid="uid://bn30jiysqvwlc" path="res://sounds/cba_horror.wav" id="23_66xif"]
-[ext_resource type="Shader" uid="uid://bogpa13fuqxvg" path="res://scanlines_and_something.gdshader" id="24_bnuda"]
+[ext_resource type="Shader" uid="uid://bogpa13fuqxvg" path="res://shaders/scanlines_and_something.gdshader" id="24_bnuda"]
 [ext_resource type="Theme" uid="uid://yaxmlrujwm50" path="res://themes/camera_button_theme.tres" id="25_0rmfi"]
 [ext_resource type="Texture2D" uid="uid://cwr2gqh83nq87" path="res://images/bCuUXw.png" id="26_xbak0"]
 [ext_resource type="Script" uid="uid://clkwpxaiyssij" path="res://scripts/animatronic_icely_pos.gd" id="27_3x28f"]
@@ -37,9 +37,15 @@
 [ext_resource type="Texture2D" uid="uid://be532q3imje1y" path="res://images/sun.tres" id="35_2iuns"]
 [ext_resource type="Texture2D" uid="uid://1s4do7i6w6mr" path="res://images/water.tres" id="36_7gkqi"]
 [ext_resource type="PackedScene" uid="uid://cfdc23iygethp" path="res://models/temp_switch.tscn" id="37_753oq"]
-[ext_resource type="Script" uid="uid://c2jcfatoylnx" path="res://scenes/vent_controller.gd" id="37_m4url"]
+[ext_resource type="Script" uid="uid://c2jcfatoylnx" path="res://scripts/vent_controller.gd" id="37_m4url"]
 [ext_resource type="Theme" uid="uid://bwudqkaxb6wgb" path="res://themes/theme.tres" id="38_3x338"]
 [ext_resource type="PackedScene" uid="uid://c6jp516ofox1x" path="res://models/wall_yellow.tscn" id="39_1yg85"]
+[ext_resource type="Shader" uid="uid://cwychn2hh8vvp" path="res://shaders/pp_layer1.gdshader" id="41_8ool0"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8ool0"]
+shader = ExtResource("41_8ool0")
+shader_parameter/invert = 0.0
+shader_parameter/size = Vector2(32, 28)
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
 height = 3.0
@@ -511,6 +517,7 @@ tonemap_mode = 4
 ssr_enabled = true
 ssao_enabled = true
 ssil_enabled = true
+sdfgi_enabled = true
 glow_enabled = true
 glow_intensity = 1.0
 
@@ -524,6 +531,19 @@ process_mode = 1
 script = ExtResource("1_7025r")
 ai_loader = NodePath("Animatronics")
 office = NodePath("Office")
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=42931009]
+layer = 1025
+
+[node name="ColorRect2" type="ColorRect" parent="CanvasLayer2" unique_id=506372054]
+z_index = 2763
+material = SubResource("ShaderMaterial_8ool0")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="Player" type="Node3D" parent="." unique_id=1151382070]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1)
@@ -543,6 +563,7 @@ script = ExtResource("2_m4url")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D" unique_id=1258365587]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, -0.24)
+visible = false
 mesh = SubResource("BoxMesh_7sc4i")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player/Camera3D/MeshInstance3D" unique_id=1999517091]
@@ -1468,7 +1489,9 @@ text = "12 AM"
 scroll_active = false
 horizontal_alignment = 2
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=807981760]
+[node name="CanvasLayer3" type="CanvasLayer" parent="." unique_id=1521617364]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer3" unique_id=807981760]
 visible = false
 anchors_preset = 15
 anchor_right = 1.0
@@ -1477,7 +1500,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="Label" type="Label" parent="CanvasLayer/ColorRect" unique_id=570432819]
+[node name="Label" type="Label" parent="CanvasLayer3/ColorRect" unique_id=570432819]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
