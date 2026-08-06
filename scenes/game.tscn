@@ -44,8 +44,11 @@
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_8ool0"]
 shader = ExtResource("41_8ool0")
+shader_parameter/chrom_levels = 65
+shader_parameter/chrom_spread = 0.0
 shader_parameter/invert = 0.0
 shader_parameter/brightness = 0.0
+shader_parameter/thermal = 0.0
 shader_parameter/size = Vector2(32, 28)
 
 [sub_resource type="SphereMesh" id="SphereMesh_qhcbd"]
@@ -644,7 +647,6 @@ script = ExtResource("11_8qswn")
 audio_player = NodePath("AudioStreamPlayer")
 audio_streams = Array[AudioStream]([ExtResource("12_rm0al"), ExtResource("13_i4re6"), ExtResource("14_pf7vy"), ExtResource("15_o8ni1")])
 stages = 1
-ai_level = 20
 move_time = 12.03
 metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 
