@@ -89,6 +89,27 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_36jdj")
 size = Vector2(1.6, 0.9)
 
+[sub_resource type="Gradient" id="Gradient_f1jbl"]
+offsets = PackedFloat32Array(0.46666667, 0.53333336)
+colors = PackedColorArray(0, 0, 1, 1, 1, 1, 1, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 15
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_vaj68"]
+gradient = SubResource("Gradient_f1jbl")
+fill_from = Vector2(0.5, 0.25)
+fill_to = Vector2(0.5, 0.5)
+metadata/_snap_enabled = true
+metadata/_snap_count = 8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2p71"]
+albedo_texture = SubResource("GradientTexture2D_vaj68")
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_f1jbl"]
+material = SubResource("StandardMaterial3D_i2p71")
+radius = 0.1
+height = 0.4
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_boyg6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fc0e3"]
@@ -435,27 +456,6 @@ size = Vector3(2, 0.02, 0.5)
 [sub_resource type="BoxMesh" id="BoxMesh_qhcbd"]
 size = Vector3(0.09, 0.4, 0.25)
 
-[sub_resource type="Gradient" id="Gradient_f1jbl"]
-offsets = PackedFloat32Array(0.46666667, 0.53333336)
-colors = PackedColorArray(0, 0, 1, 1, 1, 1, 1, 1)
-metadata/_snap_enabled = true
-metadata/_snap_count = 15
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_vaj68"]
-gradient = SubResource("Gradient_f1jbl")
-fill_from = Vector2(0.5, 0.25)
-fill_to = Vector2(0.5, 0.5)
-metadata/_snap_enabled = true
-metadata/_snap_count = 8
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i2p71"]
-albedo_texture = SubResource("GradientTexture2D_vaj68")
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_f1jbl"]
-material = SubResource("StandardMaterial3D_i2p71")
-radius = 0.1
-height = 0.4
-
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vaj68"]
 radius = 0.1
 height = 0.4
@@ -594,6 +594,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.03)
 visible = false
 mesh = SubResource("QuadMesh_xfvwf")
 
+[node name="SprayBottle" type="MeshInstance3D" parent="Player/Camera3D" unique_id=706882007]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, -0.5)
+mesh = SubResource("CapsuleMesh_f1jbl")
+
 [node name="Animatronics" type="Node" parent="." unique_id=258026473 node_paths=PackedStringArray("animatronics") groups=["AILoader"]]
 script = ExtResource("4_pr1ej")
 animatronics = [NodePath("BlueFairy"), NodePath("StrongFairy"), NodePath("BusyFairy"), NodePath("MerryFairy"), NodePath("BraveFairy"), NodePath("WitchFairy"), NodePath("IcelyToad"), NodePath("FairyDummy"), NodePath("AnglerFairy"), NodePath("Firefly"), NodePath("DummyFairy"), null, null, null, NodePath("ThermalFairy"), null, null, null, null, null, null, null, null, null]
@@ -655,6 +659,7 @@ volume_db = 12.0
 
 [node name="FairyDummy" type="Node" parent="Animatronics" unique_id=1342898715]
 script = ExtResource("16_3hbvx")
+stages = 1
 metadata/_custom_type_script = "uid://h1s63y502iie"
 
 [node name="AnglerFairy" type="Node" parent="Animatronics" unique_id=869711172 node_paths=PackedStringArray("hookAnim", "hook")]
