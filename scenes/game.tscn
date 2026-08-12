@@ -529,7 +529,6 @@ tonemap_mode = 4
 ssr_enabled = true
 ssao_enabled = true
 ssil_enabled = true
-sdfgi_enabled = true
 glow_enabled = true
 glow_intensity = 1.0
 
@@ -595,7 +594,8 @@ visible = false
 mesh = SubResource("QuadMesh_xfvwf")
 
 [node name="SprayBottle" type="MeshInstance3D" parent="Player/Camera3D" unique_id=706882007]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.375, -0.5)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, -0.25)
+visible = false
 mesh = SubResource("CapsuleMesh_f1jbl")
 
 [node name="Animatronics" type="Node" parent="." unique_id=258026473 node_paths=PackedStringArray("animatronics") groups=["AILoader"]]
@@ -657,7 +657,7 @@ metadata/_custom_type_script = "uid://cvkkptlwbd16u"
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Animatronics/IcelyToad" unique_id=1853153347]
 volume_db = 12.0
 
-[node name="FairyDummy" type="Node" parent="Animatronics" unique_id=1342898715]
+[node name="FairyDummy" type="Node" parent="Animatronics" unique_id=1342898715 groups=["FairyDummy"]]
 script = ExtResource("16_3hbvx")
 stages = 1
 metadata/_custom_type_script = "uid://h1s63y502iie"

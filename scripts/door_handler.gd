@@ -35,6 +35,8 @@ func _on_door_button_l_input_event(_camera: Node, event: InputEvent, _event_posi
 		return
 	if(event.is_action_pressed("select")):
 		get_viewport().set_input_as_handled()
+		if(!doors_closed[0] && get_tree().get_first_node_in_group("FairyDummy").progress > 0 && get_tree().get_first_node_in_group("FairyDummy").door == Constants.Door.LEFT):
+			return
 		doors_closed[0] = !doors_closed[0]
 
 func _on_door_button_r_input_event(_camera: Node, event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
@@ -42,6 +44,8 @@ func _on_door_button_r_input_event(_camera: Node, event: InputEvent, _event_posi
 		return
 	if(event.is_action_pressed("select")):
 		get_viewport().set_input_as_handled()
+		if(!doors_closed[1] && get_tree().get_first_node_in_group("FairyDummy").progress > 0 && get_tree().get_first_node_in_group("FairyDummy").door == Constants.Door.RIGHT):
+			return
 		doors_closed[1] = !doors_closed[1]
 
 func _on_light_buttton_l_input_event(_camera: Node, _event: InputEvent, _event_position: Vector3, _normal: Vector3, _shape_idx: int) -> void:
